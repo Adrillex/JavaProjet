@@ -1,5 +1,8 @@
 package controller;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
@@ -9,10 +12,10 @@ import contract.IView;
 /**
  * The Class Controller.
  */
-public class Controller implements IController {
+public class Controller implements IController, KeyListener {
 
 	/** The view. */
-	private IView		view;
+	private IView view;
 
 	/** The model. */
 	private IModel	model;
@@ -30,15 +33,9 @@ public class Controller implements IController {
 		this.setModel(model);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see contract.IController#control()
-	 */
-	public void control() {
-		this.view.printMessage("Appuyer sur les touches 'E', 'F', 'D' ou 'I', pour afficher Hello world dans la langue d votre choix.");
+	public void GameLoop(){
+		
 	}
-
 	/**
 	 * Sets the view.
 	 *
@@ -82,6 +79,26 @@ public class Controller implements IController {
 			default:
 				break;
 		}
+	}
+
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void control() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
