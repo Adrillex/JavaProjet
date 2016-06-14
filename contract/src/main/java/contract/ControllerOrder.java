@@ -12,5 +12,5 @@ public enum ControllerOrder {
 	LEFT,
 	RIGHT,
 	SHOOT,
-	NOP
+	NOP;
 }
