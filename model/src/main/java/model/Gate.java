@@ -8,7 +8,7 @@ public class Gate extends Fixe{
 	private Image image;
 	
 	public Gate(Position position, Image image){
-		thi.position = position;
+		this.position = position;
 		this.image = image;
 	}
 	
