@@ -8,7 +8,6 @@ import contract.IController;
 import contract.IModel;
 import contract.IView;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Controller.
  */
@@ -55,48 +54,23 @@ public class Controller implements IController, KeyListener {
 		this.model = model;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see contract.IController#orderPerform(contract.ControllerOrder)
-	 */
 	public void orderPerform(final ControllerOrder controllerOrder) {
-		switch (controllerOrder) {
-			case English:
-				this.model.loadMessage("GB");
-				break;
-			case Francais:
-				this.model.loadMessage("FR");
-				break;
-			case Deutsch:
-				this.model.loadMessage("DE");
-				break;
-			case Indonesia:
-				this.model.loadMessage("ID");
-				break;
-
-			default:
-				break;
-		}
+		
 	}
 
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	public void control() {
-		// TODO Auto-generated method stub
 		
 	}
 

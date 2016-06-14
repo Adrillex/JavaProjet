@@ -1,13 +1,15 @@
 package model;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 
 /**
  * The Class DAOHelloWorld.
  *
- * 
  */
-class DAOStage extends DAOElement {
+class DAOStage extends DAOElement<Element> {
 
+	
 	/**
 	 * Instantiates a new DAO Element.
 	 *
@@ -16,7 +18,8 @@ class DAOStage extends DAOElement {
 	 * @throws SQLException
 	 *           the SQL exception
 	 */
-	public DAOElement(final Connection connection) throws SQLException {
+	
+	public DAOStage(Connection connection) throws SQLException {
 		super(connection);
 	}
 
@@ -60,14 +63,12 @@ class DAOStage extends DAOElement {
 	 */
 	@Override
 	public Element find(final int id) {
-
 		return null;
 	}
 
 	
 	@Override
 	public Element find(final String key) {
-		
 		return null;
 	}
 
