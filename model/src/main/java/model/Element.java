@@ -6,12 +6,13 @@ public abstract class Element {
 	
 	private Image image;
 	private Position position;
+	private Permeability permeability;
 	
-	public Element(int x, int y){
+	public Element(int x, int y, Permeability permeability){
 		
 	}
 	
-	public Element(Position position){
+	public Element(Position position, Permeability permeability){
 		
 	}
 	
@@ -22,9 +23,7 @@ public abstract class Element {
 	public Image getImage(){
 		return this.image;
 	}
-	
-	public abstract boolean isSolide();
-	
+		
 	public abstract void action();
 	
 
