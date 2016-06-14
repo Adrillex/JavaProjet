@@ -2,12 +2,12 @@ package model;
 
 import java.awt.Image;
 
-public class EnergyBull {
+public class CrystalBall extends Fixe{
 	
 	private Position position;
 	private Image image;
 	
-	public EnergyBull(Position position, Image image){
+	public CrystalBall(Position position, Image image){
 		this.position = position;
 		this.image = image;
 	}
@@ -16,6 +16,6 @@ public class EnergyBull {
 		return true;
 	}
 	
-	public void action(){
+	public void Action(){
 	}
 }

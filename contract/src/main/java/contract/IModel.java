@@ -6,7 +6,5 @@ package contract;
  */
 public interface IModel {
 
-	public ArrayList<Mobile> getMobile(){
-		
-	}
+	public void LoadStage(int stage);
 }

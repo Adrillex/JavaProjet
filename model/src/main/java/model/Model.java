@@ -17,10 +17,10 @@ public class Model implements IModel {
 	public Model() {
 	}
 	
-	private void LoadStage(int Stage){
+	public void LoadStage(int Stage){
 	}
 	
-	private ArrayList<Mobile> getMobile(){
+	private ArrayList<Element> getElement(){
 		return null;
 	}
 	
