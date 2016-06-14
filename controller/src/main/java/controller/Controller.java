@@ -54,7 +54,7 @@ public class Controller implements IController, KeyListener {
 		this.model = model;
 	}
 
-	public void orderPerform(final ControllerOrder controllerOrder) {
+	public void orderPerform(final ControllerOrder order) {
 		
 	}
 
