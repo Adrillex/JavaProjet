@@ -2,19 +2,21 @@ package model;
 
 public class Monster extends Mobile{
 	
-	public Monster(Directon direction, Position position, String image){
+	public Monster(Direction direction, Position position, String image){
 		
 	}
-	public move(){
+	public void move(){
 		
 	}
 	public boolean hit(){
+		return false;
 		
 	}
 	public boolean isAlive(){
+		return false;
 		
 	}
 	public void action(){
 		
 	}
-	
+}

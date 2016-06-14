@@ -12,6 +12,7 @@ public class Fireball {
 		
 	}
 	public boolean isWeapon(){
+		return false;
 		
 	}
 }
