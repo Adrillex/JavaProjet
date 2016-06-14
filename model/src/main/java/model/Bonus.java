@@ -4,12 +4,11 @@ import java.awt.Image;
 
 public class Bonus extends Fixe{
 	
-	private int x, y;
+	private Position position;
 	private Image image;
 	
-	public Bonus(int x, int y, Image image){
-		this.x = x;
-		this.y = y;
+	public Bonus(Position position, Image image){
+		this.position = position;
 		this.image = image;
 	}
 	

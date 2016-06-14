@@ -4,12 +4,11 @@ import java.awt.Image;
 
 public class Wall extends Fixe{
 	
-	private int x, y;
+	private Position position;
 	private Image image;
 	
-	public Wall(int x, int y, Image image){
-		this.x = x;
-		this.y = y;
+	public Wall(Position position, Image image){
+		this.position = position;
 		this.image = image;
 	}
 	

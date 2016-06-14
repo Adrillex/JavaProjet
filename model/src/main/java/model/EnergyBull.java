@@ -4,12 +4,11 @@ import java.awt.Image;
 
 public class EnergyBull {
 	
-	private int x, y;
+	private Position position;
 	private Image image;
 	
-	public EnergyBull(int x, int y, Image image){
-		this.x = x;
-		this.y = y;
+	public EnergyBull(Position position, Image image){
+		this.position = position;
 		this.image = image;
 	}
 	

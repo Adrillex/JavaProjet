@@ -4,12 +4,11 @@ import java.awt.Image;
 
 public class Gate extends Fixe{
 	
-	private int x, y;
+	private Position position;
 	private Image image;
 	
-	public Gate(int x, int y, Image image){
-		this.x = x;
-		this.y = y;
+	public Gate(Position position, Image image){
+		thi.position = position;
 		this.image = image;
 	}
 	
