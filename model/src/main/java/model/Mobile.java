@@ -1,6 +1,9 @@
 package model;
 
 public class Mobile implements IMobile{
+	
+	private int x;
+	private int y;
 
 	public Direction getDirection() {
 		return Direction;
@@ -13,6 +16,16 @@ public class Mobile implements IMobile{
 	public boolean isAlive() {
 		return false;
 	}
+	
+	public void setPosX( int PosX){
+		
+		x = PosX;
+	}
+	
+	public void setPosY( int PosY ){
+		
+		y = PosY;
+	}
 
 	public boolean hit() {
 		return false;
@@ -21,19 +34,4 @@ public class Mobile implements IMobile{
 	public void move() {
 	}
 	
-	public void moveUp(){
-		
-	}
-	
-	public void moveDown(){
-		
-	}
-	
-	public void moveLeft(){
-		
-	}
-	
-	public void moveRight(){
-		
-	}
 }
