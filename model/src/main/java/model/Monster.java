@@ -1,17 +1,18 @@
 package model;
 
+import java.awt.image.BufferedImage;
+
 public class Monster extends Mobile{
 	
-	public Monster(Direction direction, Position position, String image){
-		
+	static Permeability permeability = Permeability.KILLING;
+	
+	public Monster(Direction direction, int posX, int posY, BufferedImage picture){
+		super(posX, posY, permeability , picture, direction);
 	}
 	public void move(){
 		
 	}
-	public boolean hit(){
-		return false;
-		
-	}
+
 	public boolean isAlive(){
 		return false;
 		
@@ -19,4 +20,5 @@ public class Monster extends Mobile{
 	public void action(){
 		
 	}
+
 }

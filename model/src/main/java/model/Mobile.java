@@ -1,37 +1,35 @@
 package model;
 
-public class Mobile implements IMobile{
+import java.awt.image.BufferedImage;
+
+public abstract class Mobile extends Element implements IMobile{
 	
-	private int x;
-	private int y;
+	protected Direction direction;
+	protected int speed;
+
+	public Mobile(int posX, int posY, Permeability permeability, BufferedImage picture, Direction direction) {
+		super(posX, posY, permeability, picture);
+		this.direction = direction;
+	}
 
 	public Direction getDirection() {
-		return Direction;
+		return direction;
+	}
+
+	public void setDirection(Direction direction) {
+		this.direction = direction;
 	}
 
 	public int getSpeed() {
-		return 0;
+		return this.speed;
 	}
 
-	public boolean isAlive() {
-		return false;
-	}
-	
-	public void setPosX( int PosX){
-		
-		x = PosX;
-	}
-	
-	public void setPosY( int PosY ){
-		
-		y = PosY;
+	public void setPosX(int posX) {
+		this.posX = posX;
 	}
 
-	public boolean hit() {
-		return false;
+	public void setPosY(int posY) {
+		this.posY = posY;
 	}
 
-	public void move() {
-	}
-	
 }
