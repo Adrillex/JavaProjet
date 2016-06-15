@@ -1,22 +1,17 @@
 package model;
 
-import java.awt.Image;
+import java.awt.image.BufferedImage;
 
 public class Gate extends Fixe{
 	
-	private Position position;
-	private Image image;
+
 	private boolean open;
 	
-	public Gate(Position position, Image image){
-		this.position = position;
+	public Gate(int posX, int posY, boolean open ,  BufferedImage image){
+		this.posX = posX;
+		this.posY = posY;
 		this.image = image;
-	}
-	
-	public Gate(int posX, int posY,boolean open ,  Image image){
-		this.
-		this.image = image;
-		this.open = o
+		this.open = open;
 	}
 	
 	public boolean isSolid(){

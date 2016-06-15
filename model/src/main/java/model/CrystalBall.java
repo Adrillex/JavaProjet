@@ -1,14 +1,13 @@
 package model;
 
-import java.awt.Image;
+import java.awt.image.BufferedImage;
 
 public class CrystalBall extends Fixe{
 	
-	private Position position;
-	private Image image;
 	
-	public CrystalBall(Position position, Image image){
-		this.position = position;
+	public CrystalBall(int posX, int posY, BufferedImage image){
+		this.posX = posX;
+		this.posY = posY;
 		this.image = image;
 	}
 	

@@ -1,6 +1,6 @@
 package model;
 
-public class Fixe implements IFixe{
+public class Fixe extends Element implements IFixe{
 
 	public boolean isPickable() {
 		return false;

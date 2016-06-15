@@ -4,9 +4,10 @@ import java.awt.image.BufferedImage;
 
 public abstract class Element {
 	
-	private BufferedImage image;
+	protected BufferedImage image;
 	private Permeability permeability;
-	private int posX, posY;
+	protected int posX;
+	private int posY;
 	
 	public Element(int posX, int posY, Permeability permeability, BufferedImage image){
 		this.posX = posX;

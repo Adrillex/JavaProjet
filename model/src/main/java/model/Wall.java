@@ -1,14 +1,14 @@
 package model;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 
-public class Wall extends Fixe{
+public class Wall extends Fixe{	
 	
-	private Position position;
-	private Image image;
-	
-	public Wall(Position position, Image image){
-		this.position = position;
+	public Wall(int posX, int posY, BufferedImage image){
+		
+		this.posX = posX;
+		this.posY = posY;
 		this.image = image;
 	}
 	
