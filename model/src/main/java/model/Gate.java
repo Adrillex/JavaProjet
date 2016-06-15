@@ -6,10 +6,17 @@ public class Gate extends Fixe{
 	
 	private Position position;
 	private Image image;
+	private boolean open;
 	
 	public Gate(Position position, Image image){
 		this.position = position;
 		this.image = image;
+	}
+	
+	public Gate(int posX, int posY,boolean open ,  Image image){
+		this.
+		this.image = image;
+		this.open = o
 	}
 	
 	public boolean isSolid(){
@@ -17,7 +24,7 @@ public class Gate extends Fixe{
 	}
 	
 	public boolean isOpen(){
-		return false;
+		return open;
 	}
 	
 	public void action(){

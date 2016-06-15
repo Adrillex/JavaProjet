@@ -25,13 +25,13 @@ public class Model implements IModel {
 		ArrayList <Wall> rWallList = new ArrayList <Wall>();
 		ArrayList <CrystalBall> cBallList = new ArrayList <CrystalBall>();
 		ArrayList <Purse> purseList = new ArrayList <Purse>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
-		ArrayList <Wall> wallList = new ArrayList <Wall>();
+		ArrayList <Gate> gateCList = new ArrayList <Gate>();
+		ArrayList <Gate> gateOList = new ArrayList <Gate>();
+		ArrayList <Monster> monster1List = new ArrayList <Monster>();
+		ArrayList <Monster> monster2List = new ArrayList <Monster>();
+		ArrayList <Monster> monster3List = new ArrayList <Monster>();
+		ArrayList <Monster> monster4List = new ArrayList <Monster>();
+		ArrayList <Hero> rLorannList = new ArrayList <Hero>();
 		
 		int numStage = 1;
 		DBConnection instance = DBConnection.getInstance();
