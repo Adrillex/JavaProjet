@@ -9,15 +9,12 @@ public abstract class Element {
 	private Permeability permeability;
 	
 	public Element(int x, int y, Permeability permeability){
-		
-	}
-	
-	public Element(Position position, Permeability permeability){
-		
+		this.position = new Position(x, y);
+		this.permeability = permeability;
 	}
 	
 	public void setImage(Image image){
-		
+		this.image = image;
 	}
 	
 	public Image getImage(){

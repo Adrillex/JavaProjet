@@ -28,5 +28,17 @@ public class PositionTest {
 	public void testGetPosition() {
 		assertEquals(this.position, position.getPosition());
 	}
+	
+	@Test
+	public void testSetX(){
+		this.position.setX(10);
+		assertEquals(this.position.getX(), 10);
+	}
+	
+	@Test
+	public void testSetY(){
+		this.position.setY(15);
+		assertEquals(this.position.getY(), 15);
+	}
 
 }
