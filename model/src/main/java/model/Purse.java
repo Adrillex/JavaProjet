@@ -1,21 +1,14 @@
 package model;
 
-import java.awt.Image;
 
-public class Purse extends Fixe{
+import java.awt.image.BufferedImage;
+
+public class Purse extends Bonus{
 	
-	private Position position;
-	private Image image;
 	
-	public Purse(Position position, Image image){
-		this.position = position;
-		this.image = image;
-	}
-	
-	public boolean isPickable(){
-		return true;
-	}
-	
-	public void action(){
+	public Purse(int posX, int posY, BufferedImage image){
+		
+		super(posX, posY, image);
 	}
 }
+	
