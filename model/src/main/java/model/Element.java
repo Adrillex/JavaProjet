@@ -1,29 +1,40 @@
 package model;
 
-import java.awt.Image;
+import java.awt.image.BufferedImage;
 
 public abstract class Element {
 	
-	private Image image;
-	private Position position;
+	private BufferedImage image;
 	private Permeability permeability;
+	private int posX, posY;
 	
-	public Element(int x, int y, Permeability permeability){
-		this.position = new Position(x, y);
+	public Element(int posX, int posY, Permeability permeability, BufferedImage image){
+		this.posX = posX;
+		this.posY = posY;
 		this.permeability = permeability;
-	}
-	
-	public void setImage(Image image){
 		this.image = image;
 	}
 	
-	public Image getImage(){
+	public void setImage(BufferedImage image){
+		this.image = image;
+	}
+	
+	public BufferedImage getImage(){
 		return this.image;
 	}
-		
-	public abstract void action();
-	
 
+	public int getPosX(){
+		return posX;
+	}
 	
+	public int setPosY(){
+		return posY;
+	}
+	
+	public Permeability getPermeability(){
+		return permeability;
+	}
+	
+	public abstract void action();
 
 }

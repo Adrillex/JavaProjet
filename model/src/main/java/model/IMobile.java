@@ -7,4 +7,6 @@ public interface IMobile {
 	public boolean isAlive();
 	public boolean hit();
 	public void move();
+	public void setPosX();
+	public void setPosY();
 }
