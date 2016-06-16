@@ -55,7 +55,6 @@ public class ImageLoader {
 			monster_3 = ImageIO.read(ImageLoader.class.getResource("monster_3.png"));
 			monster_4 = ImageIO.read(ImageLoader.class.getResource("monster_4.png"));
 			
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
