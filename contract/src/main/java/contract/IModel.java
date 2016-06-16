@@ -6,5 +6,5 @@ package contract;
  */
 public interface IModel {
 
-	public void LoadStage(int stage);
+	public void loadStage(int stage);
 }

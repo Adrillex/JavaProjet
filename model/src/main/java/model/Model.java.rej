@@ -1,0 +1,9 @@
+diff a/model/src/main/java/model/Model.java b/model/src/main/java/model/Model.java	(rejected hunks)
+@@ -19,7 +19,6 @@
+ 	public Model() {
+ 	}
+ 	
+-	private void LoadStage(int Stage){
+ 	public void LoadStage(int Stage){
+ 		ArrayList <Wall> vWallList = new ArrayList <Wall>();
+ 		ArrayList <Wall> hWallList = new ArrayList <Wall>();
