@@ -10,14 +10,6 @@ public class Hero extends Mobile{
 		super(posX, posY, Permeability.BLOCKING , sprite, direction);
 	}
 	
-	public boolean isAlive(){
-		return true;
-	}
-	
-	public boolean hit(){
-		return false;
-	}
-	
 	public void action(){
 		
 	}
@@ -27,7 +19,7 @@ public class Hero extends Mobile{
 	}
 
 	public boolean isThisMovePossible() {
-		// TODO Auto-generated method stub
-		return false;
+		int x,y;
+		
 	}
 }

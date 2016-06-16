@@ -31,6 +31,7 @@ public class Model implements IModel {
 	 * Instantiates a new model.
 	 */
 	public Model() {
+		ImageLoader.loadImage();
 	}
 	
 	public ArrayList<IElement> loadStage(int Stage){
@@ -109,7 +110,7 @@ public class Model implements IModel {
 			}
 		}
 	}
-	
+
 	private void move(Direction direction, Mobile mobile){
 		switch(direction){
 		case UP: mobile.setPosY(mobile.getPosY() - 1); 
@@ -133,6 +134,15 @@ public class Model implements IModel {
 					  mobile.setPosX(mobile.getPosX() - 1); 
 		break; 
 		}
+	}
+	
+	
+	private void moveUp(){
+		
+	}
+	
+	private void moveDown(){
+		
 	}
 
 

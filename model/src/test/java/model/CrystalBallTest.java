@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class ModelTest {
+public class CrystalBallTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,22 +27,17 @@ public class ModelTest {
 	}
 
 	@Test
-	public void testModel() {
+	public void testIsPickable() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testLoadStage() {
+	public void testCrystalBall() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testMonsterMove() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testPlayerMove() {
+	public void testAction() {
 		fail("Not yet implemented");
 	}
 

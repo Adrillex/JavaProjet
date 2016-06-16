@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class ModelTest {
+public class ElementTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,22 +27,37 @@ public class ModelTest {
 	}
 
 	@Test
-	public void testModel() {
+	public void testElement() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testLoadStage() {
+	public void testSetSprite() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testMonsterMove() {
+	public void testGetSprite() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testPlayerMove() {
+	public void testGetPosX() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetPosY() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetPermeability() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAction() {
 		fail("Not yet implemented");
 	}
 

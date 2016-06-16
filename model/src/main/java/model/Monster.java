@@ -11,20 +11,15 @@ public class Monster extends Mobile{
 	public Monster(Direction direction, int posX, int posY, BufferedImage sprite){
 		super(posX, posY, permeability , sprite, direction);
 	}
-	public void move(){
 		
-	}
-
-	public boolean isAlive(){
-		return false;
-		
-	}
 	public void action(){
 		
 	}
 	public boolean isThisMovePossible() {
-		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public void move() {		
 	}
 
 }
