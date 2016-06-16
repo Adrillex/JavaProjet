@@ -7,8 +7,8 @@ public abstract class Mobile extends Element implements IMobile{
 	protected Direction direction;
 	protected int speed;
 
-	public Mobile(int posX, int posY, Permeability permeability, BufferedImage picture, Direction direction) {
-		super(posX, posY, permeability, picture);
+	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction) {
+		super(posX, posY, permeability, sprite);
 		this.direction = direction;
 	}
 

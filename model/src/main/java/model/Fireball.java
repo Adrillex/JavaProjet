@@ -9,8 +9,8 @@ public class Fireball extends Mobile{
 	private final Permeability permeability = Permeability.KILLER;
 	private  static Fireball instance = null;
 	
-	private Fireball(Direction direction, int posX, int posY, BufferedImage picture){
-		super(direction, posX, posY, picture);
+	private Fireball(Direction direction, int posX, int posY, BufferedImage sprite){
+		super(direction, posX, posY, sprite);
 	}
 	public void move(){
 		

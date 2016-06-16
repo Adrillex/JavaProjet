@@ -4,23 +4,23 @@ import java.awt.image.BufferedImage;
 
 public abstract class Element {
 	
-	protected BufferedImage picture;
+	protected BufferedImage sprite;
 	protected Permeability permeability;
 	protected int posX, posY;
 
-	public Element(int posX, int posY, Permeability permeability, BufferedImage picture){
+	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite){
 		this.posX = posX;
 		this.posY = posY;
 		this.permeability = permeability;
-		this.picture = picture;
+		this.sprite = sprite;
 	}
 	
-	public void setPicture(BufferedImage picture){
-		this.picture = picture;
+	public void setPicture(BufferedImage sprite){
+		this.sprite = sprite;
 	}
 	
-	public BufferedImage getPicture(){
-		return this.picture;
+	public BufferedImage getSprite(){
+		return this.sprite;
 	}
 
 	public int getPosX(){
