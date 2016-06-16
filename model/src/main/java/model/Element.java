@@ -2,7 +2,9 @@ package model;
 
 import java.awt.image.BufferedImage;
 
-public abstract class Element {
+import contract.IElement;
+
+public abstract class Element implements IElement{
 	
 	protected BufferedImage sprite;
 	protected Permeability permeability;
@@ -15,7 +17,7 @@ public abstract class Element {
 		this.sprite = sprite;
 	}
 	
-	public void setPicture(BufferedImage sprite){
+	public void setSprite(BufferedImage sprite){
 		this.sprite = sprite;
 	}
 	
@@ -27,7 +29,7 @@ public abstract class Element {
 		return posX;
 	}
 	
-	public int setPosY(){
+	public int getPosY(){
 		return posY;
 	}
 	

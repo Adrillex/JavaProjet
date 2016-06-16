@@ -19,7 +19,7 @@ public abstract class Mobile extends Element implements IMobile{
 	public void setDirection(Direction direction) {
 		this.direction = direction;
 	}
-
+	
 	public int getSpeed() {
 		return this.speed;
 	}

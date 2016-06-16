@@ -30,7 +30,7 @@ public class Model implements IModel {
 	public Model() {
 	}
 	
-	private void loadStage(int Stage){
+	public void LoadStage(int Stage){
 		ArrayList <Wall> vWallList = new ArrayList <Wall>();
 		ArrayList <Wall> hWallList = new ArrayList <Wall>();
 		ArrayList <Wall> rWallList = new ArrayList <Wall>();
