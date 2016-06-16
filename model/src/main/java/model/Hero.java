@@ -21,4 +21,8 @@ public class Hero extends Mobile{
 	public void action(){
 		
 	}
+
+	public void move() {
+		
+	}
 }

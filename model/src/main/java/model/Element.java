@@ -29,7 +29,7 @@ public abstract class Element implements IElement{
 		return posX;
 	}
 	
-	public int setPosY(){
+	public int getPosY(){
 		return posY;
 	}
 	
