@@ -54,13 +54,10 @@ public class ImageLoader {
 			monster_2 = ImageIO.read(ImageLoader.class.getResource("monster_2.png"));
 			monster_3 = ImageIO.read(ImageLoader.class.getResource("monster_3.png"));
 			monster_4 = ImageIO.read(ImageLoader.class.getResource("monster_4.png"));
-			System.out.println("sqrzser");
-			
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
-			System.out.println("olol");
 		}
 	}
 }
