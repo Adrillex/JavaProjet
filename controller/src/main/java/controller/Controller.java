@@ -44,6 +44,10 @@ public class Controller implements IController, KeyListener {
 		this.view = view;
 	}
 
+	public void control() {
+		
+	}
+	
 	/**
 	 * Sets the model.
 	 *
@@ -55,23 +59,67 @@ public class Controller implements IController, KeyListener {
 	}
 
 	public void orderPerform(final ControllerOrder order) {
-		
+		switch(order){
+		case UP:
+			break;
+		case DOWN: 
+			break;
+		case LEFT:
+			break;
+		case RIGHT:
+			break;
+		case UPPER_RIGHT: 
+			break;
+		case UPPER_LEFT:
+			break;
+		case BOTTOM_RIGHT:
+			break;
+		case BOTTOM_LEFT:
+			break;
+		case SHOOT:
+			break;
+		default:
+			break;
+		}
 	}
 
+	protected ControllerOrder keyCodeToOrder(final int keyCode){
+		switch (keyCode){
+		case KeyEvent.VK_8:
+			return ControllerOrder.UP;
+		case KeyEvent.VK_7:
+			return ControllerOrder.UPPER_LEFT;
+		case KeyEvent.VK_9:
+			return ControllerOrder.UPPER_RIGHT;
+		case KeyEvent.VK_6:
+			return ControllerOrder.LEFT;
+		case KeyEvent.VK_4:
+			return ControllerOrder.RIGHT;
+		case KeyEvent.VK_3:
+			return ControllerOrder.BOTTOM_RIGHT;
+		case KeyEvent.VK_2:
+			return ControllerOrder.DOWN;
+		case KeyEvent.VK_1:
+			return ControllerOrder.BOTTOM_LEFT;
+		case KeyEvent.VK_SPACE:
+			return ControllerOrder.SHOOT;
+		default:
+			return ControllerOrder.NOP;
+		}
+	}
+	
 	public void keyTyped(KeyEvent e) {
 		
 	}
 
 	public void keyPressed(KeyEvent e) {
-		
+		orderPerform(this.keyCodeToOrder(e.getKeyCode()));
 	}
 
 	public void keyReleased(KeyEvent e) {
 		
 	}
 
-	public void control() {
-		
-	}
+
 
 }
