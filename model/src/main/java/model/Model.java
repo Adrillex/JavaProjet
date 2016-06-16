@@ -2,7 +2,9 @@ package model;
 
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import contract.IElement;
 
 import contract.IModel;
 
@@ -30,7 +32,7 @@ public class Model implements IModel {
 	public Model() {
 	}
 	
-	public void LoadStage(int Stage){
+	public ArrayList<IElement> loadStage(int Stage){
 		ArrayList <Wall> vWallList = new ArrayList <Wall>();
 		ArrayList <Wall> hWallList = new ArrayList <Wall>();
 		ArrayList <Wall> rWallList = new ArrayList <Wall>();
@@ -43,32 +45,47 @@ public class Model implements IModel {
 		ArrayList <Monster> monster3List = new ArrayList <Monster>();
 		ArrayList <Monster> monster4List = new ArrayList <Monster>();
 		ArrayList <Hero> rLorannList = new ArrayList <Hero>();
-		ArrayList <IElements> elements = new ArrayList <IElements>();
+		ArrayList <IElement> elements = new ArrayList <IElement>();
 		
 		int numStage = 1;
 		DBConnection instance = DBConnection.getInstance();
 		final String sql = "{call VoirStage" + numStage + "}";
-		final CallableStatement call = instance.getConnection().prepareCall(sql);
-		call.execute();
-		final ResultSet rs = call.getResultSet();
-		
-		while (rs.next()){
-			switch (rs.getInt(id)) {
-			case 1:
-				// horizontal wall
-				
-				break;
-			case 2:
-				// vertical wall
-				break;
-			case 3:
-				// round wall
-				break;
+		CallableStatement call;
+		ResultSet rs;
+		try {
+			call = instance.getConnection().prepareCall(sql);
+			call.execute();
+			rs = call.getResultSet();
 			
-			default:
-				break;
-			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catc block
+			e.printStackTrace();
+			return elements;
 		}
+		
+		try {
+			while (rs.next()){
+				switch (rs.getInt("id_elements")) {
+				case 1:
+					// horizontal wall
+					hWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.horizontal_bone));
+					break;
+				case 2:
+					// vertical wall
+					break;
+				case 3:
+					// round wall
+					break;
+				
+				default:
+					break;
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return elements;
 		
 	}
 	

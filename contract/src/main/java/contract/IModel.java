@@ -1,10 +1,12 @@
 package contract;
 
+import java.util.ArrayList;
+
 /**
  * The Interface IModel.
  *
  */
 public interface IModel {
 
-	public void loadStage(int stage);
+	public ArrayList<IElement> loadStage(int stage);
 }
