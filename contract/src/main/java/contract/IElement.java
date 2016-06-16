@@ -1,16 +1,12 @@
 package contract;
 
+import java.awt.image.BufferedImage;
+
 public interface IElement {
 	
-	public int getPosX(){
-		return posX;
-	}
+	public int getPosX();
 	
-	public int getPosY(){
-		return posY;
-	}
+	public int getPosY();
 	
-	public BufferedImage getSprite(){
-		return BufferedImage;
-	}
+	public BufferedImage getSprite();
 }
