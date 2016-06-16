@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class ModelTest {
+public class DBPropertiesTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,22 +27,22 @@ public class ModelTest {
 	}
 
 	@Test
-	public void testModel() {
+	public void testDBProperties() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testLoadStage() {
+	public void testGetUrl() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testMonsterMove() {
+	public void testGetLogin() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testPlayerMove() {
+	public void testGetPassword() {
 		fail("Not yet implemented");
 	}
 
