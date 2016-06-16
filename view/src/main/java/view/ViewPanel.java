@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -38,18 +39,27 @@ class ViewPanel extends JPanel implements IElement{
 	 *          the view frame
 	 */
 	public ViewPanel(IModel model) {
-		this.setLayout(new GridLayout(20, 12));
+		
+		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 		System.out.println("allo");
 		gbc = new GridBagConstraints();
 		element = model.loadStage(1);
-		for (IElement element : element) {
-			System.out.println("coucou");
-			ImageIcon icon = new ImageIcon(element.getSprite());
-			JLabel img = new JLabel(icon);
-			gbc.gridx = element.getPosX();
-			gbc.gridy = element.getPosY();
-			this.add(img, gbc);
+		int k = 0;
+		for (int i = 0; i < 12; i++) {
+			for (int j = 0; j < 20; j++) {
+				if (element.get(k).getPosX() == j && element.get(k).getPosY() == i){
+						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
+						JLabel img = new JLabel(icon);
+						this.add(img);
+						k++;
+				}
+				else {
+					JPanel pan = new JPanel();
+					pan.setBackground(Color.BLACK);
+					this.add(pan);
+				}
+			}
 		}
 	}
 	
