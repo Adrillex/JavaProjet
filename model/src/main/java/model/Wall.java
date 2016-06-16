@@ -5,11 +5,11 @@ import java.awt.image.BufferedImage;
 
 public class Wall extends Fixe{	
 	
-	public Wall(int posX, int posY, BufferedImage image){
+	public Wall(int posX, int posY, BufferedImage sprite){
 		
 		this.posX = posX;
 		this.posY = posY;
-		this.image = image;
+		this.sprite = sprite;
 	}
 	
 	public boolean isSolid(){

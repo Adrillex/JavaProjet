@@ -7,10 +7,10 @@ public class Gate extends Fixe{
 
 	private boolean open;
 	
-	public Gate(int posX, int posY, boolean open ,  BufferedImage image){
+	public Gate(int posX, int posY, boolean open ,  BufferedImage sprite){
 		this.posX = posX;
 		this.posY = posY;
-		this.image = image;
+		this.sprite = sprite;
 		this.open = open;
 	}
 	

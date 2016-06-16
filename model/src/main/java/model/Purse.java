@@ -6,9 +6,9 @@ import java.awt.image.BufferedImage;
 public class Purse extends Bonus{
 	
 	
-	public Purse(int posX, int posY, BufferedImage image){
+	public Purse(int posX, int posY, BufferedImage sprite){
 		
-		super(posX, posY, image);
+		super(posX, posY, sprite);
 	}
 }
 	

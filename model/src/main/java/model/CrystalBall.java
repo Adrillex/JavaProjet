@@ -5,10 +5,10 @@ import java.awt.image.BufferedImage;
 public class CrystalBall extends Fixe{
 	
 	
-	public CrystalBall(int posX, int posY, BufferedImage image){
+	public CrystalBall(int posX, int posY, BufferedImage sprite){
 		this.posX = posX;
 		this.posY = posY;
-		this.image = image;
+		this.sprite = sprite;
 	}
 	
 	public boolean isPickable(){

@@ -6,11 +6,11 @@ public class Bonus extends Fixe{
 	
 	private int bonus;
 	
-	public Bonus(int posX, int posY, BufferedImage image){
+	public Bonus(int posX, int posY, BufferedImage sprite){
 		
 		this.posX = posX;
 		this.posY = posY;
-		this.image = image;
+		this.sprite = sprite;
 	}
 	
 	public Boolean isPickeable(){
