@@ -1,15 +1,11 @@
 package model;
 
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 
-public class Wall extends Fixe{	
+public class Wall extends Motionless{	
 	
 	public Wall(int posX, int posY, BufferedImage sprite){
-		
-		this.posX = posX;
-		this.posY = posY;
-		this.sprite = sprite;
+		super(posX, posY, Permeability.PENETRABLE, sprite);
 	}
 	
 	public boolean isSolid(){
@@ -17,5 +13,10 @@ public class Wall extends Fixe{
 	}
 	
 	public void action(){
+	}
+
+	@Override
+	public boolean isPickable() {
+		return false;
 	}
 }

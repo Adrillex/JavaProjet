@@ -1,6 +1,6 @@
 package model;
 
-public interface IFixe {
+public interface IMotionless {
 	
 	public boolean isPickable();
 }

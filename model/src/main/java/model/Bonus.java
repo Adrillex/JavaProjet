@@ -2,20 +2,12 @@ package model;
 
 import java.awt.image.BufferedImage;
 
-public class Bonus extends Fixe{
+public class Bonus extends Motionless{
 	
-	private int bonus;
+	protected int bonus;
 	
 	public Bonus(int posX, int posY, BufferedImage sprite){
-		
-		this.posX = posX;
-		this.posY = posY;
-		this.sprite = sprite;
-	}
-	
-	public Boolean isPickeable(){
-		
-		return false;
+		super(posX, posY, Permeability.PENETRABLE, sprite);
 	}
 	
 	public void action(){
@@ -23,8 +15,12 @@ public class Bonus extends Fixe{
 	}
 	
 	public int getBonus(){
-		
 		return bonus;
+	}
+
+	@Override
+	public boolean isPickable() {
+		return true;
 	}
 	
 	
