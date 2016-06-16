@@ -2,6 +2,8 @@ package model;
 
 import java.awt.image.BufferedImage;
 
+import contract.Direction;
+
 public class Monster extends Mobile{
 	
 	static Permeability permeability = Permeability.KILLING;
@@ -19,6 +21,10 @@ public class Monster extends Mobile{
 	}
 	public void action(){
 		
+	}
+	public boolean isThisMovePossible() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

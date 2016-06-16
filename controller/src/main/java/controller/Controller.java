@@ -7,6 +7,7 @@ import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
 import contract.IView;
+import contract.Direction;
 
 /**
  * The Class Controller.
@@ -33,7 +34,6 @@ public class Controller implements IController, KeyListener {
 	}
 
 	public void GameLoop(){
-		
 	}
 	/**
 	 * Sets the view.
@@ -45,7 +45,6 @@ public class Controller implements IController, KeyListener {
 	}
 
 	public void control() {
-		
 	}
 	
 	/**
@@ -60,21 +59,21 @@ public class Controller implements IController, KeyListener {
 
 	public void orderPerform(final ControllerOrder order) {
 		switch(order){
-		case UP:
+		case UP: this.model.playerMove(Direction.UP);
 			break;
-		case DOWN: 
+		case DOWN: this.model.playerMove(Direction.DOWN);
 			break;
-		case LEFT:
+		case LEFT: this.model.playerMove(Direction.LEFT);
 			break;
-		case RIGHT:
+		case RIGHT: this.model.playerMove(Direction.RIGHT);
 			break;
-		case UPPER_RIGHT: 
+		case UPPER_RIGHT: this.model.playerMove(Direction.UPPER_RIGHT);
 			break;
-		case UPPER_LEFT:
+		case UPPER_LEFT: this.model.playerMove(Direction.UPPER_LEFT);
 			break;
-		case BOTTOM_RIGHT:
+		case BOTTOM_RIGHT: this.model.playerMove(Direction.BOTTOM_RIGHT);
 			break;
-		case BOTTOM_LEFT:
+		case BOTTOM_LEFT: this.model.playerMove(Direction.BOTTOM_LEFT);
 			break;
 		case SHOOT:
 			break;

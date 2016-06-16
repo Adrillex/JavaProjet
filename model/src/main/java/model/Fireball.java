@@ -2,10 +2,10 @@ package model;
 
 import java.awt.image.BufferedImage;
 
-import javax.swing.text.Position;
+import contract.Direction;
 
 public class Fireball extends Mobile{
-	private int SPEED;
+
 	private  static Fireball instance = null;
 	
 	private Fireball(Direction direction, int posX, int posY, BufferedImage sprite){
@@ -25,6 +25,9 @@ public class Fireball extends Mobile{
 	@Override
 	public void action() {
 		
+	}
+	public boolean isThisMovePossible() {
+		return false;
 	}
 	
 }

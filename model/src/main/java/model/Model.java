@@ -4,8 +4,9 @@ import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import contract.IElement;
 
+import contract.Direction;
+import contract.IElement;
 import contract.IModel;
 
 /**
@@ -82,7 +83,6 @@ public class Model implements IModel {
 				}
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return elements;
@@ -93,7 +93,42 @@ public class Model implements IModel {
 		return null;
 	}
 	
+	public void monsterMove(){
+	}
 	
+	public void PlayerMove(Direction direction){
+		for(Hero object : rLorannList){
+			object.setDirection(direction);
+			if(object.isThisMovePossible()){
+				move(direction, object);
+			}
+		}
+	}
+	
+	private void move(Direction direction, Mobile mobile){
+		switch(direction){
+		case UP: mobile.setPosY(mobile.getPosY() - 1); 
+		break;
+	case DOWN: mobile.setPosY(mobile.getPosY() + 1); 
+		break;
+	case LEFT: mobile.setPosX(mobile.getPosX() - 1); 
+		break;
+	case RIGHT: mobile.setPosX(mobile.getPosX() + 1); 
+		break;
+	case UPPER_RIGHT: mobile.setPosY(mobile.getPosY() - 1); 
+					  mobile.setPosX(mobile.getPosX() + 1); 
+		break;
+	case UPPER_LEFT: mobile.setPosY(mobile.getPosY() - 1); 
+					 mobile.setPosX(mobile.getPosX() - 1); 
+		break;
+	case BOTTOM_RIGHT: mobile.setPosY(mobile.getPosY() - 1); 
+					   mobile.setPosX(mobile.getPosX() + 1); 	
+		break;
+	case BOTTOM_LEFT: mobile.setPosY(mobile.getPosY() - 1); 
+					  mobile.setPosX(mobile.getPosX() - 1); 
+		break; 
+		}
+	}
 
 
 

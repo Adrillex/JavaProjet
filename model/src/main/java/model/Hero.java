@@ -2,10 +2,10 @@ package model;
 
 import java.awt.image.BufferedImage;
 
+import contract.Direction;
+
 public class Hero extends Mobile{
-	
-	private final int SPEED = 2;
-	
+		
 	public Hero(Direction direction, int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.BLOCKING , sprite, direction);
 	}
@@ -24,5 +24,10 @@ public class Hero extends Mobile{
 
 	public void move() {
 		
+	}
+
+	public boolean isThisMovePossible() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

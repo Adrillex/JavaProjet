@@ -1,12 +1,14 @@
-package model;
+	package model;
 
 import java.awt.image.BufferedImage;
+
+import contract.Direction;
+
 
 public abstract class Mobile extends Element implements IMobile{
 	
 	protected Direction direction;
-	protected int speed;
-
+	
 	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction) {
 		super(posX, posY, permeability, sprite);
 		this.direction = direction;
@@ -18,10 +20,6 @@ public abstract class Mobile extends Element implements IMobile{
 
 	public void setDirection(Direction direction) {
 		this.direction = direction;
-	}
-	
-	public int getSpeed() {
-		return this.speed;
 	}
 
 	public void setPosX(int posX) {
