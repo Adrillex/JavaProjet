@@ -40,7 +40,7 @@ class ViewPanel extends JPanel implements IElement{
 	public ViewPanel(IModel model) {
 		this.setLayout(new GridLayout(20, 12));
 		this.setBackground(Color.black);
-		
+		System.out.println("allo");
 		gbc = new GridBagConstraints();
 		element = model.loadStage(1);
 		for (IElement element : element) {
