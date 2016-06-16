@@ -34,23 +34,23 @@ public class Model implements IModel {
 	}
 	
 	public ArrayList<IElement> loadStage(int Stage){
-		ArrayList <Wall> vWallList = new ArrayList <Wall>();
-		ArrayList <Wall> hWallList = new ArrayList <Wall>();
-		ArrayList <Wall> rWallList = new ArrayList <Wall>();
-		ArrayList <CrystalBall> cBallList = new ArrayList <CrystalBall>();
-		ArrayList <Purse> purseList = new ArrayList <Purse>();
-		ArrayList <Gate> gateCList = new ArrayList <Gate>();
-		ArrayList <Gate> gateOList = new ArrayList <Gate>();
-		ArrayList <Monster> monster1List = new ArrayList <Monster>();
-		ArrayList <Monster> monster2List = new ArrayList <Monster>();
-		ArrayList <Monster> monster3List = new ArrayList <Monster>();
-		ArrayList <Monster> monster4List = new ArrayList <Monster>();
-		ArrayList <Hero> rLorannList = new ArrayList <Hero>();
+		vWallList = new ArrayList <Wall>();
+		hWallList = new ArrayList <Wall>();
+		rWallList = new ArrayList <Wall>();
+		cBallList = new ArrayList <CrystalBall>();
+		purseList = new ArrayList <Purse>();
+		gateCList = new ArrayList <Gate>();
+		gateOList = new ArrayList <Gate>();
+		monster1List = new ArrayList <Monster>();
+		monster2List = new ArrayList <Monster>();
+		monster3List = new ArrayList <Monster>();
+		monster4List = new ArrayList <Monster>();
+		rLorannList = new ArrayList <Hero>();
 		ArrayList <IElement> elements = new ArrayList <IElement>();
 		
 		int numStage = 1;
 		DBConnection instance = DBConnection.getInstance();
-		final String sql = "{call VoirStage" + numStage + "}";
+		final String sql = "{call seeStage" + numStage + "}";
 		CallableStatement call;
 		ResultSet rs;
 		try {
@@ -70,12 +70,17 @@ public class Model implements IModel {
 				case 1:
 					// horizontal wall
 					hWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.horizontal_bone));
+					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.horizontal_bone));
 					break;
 				case 2:
 					// vertical wall
+					vWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.vertical_bone));
+					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.vertical_bone));
 					break;
 				case 3:
 					// round wall
+					rWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone));
+					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone));
 					break;
 				
 				default:
@@ -96,7 +101,7 @@ public class Model implements IModel {
 	public void monsterMove(){
 	}
 	
-	public void PlayerMove(Direction direction){
+	public void playerMove(Direction direction){
 		for(Hero object : rLorannList){
 			object.setDirection(direction);
 			if(object.isThisMovePossible()){

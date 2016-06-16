@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import contract.IElement;
+import contract.IModel;
 
 /**
  * The Class ViewPanel.
@@ -36,12 +37,14 @@ class ViewPanel extends JPanel implements IElement{
 	 * @param viewFrame
 	 *          the view frame
 	 */
-	public ViewPanel() {
+	public ViewPanel(IModel model) {
 		this.setLayout(new GridLayout(20, 12));
 		this.setBackground(Color.black);
 		
 		gbc = new GridBagConstraints();
+		element = model.loadStage(1);
 		for (IElement element : element) {
+			System.out.println("coucou");
 			ImageIcon icon = new ImageIcon(element.getSprite());
 			JLabel img = new JLabel(icon);
 			gbc.gridx = element.getPosX();

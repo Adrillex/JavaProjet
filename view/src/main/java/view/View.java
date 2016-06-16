@@ -17,8 +17,8 @@ public class View implements IView, Runnable {
 	
 	BufferStrategy bs;
 	
-	public View(){
-		frame = new ViewFrame();
+	public View(IModel model){
+		frame = new ViewFrame(model);
 	}
 	
 	

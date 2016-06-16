@@ -35,14 +35,14 @@ class ViewFrame extends JFrame {
 	 * @throws HeadlessException
 	 *           the headless exception
 	 */
-	public ViewFrame() {
+	public ViewFrame(IModel model) {
 		
 		this.setSize(700, 700);
 		this.setTitle("Lorann");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		this.setContentPane(new ViewPanel());
+		this.setContentPane(new ViewPanel(model));
 		this.setVisible(true);
 	}
 
