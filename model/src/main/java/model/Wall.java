@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 public class Wall extends Motionless{	
 	
 	public Wall(int posX, int posY, BufferedImage sprite){
-		super(posX, posY, Permeability.PENETRABLE, sprite);
+		super(posX, posY, Permeability.BLOCKING, sprite);
 	}
 	
 	public boolean isSolid(){

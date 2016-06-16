@@ -2,13 +2,11 @@ package model;
 
 import java.awt.image.BufferedImage;
 
-public class CrystalBall extends Fixe{
+public class CrystalBall extends Motionless{
 	
 	
 	public CrystalBall(int posX, int posY, BufferedImage sprite){
-		this.posX = posX;
-		this.posY = posY;
-		this.sprite = sprite;
+		super(posX, posY, Permeability.PENETRABLE, sprite);
 	}
 	
 	public boolean isPickable(){
