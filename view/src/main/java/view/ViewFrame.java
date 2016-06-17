@@ -4,6 +4,8 @@ import java.awt.Container;
 import java.awt.GraphicsConfiguration;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -17,7 +19,7 @@ import contract.IModel;
  *
  * @author Jean-Aymeric Diet
  */
-class ViewFrame extends JFrame {
+class ViewFrame extends JFrame{
 
 	/** The model. */
 	private IModel	model;
@@ -64,6 +66,7 @@ class ViewFrame extends JFrame {
 	 */
 	protected void setController(final IController controller) {
 		this.controller = controller;
+		this.addKeyListener(this.controller);
 	}
 
 	/**
@@ -84,13 +87,4 @@ class ViewFrame extends JFrame {
 	protected void setModel(IModel model) {
 		this.model = model;
 	}
-
-	/**
-	 * Builds the view frame.
-	 *
-	 * @param model
-	 *          the model
-	 */
-
-	
 }

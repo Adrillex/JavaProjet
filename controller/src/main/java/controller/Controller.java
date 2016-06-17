@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -12,7 +13,7 @@ import contract.Direction;
 /**
  * The Class Controller.
  */
-public class Controller implements IController, KeyListener {
+public class Controller extends KeyAdapter implements IController, KeyListener  {
 
 	/** The view. */
 	private IView view;
@@ -112,6 +113,7 @@ public class Controller implements IController, KeyListener {
 	}
 
 	public void keyPressed(KeyEvent e) {
+		System.out.println("Lol");
 		orderPerform(this.keyCodeToOrder(e.getKeyCode()));
 	}
 
