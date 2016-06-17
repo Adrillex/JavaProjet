@@ -90,15 +90,15 @@ public class Controller implements IController, KeyListener  {
 			return ControllerOrder.UPPER_LEFT;
 		case KeyEvent.VK_9:
 			return ControllerOrder.UPPER_RIGHT;
-		case KeyEvent.VK_6:
-			return ControllerOrder.LEFT;
 		case KeyEvent.VK_Q:
-			return ControllerOrder.RIGHT;
+			return ControllerOrder.LEFT;
 		case KeyEvent.VK_D:
+			return ControllerOrder.RIGHT;
+		case KeyEvent.VK_6:
 			return ControllerOrder.BOTTOM_RIGHT;
-		case KeyEvent.VK_2:
-			return ControllerOrder.DOWN;
 		case KeyEvent.VK_S:
+			return ControllerOrder.DOWN;
+		case KeyEvent.VK_5:
 			return ControllerOrder.BOTTOM_LEFT;
 		case KeyEvent.VK_SPACE:
 			return ControllerOrder.SHOOT;
