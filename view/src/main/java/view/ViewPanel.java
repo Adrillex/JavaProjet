@@ -45,9 +45,9 @@ class ViewPanel extends JPanel {
 		gbc = new GridBagConstraints();
 		element = model.loadStage(1);
 		int k = 0;
-		for (int i = 0; i < 12; i++) {
-			for (int j = 0; j < 20; j++) {
-				if (element.get(k).getPosX() == j && element.get(k).getPosY() == i){
+		for (int j = 0; j < 12; j++ ) {
+			for (int i = 0; i < 20; i++) {
+				if (element.get(k).getPosX() == i && element.get(k).getPosY() == j){
 						System.out.println(element.size());
 						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
 						JLabel img = new JLabel(icon);
