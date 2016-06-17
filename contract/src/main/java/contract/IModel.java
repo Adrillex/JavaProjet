@@ -13,4 +13,6 @@ public interface IModel {
 	public void playerMove(Direction direction);
 	
 	public void monsterMove();
+	
+	public void playerShot();
 }

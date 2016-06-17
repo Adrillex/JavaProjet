@@ -16,9 +16,9 @@ public class Fireball extends Mobile{
 		
 	}
 
-	public static Fireball getInstance(Direction direction, int posX, int posY, BufferedImage picture){
+	public static Fireball getInstance(Direction direction, int posX, int posY, BufferedImage sprite){
 		if(Fireball.instance == null){
-			instance = new Fireball(direction, posX, posY, picture);
+			instance = new Fireball(direction, posX, posY, sprite);
 		}
 		return instance;
 	}

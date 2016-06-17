@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import contract.Direction;
 import contract.IElement;
 import contract.IModel;
+import contract.Permeability;
 
 /**
  * The Class Model.
@@ -132,6 +133,8 @@ public class Model implements IModel {
 				default:
 					break;
 				}
+
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -145,12 +148,13 @@ public class Model implements IModel {
 	}
 	
 	public void monsterMove(){
+		
 	}
 	
 	public void playerMove(Direction direction){
 		for(Hero object : rLorannList){
 			object.setDirection(direction);
-			IElement goalPosition = getElementCoordinates(object);
+			IElement goalPosition = getElementCoordinates(object, "move");
 			if(goalPosition != null){
 				switch(goalPosition.getPermeability()){
 				case PENETRABLE: move(object, goalPosition.getPosX(), goalPosition.getPosY());
@@ -168,15 +172,22 @@ public class Model implements IModel {
 		}
 	}
 	
-	private void move(Mobile mobile, int x, int y){
+	private void move(IElement mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+
 		System.out.println(mobile.getPosX());
 		System.out.println(mobile.getPosY());
+		System.out.println(elements.get(26).getPosY());
+		System.out.println(elements.get(26).getPosY());
+		for
 		
 	}
 	
-	private IElement getElementCoordinates(Mobile mobile) {
+	private IElement getElementCoordinates(Mobile mobile, String order) {
 		int x = mobile.getPosX() ,y = mobile.getPosY();
 		switch(mobile.getDirection()){
 		case UP: y = mobile.posY - 1; 
@@ -206,10 +217,43 @@ public class Model implements IModel {
 			}
 		System.out.println(mobile.getPosX());
 		System.out.println(mobile.getPosY());
-		move(mobile, x, y);
+		if(order == "move")
+			move(mobile, x, y);
+		else{
+			castFireball(fireballDirection(mobile.getDirection()), x, y);
+			
+		}
 		return null;
 	}
-	
-	
 
+	public void playerShot() {
+		for(Hero object : rLorannList){
+			Direction playerDir = object.getDirection();
+			IElement goalPosition = getElementCoordinates(object, "attack");
+			if(goalPosition.getPermeability() == Permeability.KILLER){
+				
+			}
+			
+		}
+	}
+	
+	public void castFireball(Direction direction, int x, int y){
+		Fireball.getInstance(direction, x, y, ImageLoader.fireball[0]);
+	}
+	
+	private Direction fireballDirection(Direction playerDir){
+		switch(playerDir){
+		case BOTTOM_LEFT: return Direction.UPPER_RIGHT;
+		case BOTTOM_RIGHT:return Direction.UPPER_LEFT;
+		case DOWN: return Direction.UP;
+		case LEFT: return Direction.RIGHT;
+		case RIGHT:return Direction.LEFT;
+		case UP: return Direction.DOWN;
+		case UPPER_LEFT: return Direction.BOTTOM_RIGHT;
+		case UPPER_RIGHT: return Direction.BOTTOM_RIGHT;
+		}
+		return null;
+	}
 }
+
+

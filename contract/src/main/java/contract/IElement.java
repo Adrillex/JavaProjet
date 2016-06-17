@@ -11,4 +11,8 @@ public interface IElement {
 	public Permeability getPermeability();
 	
 	public BufferedImage getSprite();
+	
+	public void setPosX(int x);
+	
+	public void setPosY(int y);
 }

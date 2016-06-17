@@ -38,6 +38,13 @@ public abstract class Element implements IElement{
 		return permeability;
 	}
 	
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
 
 	
 	public abstract void action();
