@@ -27,7 +27,8 @@ public class View implements IView, Runnable {
 		bs = frame.getBufferStrategy();
 		if(bs == null){
 			frame.createBufferStrategy(3);
-			return;
+		
+		
 		}
 	}
 	

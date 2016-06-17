@@ -171,6 +171,9 @@ public class Model implements IModel {
 	private void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
+		System.out.println(mobile.getPosX());
+		System.out.println(mobile.getPosY());
+		
 	}
 	
 	private IElement getElementCoordinates(Mobile mobile) {
@@ -201,6 +204,8 @@ public class Model implements IModel {
 			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y){
 				return goalPosition;
 			}
+		System.out.println(mobile.getPosX());
+		System.out.println(mobile.getPosY());
 		move(mobile, x, y);
 		return null;
 	}
