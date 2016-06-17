@@ -52,7 +52,7 @@ class ViewPanel extends JPanel {
 						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
 						JLabel img = new JLabel(icon);
 						this.add(img);
-						if (k == element.size())
+						if (k == element.size()-1)
 							break;
 						k++;
 
