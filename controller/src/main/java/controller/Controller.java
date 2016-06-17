@@ -84,21 +84,21 @@ public class Controller implements IController, KeyListener {
 
 	protected ControllerOrder keyCodeToOrder(final int keyCode){
 		switch (keyCode){
-		case KeyEvent.VK_8:
+		case KeyEvent.VK_Z:
 			return ControllerOrder.UP;
-		case KeyEvent.VK_7:
+		case KeyEvent.VK_8:
 			return ControllerOrder.UPPER_LEFT;
 		case KeyEvent.VK_9:
 			return ControllerOrder.UPPER_RIGHT;
 		case KeyEvent.VK_6:
 			return ControllerOrder.LEFT;
-		case KeyEvent.VK_4:
+		case KeyEvent.VK_Q:
 			return ControllerOrder.RIGHT;
-		case KeyEvent.VK_3:
+		case KeyEvent.VK_D:
 			return ControllerOrder.BOTTOM_RIGHT;
 		case KeyEvent.VK_2:
 			return ControllerOrder.DOWN;
-		case KeyEvent.VK_1:
+		case KeyEvent.VK_S:
 			return ControllerOrder.BOTTOM_LEFT;
 		case KeyEvent.VK_SPACE:
 			return ControllerOrder.SHOOT;
