@@ -27,33 +27,33 @@ public class ImageLoader {
 		gate = new BufferedImage[2];
 				
 		try {
-			player[0] = ImageIO.read((ImageLoader.class.getResource("lorann_b.png")));
-			player[1] = ImageIO.read((ImageLoader.class.getResource("lorann_br.png")));
-			player[2] = ImageIO.read((ImageLoader.class.getResource("lorann_r.png")));
-			player[3] = ImageIO.read((ImageLoader.class.getResource("lorann_ur.png")));
-			player[4] = ImageIO.read((ImageLoader.class.getResource("lorann_u.png")));
-			player[5] = ImageIO.read((ImageLoader.class.getResource("lorann_ul.png")));
-			player[6] = ImageIO.read((ImageLoader.class.getResource("lorann_l.png")));
-			player[7] = ImageIO.read((ImageLoader.class.getResource("lorann_bl.png")));
+			player[0] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_b.png")));
+			player[1] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_br.png")));
+			player[2] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_r.png")));
+			player[3] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_ur.png")));
+			player[4] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_u.png")));
+			player[5] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_ul.png")));
+			player[6] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_l.png")));
+			player[7] = ImageIO.read((ImageLoader.class.getResource("/sprite/lorann_bl.png")));
 			
-			fireball[0] = ImageIO.read(ImageLoader.class.getResource("fireball_1.png"));
-			fireball[1] = ImageIO.read(ImageLoader.class.getResource("fireball_2.png"));
-			fireball[2] = ImageIO.read(ImageLoader.class.getResource("fireball_3.png"));
-			fireball[3] = ImageIO.read(ImageLoader.class.getResource("fireball_4.png"));
-			fireball[4] = ImageIO.read(ImageLoader.class.getResource("fireball_5.png"));
+			fireball[0] = ImageIO.read(ImageLoader.class.getResource("/sprite/fireball_1.png"));
+			fireball[1] = ImageIO.read(ImageLoader.class.getResource("/sprite/fireball_2.png"));
+			fireball[2] = ImageIO.read(ImageLoader.class.getResource("/sprite/fireball_3.png"));
+			fireball[3] = ImageIO.read(ImageLoader.class.getResource("/sprite/fireball_4.png"));
+			fireball[4] = ImageIO.read(ImageLoader.class.getResource("/sprite/fireball_5.png"));
 			
-			gate[0] = ImageIO.read(ImageLoader.class.getResource("gate_closed.png"));
-			gate[1] = ImageIO.read(ImageLoader.class.getResource("gate_open.png"));
+			gate[0] = ImageIO.read(ImageLoader.class.getResource("/sprite/gate_closed.png"));
+			gate[1] = ImageIO.read(ImageLoader.class.getResource("/sprite/gate_open.png"));
 			
-			bone = ImageIO.read(ImageLoader.class.getResource("bone.png"));
-			crystal_ball = ImageIO.read(ImageLoader.class.getResource("crystal_ball.png"));
-			horizontal_bone = ImageIO.read(ImageLoader.class.getResource("horizontal_bone.png"));
-			vertical_bone = ImageIO.read(ImageLoader.class.getResource("vertical_bone.png"));
-			purse = ImageIO.read(ImageLoader.class.getResource("purse.png"));
-			monster_1 = ImageIO.read(ImageLoader.class.getResource("monster_1.png"));
-			monster_2 = ImageIO.read(ImageLoader.class.getResource("monster_2.png"));
-			monster_3 = ImageIO.read(ImageLoader.class.getResource("monster_3.png"));
-			monster_4 = ImageIO.read(ImageLoader.class.getResource("monster_4.png"));
+			bone = ImageIO.read(ImageLoader.class.getResource("/sprite/bone.png"));
+			crystal_ball = ImageIO.read(ImageLoader.class.getResource("/sprite/crystal_ball.png"));
+			horizontal_bone = ImageIO.read(ImageLoader.class.getResource("/sprite/horizontal_bone.png"));
+			vertical_bone = ImageIO.read(ImageLoader.class.getResource("/sprite/vertical_bone.png"));
+			purse = ImageIO.read(ImageLoader.class.getResource("/sprite/purse.png"));
+			monster_1 = ImageIO.read(ImageLoader.class.getResource("/sprite/monster_1.png"));
+			monster_2 = ImageIO.read(ImageLoader.class.getResource("/sprite/monster_2.png"));
+			monster_3 = ImageIO.read(ImageLoader.class.getResource("/sprite/monster_3.png"));
+			monster_4 = ImageIO.read(ImageLoader.class.getResource("/sprite/monster_4.png"));
 			
 		} catch (IOException e) {
 			e.printStackTrace();
