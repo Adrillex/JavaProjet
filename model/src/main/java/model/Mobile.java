@@ -3,6 +3,7 @@
 import java.awt.image.BufferedImage;
 
 import contract.Direction;
+import contract.Permeability;
 
 
 public abstract class Mobile extends Element implements IMobile{
@@ -29,5 +30,7 @@ public abstract class Mobile extends Element implements IMobile{
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
+	
+
 
 }

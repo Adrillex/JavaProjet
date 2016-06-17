@@ -3,6 +3,7 @@ package model;
 import java.awt.image.BufferedImage;
 
 import contract.Direction;
+import contract.Permeability;
 
 public class Fireball extends Mobile{
 

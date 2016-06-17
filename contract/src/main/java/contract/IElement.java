@@ -8,5 +8,7 @@ public interface IElement {
 	
 	public int getPosY();
 	
+	public Permeability getPermeability();
+	
 	public BufferedImage getSprite();
 }

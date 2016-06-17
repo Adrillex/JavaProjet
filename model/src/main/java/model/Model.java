@@ -27,6 +27,7 @@ public class Model implements IModel {
 	public ArrayList <Monster> monster3List;
 	public ArrayList <Monster> monster4List;
 	public ArrayList <Hero> rLorannList;
+	public ArrayList <IElement> elements;
 	/**
 	 * Instantiates a new model.
 	 */
@@ -47,7 +48,7 @@ public class Model implements IModel {
 		monster3List = new ArrayList <Monster>();
 		monster4List = new ArrayList <Monster>();
 		rLorannList = new ArrayList <Hero>();
-		ArrayList <IElement> elements = new ArrayList <IElement>();
+		elements = new ArrayList <IElement>();
 		
 		int numStage = 1;
 		DBConnection instance = DBConnection.getInstance();
@@ -105,46 +106,62 @@ public class Model implements IModel {
 	public void playerMove(Direction direction){
 		for(Hero object : rLorannList){
 			object.setDirection(direction);
-			if(object.isThisMovePossible()){
-				move(direction, object);
+			IElement goalPosition = getElementCoordinates(object);
+			if(goalPosition != null){
+				switch(goalPosition.getPermeability()){
+				case PENETRABLE: move(object, goalPosition.getPosX(), goalPosition.getPosY());
+					break;
+				case BLOCKING:
+					break;
+				case KILLING:
+					break;
+				case KILLER:
+					break;
+				default: move(object, goalPosition.getPosX(), goalPosition.getPosY());
+					break;
+				}
 			}
 		}
 	}
-
-	private void move(Direction direction, Mobile mobile){
-		switch(direction){
-		case UP: mobile.setPosY(mobile.getPosY() - 1); 
+	
+	private void move(IMobile mobile, int x, int y){
+		mobile.setPosX(x);
+		mobile.setPosY(y);
+		
+	}
+	
+	private IElement getElementCoordinates(Mobile mobile) {
+		int x = -1 ,y = -1;
+		switch(mobile.getDirection()){
+		case UP: y = mobile.posY - 1; 
 		break;
-	case DOWN: mobile.setPosY(mobile.getPosY() + 1); 
+	case DOWN: y = mobile.posY + 1;
 		break;
-	case LEFT: mobile.setPosX(mobile.getPosX() - 1); 
+	case LEFT: x = mobile.posX - 1;
 		break;
-	case RIGHT: mobile.setPosX(mobile.getPosX() + 1); 
+	case RIGHT: x = mobile.posX + 1;
 		break;
-	case UPPER_RIGHT: mobile.setPosY(mobile.getPosY() - 1); 
-					  mobile.setPosX(mobile.getPosX() + 1); 
+	case UPPER_RIGHT: y = mobile.posY - 1; 
+					  x = mobile.posX + 1;
 		break;
-	case UPPER_LEFT: mobile.setPosY(mobile.getPosY() - 1); 
-					 mobile.setPosX(mobile.getPosX() - 1); 
+	case UPPER_LEFT: y = mobile.posY - 1; 
+					 x = mobile.posX - 1;
 		break;
-	case BOTTOM_RIGHT: mobile.setPosY(mobile.getPosY() - 1); 
-					   mobile.setPosX(mobile.getPosX() + 1); 	
+	case BOTTOM_RIGHT: y = mobile.posY + 1;
+					   x = mobile.posX + 1;
 		break;
-	case BOTTOM_LEFT: mobile.setPosY(mobile.getPosY() - 1); 
-					  mobile.setPosX(mobile.getPosX() - 1); 
+	case BOTTOM_LEFT: y = mobile.posY + 1;
+					  x = mobile.posX - 1;
 		break; 
 		}
+		for(IElement goalPosition : elements)
+			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y){
+				return goalPosition;
+			}
+		move(mobile, x, y);
+		return null;
 	}
 	
 	
-	private void moveUp(){
-		
-	}
-	
-	private void moveDown(){
-		
-	}
-
-
 
 }

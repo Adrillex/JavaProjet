@@ -2,6 +2,8 @@ package model;
 
 import java.awt.image.BufferedImage;
 
+import contract.Permeability;
+
 public class Bonus extends Motionless{
 	
 	protected int bonus;

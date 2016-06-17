@@ -3,6 +3,7 @@ package model;
 import java.awt.image.BufferedImage;
 
 import contract.IElement;
+import contract.Permeability;
 
 public abstract class Element implements IElement{
 	
@@ -36,6 +37,8 @@ public abstract class Element implements IElement{
 	public Permeability getPermeability(){
 		return permeability;
 	}
+	
+
 	
 	public abstract void action();
 
