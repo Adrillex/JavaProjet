@@ -8,8 +8,10 @@ public class Bonus extends Motionless{
 	
 	protected int bonus;
 	
+	private final static int ID = 13;
+	
 	public Bonus(int posX, int posY, BufferedImage sprite){
-		super(posX, posY, Permeability.PENETRABLE, sprite);
+		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 	}
 	
 	public void action(){

@@ -6,8 +6,8 @@ import contract.Permeability;
 
 public abstract class Motionless extends Element implements IMotionless{
 
-	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite) {
-		super(posX, posY, permeability, sprite);
+	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID) {
+		super(posX, posY, permeability, sprite, ID);
 	}
 
 	public abstract boolean isPickable();

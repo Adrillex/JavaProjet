@@ -6,10 +6,10 @@ import contract.Direction;
 
 public class Cargyv extends Monster{
 	
-	private final int ID = 2;
+	private final static int ID = 2;
 	
 	public Cargyv(Direction direction, int posX, int posY, BufferedImage picture){
-		super(direction, posX, posY, picture);
+		super(direction, posX, posY, picture, ID);
 		
 	}
 	

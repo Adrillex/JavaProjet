@@ -69,6 +69,8 @@ class ViewPanel extends JPanel {
 	}
 	public ViewPanel updatePanel(IModel model){
 		int v = 0;
+		int t = 0;
+		IElement temp = null;
 		System.out.println("bisou");
 		this.removeAll();
 		System.out.println("allo");
@@ -77,27 +79,40 @@ class ViewPanel extends JPanel {
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
 				if (element.get(k).getPosX() == i && element.get(k).getPosY() == j){
-						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
-						JLabel img = new JLabel(icon);
-						this.add(img);
-						if (k == element.size()-1)
-							break;
-						if (element.get(k).getID() == 0 && v == 0){
-							System.out.println("lololol");
-							j = 0;
-							i = 0;
-							v = 1;
+					if (t == 1) {
+						if (temp.getPosX() <= element.get(k).getPosX() &&  temp.getPosY() <= element.get(k).getPosY()) {
+							ImageIcon icon = new ImageIcon(temp.getSprite());
+							JLabel img = new JLabel(icon);
+							this.add(img);
+							t=0;
 						}
-						k++;
+					}
+					if (element.get(k).getID() == 0 && v == 0){
+						if ((element.get(k).getPosX() > element.get(k+1).getPosX() &&  element.get(k).getPosY() >= element.get(k+1).getPosY()) || (element.get(k).getPosY() > element.get(k+1).getPosY())) {
+							temp = element.get(k);
+							t = 1;
+							k++;
+						}
+						System.out.println(element.get(k).getPosX() + " - " + element.get(k).getPosY());
+						v = 1;
+					}
+					ImageIcon icon = new ImageIcon(element.get(k).getSprite());
+					JLabel img = new JLabel(icon);
+					this.add(img);
+					System.out.println(" -- " + element.get(k).getID());
+					if (k == element.size()-1)
+						break;
+					
+					k++;
 
 				}
 				else {
-					JPanel pan = new JPanel();
-					pan.setBackground(Color.BLACK);
-					this.add(pan);
+				JPanel pan = new JPanel();
+				pan.setBackground(Color.BLACK);
+				this.add(pan);
 				}
 			}
-		}
+		}	
 		v = 0;
 		return this;
 	}

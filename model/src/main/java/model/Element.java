@@ -9,13 +9,15 @@ public abstract class Element implements IElement{
 	
 	protected BufferedImage sprite;
 	protected Permeability permeability;
-	protected int posX, posY, ID;
+	protected int posX, posY;
+	protected int ID;
 
-	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite){
+	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID){
 		this.posX = posX;
 		this.posY = posY;
 		this.permeability = permeability;
 		this.sprite = sprite;
+		this.ID = ID;
 	}
 	
 	public int getID(){

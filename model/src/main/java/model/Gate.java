@@ -6,11 +6,11 @@ import contract.Permeability;
 
 public class Gate extends Motionless{
 	
-	private final int ID = 7;
+	private final static int ID = 7;
 	private boolean open;
 	
 	public Gate(int posX, int posY, BufferedImage[] sprite){
-		super(posX, posY, Permeability.BLOCKING, sprite[0]);
+		super(posX, posY, Permeability.BLOCKING, sprite[0], ID);
 		this.open = false;
 	}
 	
