@@ -7,8 +7,8 @@ import contract.Permeability;
 
 public class Hero extends Mobile{
 		
-	public Hero(Direction direction, int posX, int posY, BufferedImage sprite){
-		super(posX, posY, Permeability.HERO , sprite, direction);
+	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite){
+		super(posX, posY, Permeability.HERO , sprite[0], direction);
 	}
 	
 	public void action(){

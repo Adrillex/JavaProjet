@@ -9,8 +9,8 @@ public class Gate extends Motionless{
 
 	private boolean open;
 	
-	public Gate(int posX, int posY, boolean open ,  BufferedImage sprite){
-		super(posX, posY, Permeability.BLOCKING, sprite);
+	public Gate(int posX, int posY, BufferedImage[] sprite){
+		super(posX, posY, Permeability.BLOCKING, sprite[0]);
 		this.open = false;
 	}
 	

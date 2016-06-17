@@ -84,7 +84,51 @@ public class Model implements IModel {
 					rWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone));
 					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone));
 					break;
-				
+				case 4:
+					// round wall
+					cBallList.add(new CrystalBall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.crystal_ball));
+					elements.add(new CrystalBall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.crystal_ball));
+					break;
+				case 5:
+					// round wall
+					purseList.add(new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse));
+					elements.add(new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse));
+					break;
+				case 6:
+					// round wall
+					gateCList.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
+					elements.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
+					break;
+				case 7:
+					// round wall
+					gateOList.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
+					elements.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
+					break;
+				case 8:
+					// round wall
+					monster1List.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1));
+					elements.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1));
+					break;
+				case 9:
+					// round wall
+					monster2List.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_2));
+					elements.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_2));
+					break;
+				case 10:
+					// round wall
+					monster3List.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_3));
+					elements.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_3));
+					break;
+				case 11:
+					// round wall
+					monster4List.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4));
+					elements.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4));
+					break;
+				case 12:
+					// round wall
+					rLorannList.add(new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player));
+					elements.add(new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player));
+					break;
 				default:
 					break;
 				}

@@ -20,7 +20,7 @@ import contract.IModel;
  *
  * @author Jean-Aymeric Diet
  */
-class ViewPanel extends JPanel implements IElement{
+class ViewPanel extends JPanel{
 
 	/** The view frame. */
 	private ViewFrame					viewFrame;
