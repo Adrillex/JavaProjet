@@ -37,7 +37,7 @@ class ViewFrame extends JFrame {
 	 */
 	public ViewFrame(IModel model) {
 		
-		this.setSize(640, 384);
+		this.setSize(636, 387);
 		this.setTitle("Lorann");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);

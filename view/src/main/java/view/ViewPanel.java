@@ -20,7 +20,7 @@ import contract.IModel;
  *
  * @author Jean-Aymeric Diet
  */
-class ViewPanel extends JPanel{
+class ViewPanel extends JPanel {
 
 	/** The view frame. */
 	private ViewFrame					viewFrame;
@@ -52,7 +52,10 @@ class ViewPanel extends JPanel{
 						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
 						JLabel img = new JLabel(icon);
 						this.add(img);
+						if (k == element.size())
+							break;
 						k++;
+
 				}
 				else {
 					JPanel pan = new JPanel();
