@@ -62,7 +62,6 @@ public class Model implements IModel {
 			rs = call.getResultSet();
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catc block
 			e.printStackTrace();
 			return elements;
 		}
@@ -176,14 +175,7 @@ public class Model implements IModel {
 	private void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-
-		System.out.println(mobile.getPosX());
-		System.out.println(mobile.getPosY());
-		System.out.println(elements.get(26).getPosX());
-		System.out.println(elements.get(26).getPosY());
+		System.out.println("Nouvelles coordonnées   : x = "+elements.get(26).getPosX()+" y = "+elements.get(26).getPosY()+"\n");
 	}
 	
 	private IElement getElementCoordinates(Mobile mobile, String order) {
@@ -214,8 +206,7 @@ public class Model implements IModel {
 			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y){
 				return goalPosition;
 			}
-		System.out.println(mobile.getPosX());
-		System.out.println(mobile.getPosY());
+		System.out.println("Coordonnées précédentes : x = "+mobile.getPosX()+" y = "+mobile.getPosY());
 		if(order == "move")
 			move(mobile, x, y);
 		else{

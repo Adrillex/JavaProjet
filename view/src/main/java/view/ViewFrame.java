@@ -1,7 +1,5 @@
 package view;
 
-import java.awt.HeadlessException;
-
 import javax.swing.JFrame;
 
 import contract.IController;
@@ -30,7 +28,6 @@ class ViewFrame extends JFrame{
 	 * @throws HeadlessException
 	 *           the headless exception
 	 */
-	ViewPanel pan0;
 	public ViewFrame(IModel model) {
 		this.model = model;
 		this.setSize(636, 387);
@@ -38,8 +35,6 @@ class ViewFrame extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
 		this.setLocationRelativeTo(null);
-		pan0 = new ViewPanel(this.model);
-		setContentPane(pan0);
 	}
 
 	
@@ -50,10 +45,6 @@ class ViewFrame extends JFrame{
 	 */
 	public ViewPanel getPanel(){
 		return new ViewPanel(model);
-	}
-	
-	private IController getController() {
-		return this.controller;
 	}
 
 	/**

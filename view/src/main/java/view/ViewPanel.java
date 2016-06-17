@@ -1,10 +1,8 @@
 package view;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.GridBagConstraints;
+import java.awt.Color; 
 import java.awt.GridLayout;
-import java.awt.image.BufferedImage;
+
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -21,15 +19,11 @@ import contract.IModel;
  * @author Jean-Aymeric Diet
  */
 class ViewPanel extends JPanel {
-
-	/** The view frame. */
-	private ViewFrame					viewFrame;
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -998294702363713521L;
 	
 	
 	public ArrayList<IElement> element;
-	private GridBagConstraints gbc;
 	
 	/**
 	 * Instantiates a new view panel.
@@ -38,11 +32,9 @@ class ViewPanel extends JPanel {
 	 *          the view frame
 	 */
 	public ViewPanel(IModel model) {
-		System.out.println("ok");
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
-		System.out.println("allo");
-		gbc = new GridBagConstraints();
+
 		element = model.loadStage(1);
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
@@ -68,97 +60,51 @@ class ViewPanel extends JPanel {
 		}
 	}
 	public ViewPanel updatePanel(IModel model){
-		int v = 0;
-		int t = 0;
-		IElement temp = null;
-		System.out.println("bisou");
+		element = orderElement();
+
 		this.removeAll();
-		System.out.println("allo");
-		gbc = new GridBagConstraints();
+
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
 				if (element.get(k).getPosX() == i && element.get(k).getPosY() == j){
-					if (t == 1) {
-						if (temp.getPosX() <= element.get(k).getPosX() &&  temp.getPosY() <= element.get(k).getPosY()) {
-							ImageIcon icon = new ImageIcon(temp.getSprite());
-							JLabel img = new JLabel(icon);
-							this.add(img);
-							t=0;
-						}
-					}
-					if (element.get(k).getID() == 0 && v == 0){
-						if ((element.get(k).getPosX() > element.get(k+1).getPosX() &&  element.get(k).getPosY() >= element.get(k+1).getPosY()) || (element.get(k).getPosY() > element.get(k+1).getPosY())) {
-							temp = element.get(k);
-							t = 1;
-							k++;
-						}
-						System.out.println(element.get(k).getPosX() + " - " + element.get(k).getPosY());
-						v = 1;
-					}
 					ImageIcon icon = new ImageIcon(element.get(k).getSprite());
 					JLabel img = new JLabel(icon);
 					this.add(img);
-					System.out.println(" -- " + element.get(k).getID());
-					if (k == element.size()-1)
-						break;
-					
 					k++;
-
+					if(k == element.size()-1)
+						break;	
 				}
 				else {
-				JPanel pan = new JPanel();
-				pan.setBackground(Color.BLACK);
-				this.add(pan);
-				}
+					JPanel pan = new JPanel();
+					pan.setBackground(Color.BLACK);
+					this.add(pan);
+				}			
 			}
 		}	
-		v = 0;
 		return this;
 	}
 	
-	/*public void buildViewPanel(){
-		
-		//this.setLayout(new GridLayout());
-		this.setBackground(Color.black);
-		
-		gbc = new GridBagConstraints();
-		gbc.gridx = 5;
-		gbc.gridy = 5;
-		ImageIcon icon = new ImageIcon("/arbre.png");
-		JLabel img = new JLabel(icon);
-		viewFrame.add(img);
-		System.out.println("viewpanel");
-		/*for (IElement element : element) {
-		
-		gbc.gridx = element.getPosX();
-		gbc.gridy = element.getPosY();
-		
-		
-		this.add(new JLabel(new ImageIcon(element.getSprite())), gbc);
-		
-		
-		
-	}*/
-	
+	public ArrayList<IElement> orderElement(){
+		ArrayList<IElement> orderElement = new ArrayList<IElement>();
+		int xMin = 0, yMin = 0;
 
-	/**
-	 * Gets the view frame.
-	 *
-	 * @return the view frame
-	 */
-	private ViewFrame getViewFrame() {
-		return this.viewFrame;
-	}
-
-	/**
-	 * Sets the view frame.
-	 *
-	 * @param viewFrame
-	 *          the new view frame
-	 */
-	private void setViewFrame(final ViewFrame viewFrame) {
-		this.viewFrame = viewFrame;
+		while(orderElement.size() != element.size()){
+			for (IElement element : element) {
+				int x = element.getPosX(), y = element.getPosY();
+				if(x == xMin && y == yMin){
+					orderElement.add(element);
+					xMin = x;
+					yMin = y;
+				}
+			}
+			xMin++;
+			if(xMin == 20){
+				xMin = 0;
+				yMin++;
+			}
+		}
+		return orderElement;
 	}
 
 	/*
@@ -175,24 +121,5 @@ class ViewPanel extends JPanel {
 	 *
 	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	 */
-	@Override
-	protected void paintComponent(final Graphics g) {
-		
-		/*for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 5; j++) {
-				g.setColor(Color.black);
-				g.fillRect(i, j, 5, 5);
-			}
-		}
-		for (IElement element : element) {
-			
-			gbc.gridx = element.getPosX();
-			gbc.gridy = element.getPosY();
-			
-			g.drawImage(element.getSprite(), element.getPosX(), element.getPosY(), null);
-			
-		}*/
-		
-		
-	}
+	
 }

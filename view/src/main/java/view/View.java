@@ -1,7 +1,5 @@
 package view;
 
-import java.awt.image.BufferStrategy;
-
 import contract.IController;
 import contract.IModel;
 import contract.IView;
@@ -14,41 +12,59 @@ import contract.IView;
 public class View implements IView, Runnable {
 	
 	ViewFrame frame;
-	
-	BufferStrategy bs;
+	ViewPanel pan;
 	IModel model;
+	private boolean running = false;
+	private Thread thread;
 	
 	public View(IModel model){
 		this.model = model;
 		frame = new ViewFrame(model);
+		pan = new ViewPanel(this.model);
+		frame.setContentPane(pan);
 	}
 	
 	
 	
 	public void render(){
 		
-		frame.setContentPane(frame.pan0.updatePanel(model));
+		frame.setContentPane(pan.updatePanel(model));
 		frame.validate();
 		frame.setVisible(true);
-		
 	}
 	
 	
 	
 	public void run() {
-		while(true){
+		
+		while(running){
 			render();
 			try {
-				Thread.sleep(200);
+				Thread.sleep(50);
 			} catch (InterruptedException e) {
-				System.out.print("Oups");
 				e.printStackTrace();
-				this.frame.setFocusable(true);
-				this.frame.requestFocusInWindow();
 			}
 		}
-
-		
+		stop();
+	}
+	
+	public synchronized void start(){
+		if(running)
+			return;
+		running = true;
+		thread = new Thread(this);
+		thread.start();
+	}
+	
+	public synchronized void stop(){
+		if(!running)
+			return;
+		running = false;
+		try {
+			thread.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -59,10 +75,6 @@ public class View implements IView, Runnable {
 	 */
 	public void setController(final IController controller) {
 		this.frame.setController(controller);
-	}
-	
-	public void setModel(IModel model){
-		//this.viewFrame.setModel(model);
 	}
 
 

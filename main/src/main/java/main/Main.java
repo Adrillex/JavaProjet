@@ -18,13 +18,11 @@ public abstract class Main {
 	 *          the arguments
 	 */
 	public static void main(final String[] args) {
-		System.out.println("test");
 		final Model model = new Model();
 		final View view = new View(model);
-		Thread t = new Thread(view);
 		final Controller controller = new Controller(view, model);
+		
 		view.setController(controller);
-		controller.control();
-		t.start();
+		view.start();
 	}
 }

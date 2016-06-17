@@ -10,12 +10,6 @@ import java.awt.event.KeyListener;
 public interface IController extends KeyListener{
 
 	/**
-	 * Control.
-	 */
-	public void control();
-
-
-	/**
 	 * Order perform.
 	 *
 	 * @param controllerOrder

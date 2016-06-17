@@ -14,9 +14,6 @@ import contract.Direction;
  */
 public class Controller implements IController, KeyListener  {
 
-	/** The view. */
-	private IView view;
-
 	/** The model. */
 	private IModel model;
 
@@ -41,10 +38,6 @@ public class Controller implements IController, KeyListener  {
 	 *          the new view
 	 */
 	private void setView(final IView view) {
-		this.view = view;
-	}
-
-	public void control() {
 	}
 	
 	/**
