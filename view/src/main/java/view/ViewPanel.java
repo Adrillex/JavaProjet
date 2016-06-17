@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -49,6 +48,7 @@ class ViewPanel extends JPanel implements IElement{
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 20; j++) {
 				if (element.get(k).getPosX() == j && element.get(k).getPosY() == i){
+						System.out.println(element.size());
 						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
 						JLabel img = new JLabel(icon);
 						this.add(img);
