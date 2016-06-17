@@ -36,12 +36,13 @@ public class View implements IView, Runnable {
 	public void run() {
 		while(true){
 			render();
-			System.out.println("Lalala");
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
 				System.out.print("Oups");
 				e.printStackTrace();
+				this.frame.setFocusable(true);
+				this.frame.requestFocusInWindow();
 			}
 		}
 
@@ -55,7 +56,7 @@ public class View implements IView, Runnable {
 	 *          the new controller
 	 */
 	public void setController(final IController controller) {
-		//this.viewFrame.setController(controller);
+		this.frame.setController(controller);
 	}
 	
 	public void setModel(IModel model){

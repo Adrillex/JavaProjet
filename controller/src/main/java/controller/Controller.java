@@ -112,7 +112,6 @@ public class Controller implements IController, KeyListener  {
 	}
 
 	public void keyPressed(KeyEvent e) {
-		System.out.println("Lol");
 		orderPerform(this.keyCodeToOrder(e.getKeyCode()));
 	}
 

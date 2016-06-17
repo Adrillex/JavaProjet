@@ -50,7 +50,7 @@ public class Model implements IModel {
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
 		
-		int numStage = 1;
+		int numStage = 2;
 		DBConnection instance = DBConnection.getInstance();
 		final String sql = "{call seeStage" + numStage + "}";
 		CallableStatement call;
@@ -168,14 +168,13 @@ public class Model implements IModel {
 		}
 	}
 	
-	private void move(IMobile mobile, int x, int y){
+	private void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
-		
 	}
 	
 	private IElement getElementCoordinates(Mobile mobile) {
-		int x = -1 ,y = -1;
+		int x = mobile.getPosX() ,y = mobile.getPosY();
 		switch(mobile.getDirection()){
 		case UP: y = mobile.posY - 1; 
 		break;

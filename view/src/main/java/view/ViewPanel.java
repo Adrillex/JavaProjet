@@ -144,16 +144,4 @@ class ViewPanel extends JPanel {
 		
 		
 	}
-
-	public int getPosX() {
-		return 0;
-	}
-
-	public int getPosY() {
-		return 0;
-	}
-
-	public BufferedImage getSprite() {
-		return null;
-	}
 }
