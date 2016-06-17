@@ -1,15 +1,8 @@
 package view;
 
-import java.awt.Container;
-import java.awt.GraphicsConfiguration;
-import java.awt.GridLayout;
 import java.awt.HeadlessException;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 import contract.IController;
 import contract.IModel;
@@ -37,15 +30,16 @@ class ViewFrame extends JFrame{
 	 * @throws HeadlessException
 	 *           the headless exception
 	 */
+	ViewPanel pan0;
 	public ViewFrame(IModel model) {
-		
+		this.model = model;
 		this.setSize(636, 387);
 		this.setTitle("Lorann");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
 		this.setLocationRelativeTo(null);
-		this.setContentPane(new ViewPanel(model));
-		this.setVisible(true);
+		pan0 = new ViewPanel(this.model);
+		setContentPane(pan0);
 	}
 
 	
@@ -54,6 +48,10 @@ class ViewFrame extends JFrame{
 	 *
 	 * @return the controller
 	 */
+	public ViewPanel getPanel(){
+		return new ViewPanel(model);
+	}
+	
 	private IController getController() {
 		return this.controller;
 	}

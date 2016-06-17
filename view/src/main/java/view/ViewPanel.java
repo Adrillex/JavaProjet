@@ -38,7 +38,7 @@ class ViewPanel extends JPanel {
 	 *          the view frame
 	 */
 	public ViewPanel(IModel model) {
-		
+		System.out.println("ok");
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 		System.out.println("allo");
@@ -48,10 +48,12 @@ class ViewPanel extends JPanel {
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
 				if (element.get(k).getPosX() == i && element.get(k).getPosY() == j){
-						System.out.println(element.size());
 						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
 						JLabel img = new JLabel(icon);
 						this.add(img);
+						if (k == 26){
+							System.out.println(element.get(k).getPosX() + " - " + element.get(k).getPosY());
+						}
 						if (k == element.size()-1)
 							break;
 						k++;
@@ -64,6 +66,40 @@ class ViewPanel extends JPanel {
 				}
 			}
 		}
+	}
+	public ViewPanel updatePanel(IModel model){
+		int v = 0;
+		System.out.println("bisou");
+		this.removeAll();
+		System.out.println("allo");
+		gbc = new GridBagConstraints();
+		int k = 0;
+		for (int j = 0; j < 12; j++ ) {
+			for (int i = 0; i < 20; i++) {
+				if (element.get(k).getPosX() == i && element.get(k).getPosY() == j){
+						ImageIcon icon = new ImageIcon(element.get(k).getSprite());
+						JLabel img = new JLabel(icon);
+						this.add(img);
+						if (k == element.size()-1)
+							break;
+						if (element.get(k).getID() == 0 && v == 0){
+							System.out.println("lololol");
+							j = 0;
+							i = 0;
+							v = 1;
+						}
+						k++;
+
+				}
+				else {
+					JPanel pan = new JPanel();
+					pan.setBackground(Color.BLACK);
+					this.add(pan);
+				}
+			}
+		}
+		v = 0;
+		return this;
 	}
 	
 	/*public void buildViewPanel(){

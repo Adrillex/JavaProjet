@@ -6,6 +6,8 @@ import contract.Direction;
 import contract.Permeability;
 
 public class Fireball extends Mobile{
+	
+	private final int ID = 5;
 
 	private  static Fireball instance = null;
 	

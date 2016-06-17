@@ -5,6 +5,8 @@ import java.awt.image.BufferedImage;
 
 public class Purse extends Bonus{
 	
+	private final int ID = 8;
+	
 	private final int bonus = 500; 
 	
 	public Purse(int posX, int posY, BufferedImage sprite){

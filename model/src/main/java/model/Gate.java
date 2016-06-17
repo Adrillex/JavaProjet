@@ -6,7 +6,7 @@ import contract.Permeability;
 
 public class Gate extends Motionless{
 	
-
+	private final int ID = 7;
 	private boolean open;
 	
 	public Gate(int posX, int posY, BufferedImage[] sprite){

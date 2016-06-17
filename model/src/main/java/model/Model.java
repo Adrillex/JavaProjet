@@ -126,9 +126,9 @@ public class Model implements IModel {
 					elements.add(new Monster(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4));
 					break;
 				case 12:
-					// round wall
-					rLorannList.add(new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player));
-					elements.add(new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player));
+					Hero hero = new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player);
+					rLorannList.add(hero);
+					elements.add(hero);
 					break;
 				default:
 					break;
@@ -172,7 +172,7 @@ public class Model implements IModel {
 		}
 	}
 	
-	private void move(IElement mobile, int x, int y){
+	private void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
 		System.out.println("");
@@ -181,10 +181,8 @@ public class Model implements IModel {
 
 		System.out.println(mobile.getPosX());
 		System.out.println(mobile.getPosY());
+		System.out.println(elements.get(26).getPosX());
 		System.out.println(elements.get(26).getPosY());
-		System.out.println(elements.get(26).getPosY());
-		for
-		
 	}
 	
 	private IElement getElementCoordinates(Mobile mobile, String order) {

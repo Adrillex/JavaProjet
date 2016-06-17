@@ -6,6 +6,8 @@ import contract.Permeability;
 
 public class Wall extends Motionless{	
 	
+	private final int ID = 9;
+	
 	public Wall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.BLOCKING, sprite);
 	}

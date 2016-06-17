@@ -16,20 +16,21 @@ public class View implements IView, Runnable {
 	ViewFrame frame;
 	
 	BufferStrategy bs;
+	IModel model;
 	
 	public View(IModel model){
+		this.model = model;
 		frame = new ViewFrame(model);
 	}
 	
 	
 	
 	public void render(){
-		bs = frame.getBufferStrategy();
-		if(bs == null){
-			frame.createBufferStrategy(3);
 		
+		frame.setContentPane(frame.pan0.updatePanel(model));
+		frame.validate();
+		frame.setVisible(true);
 		
-		}
 	}
 	
 	

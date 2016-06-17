@@ -15,4 +15,6 @@ public interface IElement {
 	public void setPosX(int x);
 	
 	public void setPosY(int y);
+	
+	public int getID();
 }

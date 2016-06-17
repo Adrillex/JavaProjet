@@ -9,7 +9,7 @@ public abstract class Element implements IElement{
 	
 	protected BufferedImage sprite;
 	protected Permeability permeability;
-	protected int posX, posY;
+	protected int posX, posY, ID;
 
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite){
 		this.posX = posX;
@@ -18,6 +18,9 @@ public abstract class Element implements IElement{
 		this.sprite = sprite;
 	}
 	
+	public int getID(){
+		return ID;
+	}
 	public void setSprite(BufferedImage sprite){
 		this.sprite = sprite;
 	}
