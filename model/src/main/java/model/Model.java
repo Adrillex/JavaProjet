@@ -64,7 +64,7 @@ public class Model implements IModel {
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
 		
-		int numStage = 2;
+		int numStage = 1;
 		DBConnection instance = DBConnection.getInstance();
 		final String sql = "{call seeStage" + numStage + "}";
 		CallableStatement call;

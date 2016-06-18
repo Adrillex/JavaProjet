@@ -22,13 +22,13 @@ public class View implements IView, Runnable {
 		frame = new ViewFrame(model);
 		pan = new ViewPanel(this.model);
 		frame.setContentPane(pan);
+		frame.setVisible(true);
 	}
 	
 	
 	
 	public void render(){
-		
-		frame.setContentPane(pan.updatePanel(model));
+		frame.setContentPane(pan.update());
 		frame.validate();
 		frame.setVisible(true);
 	}
