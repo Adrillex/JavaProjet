@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import contract.Direction;
+import model.element.mobile.Arrbarr;
 
 public class ArrbarrTest {
 	

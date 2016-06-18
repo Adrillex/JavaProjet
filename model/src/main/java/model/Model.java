@@ -9,6 +9,19 @@ import contract.Direction;
 import contract.IElement;
 import contract.IModel;
 import contract.Permeability;
+import model.database.DBConnection;
+import model.element.mobile.Arrbarr;
+import model.element.mobile.Cargyv;
+import model.element.mobile.Fireball;
+import model.element.mobile.Hero;
+import model.element.mobile.Kyrac;
+import model.element.mobile.Maarcg;
+import model.element.mobile.Mobile;
+import model.element.mobile.Monster;
+import model.element.motionless.CrystalBall;
+import model.element.motionless.Gate;
+import model.element.motionless.Purse;
+import model.element.motionless.Wall;
 
 /**
  * The Class Model.
@@ -171,7 +184,7 @@ public class Model implements IModel {
 			}
 		}
 	}
-	
+
 	private void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
@@ -181,25 +194,25 @@ public class Model implements IModel {
 	private IElement getElementCoordinates(Mobile mobile, String order) {
 		int x = mobile.getPosX() ,y = mobile.getPosY();
 		switch(mobile.getDirection()){
-		case UP: y = mobile.posY - 1; 
+		case UP: y = mobile.getPosY() - 1; 
 		break;
-	case DOWN: y = mobile.posY + 1;
+	case DOWN: y = mobile.getPosY() + 1;
 		break;
-	case LEFT: x = mobile.posX - 1;
+	case LEFT: x = mobile.getPosX() - 1;
 		break;
-	case RIGHT: x = mobile.posX + 1;
+	case RIGHT: x = mobile.getPosX() + 1;
 		break;
-	case UPPER_RIGHT: y = mobile.posY - 1; 
-					  x = mobile.posX + 1;
+	case UPPER_RIGHT: y = mobile.getPosY() - 1; 
+					  x = mobile.getPosX() + 1;
 		break;
-	case UPPER_LEFT: y = mobile.posY - 1; 
-					 x = mobile.posX - 1;
+	case UPPER_LEFT: y = mobile.getPosY() - 1; 
+					 x = mobile.getPosX() - 1;
 		break;
-	case BOTTOM_RIGHT: y = mobile.posY + 1;
-					   x = mobile.posX + 1;
+	case BOTTOM_RIGHT: y = mobile.getPosY() + 1;
+					   x = mobile.getPosX() + 1;
 		break;
-	case BOTTOM_LEFT: y = mobile.posY + 1;
-					  x = mobile.posX - 1;
+	case BOTTOM_LEFT: y = mobile.getPosY() + 1;
+					  x = mobile.getPosX() - 1;
 		break; 
 		}
 		for(IElement goalPosition : elements)
@@ -245,5 +258,3 @@ public class Model implements IModel {
 		return null;
 	}
 }
-
-
