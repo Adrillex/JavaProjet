@@ -12,15 +12,6 @@ public class Wall extends Motionless{
 		super(posX, posY, Permeability.BLOCKING, sprite, ID);
 	}
 	
-	public boolean isSolid(){
-		return true;
-	}
-	
-	public void action(){
-	}
 
-	@Override
-	public boolean isPickable() {
-		return false;
-	}
+	
 }

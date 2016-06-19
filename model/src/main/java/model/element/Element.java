@@ -51,7 +51,4 @@ public abstract class Element implements IElement{
 		this.posY = posY;
 	}
 
-	
-	public abstract void action();
-
 }

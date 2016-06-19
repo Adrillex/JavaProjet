@@ -14,19 +14,8 @@ public class Gate extends Motionless{
 		this.open = false;
 	}
 	
-	public boolean isSolid(){
-		return true;
-	}
-	
 	public boolean isOpen(){
 		return open;
 	}
 	
-	public void action(){
-	}
-
-	@Override
-	public boolean isPickable() {
-		return false;
-	}
 }

@@ -25,10 +25,6 @@ public class Fireball extends Mobile{
 		return instance;
 	}
 	
-	@Override
-	public void action() {
-		
-	}
 	public boolean isThisMovePossible() {
 		return false;
 	}

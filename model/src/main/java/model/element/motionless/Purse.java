@@ -1,16 +1,21 @@
 package model.element.motionless;
 
-
 import java.awt.image.BufferedImage;
 
-public class Purse extends Bonus{
+import contract.Permeability;
+
+public class Purse extends Motionless{
 	
-	private final int ID = 8;
-	
-	private final int bonus = 500; 
+	protected int bonus;
+
+	private final static int ID = 8;
 	
 	public Purse(int posX, int posY, BufferedImage sprite){
-		super(posX, posY, sprite);
+		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 	}
+
+	public int getBonus(){
+		return bonus;
+	}
+
 }
-	

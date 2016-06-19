@@ -9,47 +9,27 @@ import contract.IModel;
 import contract.IView;
 import contract.Direction;
 
-/**
- * The Class Controller.
- */
 public class Controller implements IController, KeyListener  {
 
 	/** The model. */
 	private IModel model;
 
-	/**
-	 * Instantiates a new controller.
-	 *
-	 * @param view
-	 *          the view
-	 * @param model
-	 *          the model
-	 */
+	/** Constructor. @param view, model **/
 	public Controller(final IView view, final IModel model) {
 		this.setView(view);
 		this.setModel(model);
 	}
 
-	public void GameLoop(){
-	}
-	/**
-	 * Sets the view.
-	 * @param view
-	 *          the new view
-	 */
+	/** Sets the view. @param view */
 	private void setView(final IView view) {
 	}
 	
-	/**
-	 * Sets the model.
-	 *
-	 * @param model
-	 *          the new model
-	 */
+	/** Sets the model. @param model */
 	private void setModel(final IModel model) {
 		this.model = model;
 	}
 
+	/** Perform the order given. @param order**/
 	public void orderPerform(final ControllerOrder order) {
 		switch(order){
 		case UP: this.model.playerMove(Direction.UP);
@@ -75,6 +55,7 @@ public class Controller implements IController, KeyListener  {
 		}
 	}
 
+	/** Take the keycode and send an order to orderPerform @param keyCode**/
 	protected ControllerOrder keyCodeToOrder(final int keyCode){
 		switch (keyCode){
 		case KeyEvent.VK_Z:
@@ -101,15 +82,14 @@ public class Controller implements IController, KeyListener  {
 	}
 	
 	public void keyTyped(KeyEvent e) {
-		
 	}
-
+	
+	/** Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
 		orderPerform(this.keyCodeToOrder(e.getKeyCode()));
 	}
 
 	public void keyReleased(KeyEvent e) {
-		
 	}
 
 
