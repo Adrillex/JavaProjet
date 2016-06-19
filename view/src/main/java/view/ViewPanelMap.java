@@ -45,7 +45,6 @@ public class ViewPanelMap extends JPanel{
 			}
 		}	
 	}
-	
 
 	public ArrayList<IElement> orderElement(){
 		ArrayList<IElement> orderElement = new ArrayList<IElement>();
