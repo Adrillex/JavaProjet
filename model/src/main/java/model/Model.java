@@ -29,6 +29,8 @@ import model.element.motionless.Wall;
  * @author Jean-Aymeric Diet
  */
 public class Model implements IModel {
+	private boolean isKeyPressed = false;
+	
 	public ArrayList <Wall> vWallList;
 	public ArrayList <Wall> hWallList;
 	public ArrayList <Wall> rWallList;
@@ -42,6 +44,7 @@ public class Model implements IModel {
 	public ArrayList <Monster> monster4List;
 	public ArrayList <Hero> rLorannList;
 	public ArrayList <IElement> elements;
+	public ArrayList <IElement> elementsMobile;
 	/**
 	 * Instantiates a new model.
 	 */
@@ -63,6 +66,8 @@ public class Model implements IModel {
 		monster4List = new ArrayList <Monster>();
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
+		elementsMobile = new ArrayList <IElement>();
+		
 		
 		int numStage = 2;
 		DBConnection instance = DBConnection.getInstance();
@@ -84,64 +89,80 @@ public class Model implements IModel {
 				switch (rs.getInt("id_elements")) {
 				case 1:
 					// horizontal wall
-					hWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.horizontal_bone));
-					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.horizontal_bone));
+					Wall wall = new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.horizontal_bone);
+					hWallList.add(wall);
+					elements.add(wall);
 					break;
 				case 2:
 					// vertical wall
-					vWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.vertical_bone));
-					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.vertical_bone));
+					Wall wall2 = new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.vertical_bone);
+					vWallList.add(wall2);
+					elements.add(wall2);
 
 					break;
 				case 3:
 					// round wall
-					rWallList.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone));
-					elements.add(new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone));
+					Wall wall3 = new Wall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.bone);
+					rWallList.add(wall3);
+					elements.add(wall3);
 					break;
 				case 4:
 					// round wall
-					cBallList.add(new CrystalBall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.crystal_ball));
-					elements.add(new CrystalBall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.crystal_ball));
+					CrystalBall crystalBall = new CrystalBall(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.crystal_ball);
+					cBallList.add(crystalBall);
+					elements.add(crystalBall);
 					break;
 				case 5:
 					// round wall
-					purseList.add(new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse));
-					elements.add(new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse));
+					Purse purse = new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse);
+					purseList.add(purse);
+					elements.add(purse);
 					break;
 				case 6:
 					// round wall
-					gateCList.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
-					elements.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
+					Gate gate = new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate);
+					gateCList.add(gate);
+					elements.add(gate);
 					break;
 				case 7:
 					// round wall
-					gateOList.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
-					elements.add(new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate));
+					Gate gate2 = new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate);
+					gateOList.add(gate2);
+					elements.add(gate2);
 					break;
 				case 8:
 					// round wall
-					monster1List.add(new Arrbarr(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1));
-					elements.add(new Arrbarr(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1));
+					Arrbarr arrbarr = new Arrbarr(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1);
+					monster1List.add(arrbarr);
+					elements.add(arrbarr);
+					elementsMobile.add(arrbarr);
 					break;
 				case 9:
 					// round wall
-					monster2List.add(new Cargyv(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_2));
-					elements.add(new Cargyv(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_2));
+					Cargyv cargyv = new Cargyv(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_2);
+					monster2List.add(cargyv);
+					elements.add(cargyv);
+					elementsMobile.add(cargyv);
 					break;
 				case 10:
 					// round wall
-					monster3List.add(new Kyrac(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_3));
-					elements.add(new Kyrac(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_3));
+					Kyrac kyrac = new Kyrac(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_3);
+					monster3List.add(kyrac);
+					elements.add(kyrac);
+					elementsMobile.add(kyrac);
 					break;
 				case 11:
 					// round wall
-					monster4List.add(new Maarcg(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4));
-					elements.add(new Maarcg(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4));
+					Maarcg maarcg = new Maarcg(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4);
+					monster4List.add(maarcg);
+					elements.add(maarcg);
+					elementsMobile.add(maarcg);
 					break;
 				case 12:
 					Hero hero = new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player);
 					rLorannList.add(hero);
 					elements.add(hero);
+					elementsMobile.add(hero);
 					break;
 				default:
 					break;
@@ -164,9 +185,15 @@ public class Model implements IModel {
 		
 	}
 	
-	public void playerMove(Direction direction){
+	public void playerDirection(Direction direction){
 		for(Hero object : rLorannList){
 			object.setDirection(direction);
+		}
+		playerMove();
+	}
+	
+	public void playerMove(){
+		for(Hero object : rLorannList){
 			IElement goalPosition = getElementCoordinates(object, "move");
 			if(goalPosition != null){
 				switch(goalPosition.getPermeability()){
@@ -185,13 +212,13 @@ public class Model implements IModel {
 		}
 	}
 
-	private void move(Mobile mobile, int x, int y){
+	public void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
 		System.out.println("Nouvelles coordonnées   : x = "+elements.get(26).getPosX()+" y = "+elements.get(26).getPosY()+"\n");
 	}
 	
-	private IElement getElementCoordinates(Mobile mobile, String order) {
+	public IElement getElementCoordinates(Mobile mobile, String order) {
 		int x = mobile.getPosX() ,y = mobile.getPosY();
 		switch(mobile.getDirection()){
 		case UP: y = mobile.getPosY() - 1; 
@@ -244,7 +271,7 @@ public class Model implements IModel {
 		Fireball.getInstance(direction, x, y, ImageLoader.fireball[0]);
 	}
 	
-	private Direction fireballDirection(Direction playerDir){
+	public Direction fireballDirection(Direction playerDir){
 		switch(playerDir){
 		case BOTTOM_LEFT: return Direction.UPPER_RIGHT;
 		case BOTTOM_RIGHT:return Direction.UPPER_LEFT;
@@ -257,4 +284,13 @@ public class Model implements IModel {
 		}
 		return null;
 	}
+
+	public void setKeyPressed(boolean isKeyPressed) {
+		this.isKeyPressed = isKeyPressed;
+	}
+	
+	public boolean getKeyPressed() {
+		return isKeyPressed;
+	}
+
 }
