@@ -1,13 +1,10 @@
 package view;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
+
 import java.util.ArrayList;
 import java.util.Observable;
 
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import contract.IElement;
@@ -39,7 +36,7 @@ class ViewPanel extends JPanel {
 		mapPan = new ViewPanelMap(model);
 		scorePan = new ViewPanelScore();
 		this.add(mapPan, BorderLayout.CENTER);
-		this.add(scorePan, BorderLayout.EAST);
+		this.add(scorePan, BorderLayout.SOUTH);
 	}
 	
 	public ViewPanel update(){

@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Color;
 
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -14,7 +15,7 @@ public class ViewPanelScore extends JPanel{
 	private JLabel distanceGate;
 	
 	public ViewPanelScore(){	
-	this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+	this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 	this.setBackground(Color.black);
 	
 	score = new JLabel("Score : None");
@@ -28,8 +29,11 @@ public class ViewPanelScore extends JPanel{
 	distanceGate.setForeground(Color.orange);
 	
 	this.add(score);
+	this.add(Box.createGlue());
 	this.add(monsterAlive);
+	this.add(Box.createGlue());
 	this.add(bonusRemaining);
+	this.add(Box.createGlue());
 	this.add(distanceGate);
 	}
 	
