@@ -21,4 +21,8 @@ public interface IModel {
 	public boolean getKeyPressed();
 	
 	public int getScore();
+	
+	public int getMonsterNumber();
+	
+	public int getBonusNumber();
 }
