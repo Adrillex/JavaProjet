@@ -27,13 +27,13 @@ public class PlayerMove {
 				if(Stage.purseList.contains(goalPosition)){	
 					
 				}
-				goalPosition.setExisting();
+				goalPosition.setExisting(false);
 				
 					break;
 				case BLOCKING:
 					break;
 				case KILLING:
-					Stage.rLorannList.get(0).setExisting();
+					Stage.rLorannList.get(0).setExisting(false);
 					Stage.elements.remove(Stage.elements.indexOf(Stage.rLorannList.get(0)));
 					Stage.rLorannList.remove(0);
 					break;

@@ -2,6 +2,7 @@ package model.element.motionless;
 
 import java.awt.image.BufferedImage;
 
+import contract.Direction;
 import contract.Permeability;
 import model.element.Bonus;
 
@@ -15,5 +16,8 @@ public class Purse extends Motionless{
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 		this.bonus = bonus;
 		
+	}
+
+	public void setDirection(Direction direction) {	
 	}
 }

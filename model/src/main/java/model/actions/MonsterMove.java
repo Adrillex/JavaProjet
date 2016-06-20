@@ -22,10 +22,10 @@ public class MonsterMove {
 				case KILLER:
 					Stage.elements.remove(object);
 					Stage.monsterList.remove(object);
-					object.setExisting();
+					object.setExisting(false);
 					break;
 				case HERO:
-					Stage.rLorannList.get(0).setExisting();
+					Stage.rLorannList.get(0).setExisting(false);
 					Stage.elements.remove(Stage.elements.indexOf(Stage.rLorannList.get(0)));
 					Stage.rLorannList.remove(0);
 					break;

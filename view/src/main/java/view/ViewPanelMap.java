@@ -29,19 +29,22 @@ public class ViewPanelMap extends JPanel{
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
-				if (elements.get(k).getPosX() == i && elements.get(k).getPosY() == j){
-					if(elements.get(k).getState() == false){
+				if(elements.get(k).getState() == false){
+					if (elements.get(k).getID() == 5) {
+						k++;
+					}
+					else {
 						elements.remove(elements.get(k));
 						updateMap();
 					}
-					else{
+				}
+				if (elements.get(k).getPosX() == i && elements.get(k).getPosY() == j){
 					ImageIcon icon = new ImageIcon(elements.get(k).getSprite());
 					JLabel img = new JLabel(icon);
 					this.add(img);
 					k++;
 					if(k == elements.size()-1)
 						break;	
-					}
 				}
 				else {
 					JPanel pan = new JPanel();

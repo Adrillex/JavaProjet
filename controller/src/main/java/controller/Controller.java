@@ -47,6 +47,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	public void run() {
 		while (true) {
 			model.monsterMove();
+			model.fireballMove();
 			try {
 				Thread.sleep(t);
 			} catch (InterruptedException e) {

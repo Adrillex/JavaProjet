@@ -25,4 +25,6 @@ public interface IModel {
 	public int getMonsterNumber();
 	
 	public int getBonusNumber();
+
+	public void fireballMove();
 }

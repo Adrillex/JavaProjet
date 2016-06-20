@@ -5,12 +5,11 @@ import java.util.ArrayList;
 import contract.Direction;
 import contract.IElement;
 import contract.IModel;
-import contract.Permeability;
+import model.actions.FireballMove;
 import model.actions.MonsterMove;
 import model.actions.Movement;
 import model.actions.PlayerMove;
 import model.element.Bonus;
-import model.element.mobile.Fireball;
 import model.element.mobile.Hero;
 
 public class Model implements IModel {
@@ -85,6 +84,10 @@ public class Model implements IModel {
 
 	public void monsterMove() {
 		MonsterMove.Move();
+	}
+	
+	public void fireballMove(){
+		FireballMove.move();
 	}
 
 }

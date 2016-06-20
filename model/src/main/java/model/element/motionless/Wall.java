@@ -2,6 +2,7 @@ package model.element.motionless;
 
 import java.awt.image.BufferedImage;
 
+import contract.Direction;
 import contract.Permeability;
 
 public class Wall extends Motionless{	
@@ -10,5 +11,8 @@ public class Wall extends Motionless{
 	
 	public Wall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.BLOCKING, sprite, ID);
+	}
+
+	public void setDirection(Direction direction) {
 	}
 }
