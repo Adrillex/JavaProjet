@@ -33,6 +33,9 @@ public class PlayerMove {
 				case BLOCKING:
 					break;
 				case KILLING:
+					Stage.rLorannList.get(0).setExisting();
+					Stage.elements.remove(Stage.elements.indexOf(Stage.rLorannList.get(0)));
+					Stage.rLorannList.remove(0);
 					break;
 				case KILLER:
 					break;

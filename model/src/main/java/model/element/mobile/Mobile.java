@@ -35,16 +35,32 @@ public abstract class Mobile extends Element implements IMobile{
 	public void move() {
 		switch (direction) {
 		case UP:
-			posY ++;
+			posY --;
 			break;
 		case DOWN:
-			posY --;
+			posY ++;
 			break;
 		case LEFT:
 			posX --;
 			break;
 		case RIGHT:
 			posX ++;
+			break;
+		case UPPER_LEFT:
+			posY --;
+			posX --;
+			break;
+		case UPPER_RIGHT:
+			posY ++;
+			posX ++;
+			break;
+		case BOTTOM_RIGHT:
+			posY --;
+			posX ++;
+			break;
+		case BOTTOM_LEFT:
+			posY --;
+			posX --;
 			break;
 		default:
 			break;

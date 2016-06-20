@@ -16,7 +16,7 @@ public class ViewPanelMap extends JPanel{
 	private ArrayList<IElement> elements;
 	
 	public ViewPanelMap(IModel model){
-		elements = model.loadStage(2);
+		elements = model.loadStage(5);
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 	}
