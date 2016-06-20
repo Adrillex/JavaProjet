@@ -69,7 +69,7 @@ public class Model implements IModel {
 		elementsMobile = new ArrayList <IElement>();
 		
 		
-		int numStage = 2;
+		int numStage = 1;
 		DBConnection instance = DBConnection.getInstance();
 		final String sql = "{call seeStage" + numStage + "}";
 		CallableStatement call;
@@ -188,6 +188,7 @@ public class Model implements IModel {
 	public void playerDirection(Direction direction){
 		for(Hero object : rLorannList){
 			object.setDirection(direction);
+			object.setMoveSprite();
 		}
 		playerMove();
 	}
@@ -198,6 +199,8 @@ public class Model implements IModel {
 			if(goalPosition != null){
 				switch(goalPosition.getPermeability()){
 				case PENETRABLE: move(object, goalPosition.getPosX(), goalPosition.getPosY());
+				goalPosition.setExisting();
+				elements.remove(goalPosition);
 					break;
 				case BLOCKING:
 					break;
@@ -242,11 +245,11 @@ public class Model implements IModel {
 					  x = mobile.getPosX() - 1;
 		break; 
 		}
+		System.out.println("Coordonnées précédentes : x = "+mobile.getPosX()+" y = "+mobile.getPosY());
 		for(IElement goalPosition : elements)
 			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y){
 				return goalPosition;
 			}
-		System.out.println("Coordonnées précédentes : x = "+mobile.getPosX()+" y = "+mobile.getPosY());
 		if(order == "move")
 			move(mobile, x, y);
 		else{

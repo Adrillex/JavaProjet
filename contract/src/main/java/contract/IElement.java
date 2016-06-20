@@ -17,4 +17,8 @@ public interface IElement {
 	public void setPosY(int y);
 	
 	public int getID();
+	
+	public boolean getState();
+	
+	public void setExisting();
 }

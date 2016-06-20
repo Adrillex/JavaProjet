@@ -13,10 +13,10 @@ import contract.IModel;
 
 public class ViewPanelMap extends JPanel{
 	
-	private ArrayList<IElement> element;
+	private ArrayList<IElement> elements;
 	
 	public ViewPanelMap(IModel model){
-		element = model.loadStage(2);
+		elements = model.loadStage(2);
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 	}
@@ -24,40 +24,52 @@ public class ViewPanelMap extends JPanel{
 	public void updateMap(){
 		this.removeAll();
 		
-		element = orderElement();
-
+		elements = orderElement();
+		IElement temp = null;
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
-				if (element.get(k).getPosX() == i && element.get(k).getPosY() == j){
-					ImageIcon icon = new ImageIcon(element.get(k).getSprite());
+				if (elements.get(k).getPosX() == i && elements.get(k).getPosY() == j){
+					if(elements.get(k).getState() == false){
+						elements.remove(elements.get(k));
+						updateMap();
+					}
+					else{
+					ImageIcon icon = new ImageIcon(elements.get(k).getSprite());
 					JLabel img = new JLabel(icon);
 					this.add(img);
 					k++;
-					if(k == element.size()-1)
+					if(k == elements.size()-1)
 						break;	
+					}
 				}
 				else {
 					JPanel pan = new JPanel();
 					pan.setBackground(Color.BLACK);
 					this.add(pan);
-				}			
+				}
 			}
-		}	
+		}
 	}
 
 	public ArrayList<IElement> orderElement(){
 		ArrayList<IElement> orderElement = new ArrayList<IElement>();
-		int xMin = 0, yMin = 0;
-
-		while(orderElement.size() != element.size()){
-			for (IElement element : element) {
-				int x = element.getPosX(), y = element.getPosY();
-				if(x == xMin && y == yMin){
-					orderElement.add(element);
-					xMin = x;
-					yMin = y;
+		IElement temp = null;
+		int xMin = 0, yMin = 0, i = elements.size();
+		while(orderElement.size() != i){
+			for (IElement element : elements) {
+			/*	if(element.getState() == false)
+				{
+					temp = element;
 				}
+				else{*/
+					int x = element.getPosX(), y = element.getPosY();
+					if(x == xMin && y == yMin){
+						orderElement.add(element);
+						xMin = x;
+						yMin = y;
+					}
+				//}
 			}
 			xMin++;
 			if(xMin == 20){
@@ -65,6 +77,8 @@ public class ViewPanelMap extends JPanel{
 				yMin++;
 			}
 		}
+	/*	orderElement.remove(temp);
+		elements.remove(temp);*/
 		return orderElement;
 	}
 }

@@ -2,8 +2,11 @@ package model.element.mobile;
 
 import java.awt.image.BufferedImage;
 
+import javax.imageio.ImageIO;
+
 import contract.Direction;
 import contract.Permeability;
+import model.ImageLoader;
 
 public class Hero extends Mobile{
 	
@@ -15,6 +18,27 @@ public class Hero extends Mobile{
 	
 	public void action(){
 		
+	}
+	
+	public void setMoveSprite(){
+		switch(this.direction){
+		case UP: this.setSprite(ImageLoader.player[4]);
+		break;
+	case DOWN: this.setSprite(ImageLoader.player[0]);
+		break;
+	case LEFT: this.setSprite(ImageLoader.player[6]);
+		break;
+	case RIGHT: this.setSprite(ImageLoader.player[2]);
+		break;
+	case UPPER_RIGHT: this.setSprite(ImageLoader.player[3]);
+		break;
+	case UPPER_LEFT: this.setSprite(ImageLoader.player[5]);
+		break;
+	case BOTTOM_RIGHT: this.setSprite(ImageLoader.player[1]);
+		break;
+	case BOTTOM_LEFT: this.setSprite(ImageLoader.player[7]);
+		break;
+		}
 	}
 
 	public void move() {

@@ -10,7 +10,8 @@ public abstract class Element implements IElement{
 	protected BufferedImage sprite;
 	protected Permeability permeability;
 	protected int posX, posY;
-	protected int ID;
+	protected final int ID;
+	protected boolean existing = true;
 
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID){
 		this.posX = posX;
@@ -18,6 +19,14 @@ public abstract class Element implements IElement{
 		this.permeability = permeability;
 		this.sprite = sprite;
 		this.ID = ID;
+	}
+	
+	public boolean getState(){
+		return existing;
+	}
+	
+	public void setExisting(){
+		this.existing = false;
 	}
 	
 	public int getID(){
