@@ -14,6 +14,6 @@ public class Arrbarr extends Monster{
 	}
 	
 	public void Action(){
-		posX ++;
+		//posX ++;
 	}
 }

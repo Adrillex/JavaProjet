@@ -19,8 +19,6 @@ public interface IModel {
 	public void setKeyPressed(boolean isKeyPressed);
 	
 	public boolean getKeyPressed();
-	
-	public void playerMove();
-	
+		
 	public ArrayList<IElement> getMobile();
 }

@@ -1,12 +1,19 @@
-package model;
+package model.actions;
+
+import java.util.ArrayList;
 
 import contract.IElement;
-import model.actions.Movement;
 import model.element.mobile.Mobile;
 
-public class Action {
+public class Movement {
+
 	
-	public IElement getElementCoordinates(Mobile mobile, String order, Model model) {
+	public static void move(Mobile mobile, int x, int y){
+		mobile.setPosX(x);
+		mobile.setPosY(y);
+	}
+	
+	public static IElement getElementCoordinates(Mobile mobile, String order, ArrayList<IElement> elements) {
 		int x = mobile.getPosX() ,y = mobile.getPosY();
 		switch(mobile.getDirection()){
 		case UP: y = mobile.getPosY() - 1; 
@@ -30,16 +37,17 @@ public class Action {
 					  x = mobile.getPosX() - 1;
 		break; 
 		}
-		for(IElement goalPosition : Stage.elements)
+		System.out.println("Coordonnées précédentes : x = "+mobile.getPosX()+" y = "+mobile.getPosY());
+		for(IElement goalPosition : elements)
 			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y){
 				return goalPosition;
 			}
 		if(order == "move")
-			Movement.move(mobile, x, y);
-		else{
-			model.castFireball(model.fireballDirection(mobile.getDirection()), x, y);
+			move(mobile, x, y);
+	/*	else{
+			castFireball(fireballDirection(mobile.getDirection()), x, y);
 			
-		}
+		}*/
 		return null;
 	}
 }
