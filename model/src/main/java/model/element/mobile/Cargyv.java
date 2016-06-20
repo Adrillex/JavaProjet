@@ -17,9 +17,9 @@ public class Cargyv extends Monster{
 	public void Action(){
 		
 	}
-	
+
 	public void reverse(){
-		boolean up = true;
+	/**	boolean up = true;
 		boolean down = true;
 		boolean left = true;
 		boolean right = true;
@@ -56,7 +56,7 @@ public class Cargyv extends Monster{
 
 		default:
 			break;
-		}
+		}*/
 		
 		int direct = 0;
 		if(Stage.rLorannList.get(0).getPosX() > this.posX)direct = direct + 1;

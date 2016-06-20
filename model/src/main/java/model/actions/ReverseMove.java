@@ -17,6 +17,8 @@ public class ReverseMove {
 
 		case RIGHT:
 			return Direction.LEFT;
+		default:
+			break;
 		}
 		return null;
 	}

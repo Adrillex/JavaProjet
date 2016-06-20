@@ -22,10 +22,6 @@ public class Monster extends Mobile{
 		return false;
 	}
 
-	public void Action() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	public void reverse(){
 		switch (direction) {

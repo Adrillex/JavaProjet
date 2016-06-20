@@ -2,7 +2,6 @@ package model.actions;
 
 import contract.Direction;
 import contract.IElement;
-import model.Model;
 import model.Stage;
 import model.element.mobile.Hero;
 

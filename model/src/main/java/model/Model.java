@@ -19,14 +19,12 @@ public class Model implements IModel {
 	private Stage stage;
 	private static int score;
 	private Bonus bPurse;
-	private static Bonus bMonster;
 
 	/** Instantiates a new model */
 	public Model() {
 		ImageLoader.loadImage();
 		score = 0;
 		bPurse = new Bonus(650);
-		bMonster = new Bonus(100);
 	}
 	
 	public static void addToScore(int bonus){
@@ -55,11 +53,12 @@ public class Model implements IModel {
 	}
 
 	public void playerShot() {
-		for(Hero object : Stage.rLorannList){
-			stage.fireball.setDirection(fireballDirection(stage.rLorannList.get(0).getDirection()));
-			stage.fireball.setPosX(stage.rLorannList.get(0).getPosX());
-			stage.fireball.setPosY(stage.rLorannList.get(0).getPosY());
-			IElement goalPosition = Movement.getElementCoordinates(stage.fireball, "attack", Stage.elements);
+		ArrayList<Hero> rLorannList = Stage.rLorannList;
+		for (int i = 0; i < rLorannList.size(); i++) {
+			Stage.fireball.setDirection(fireballDirection(Stage.rLorannList.get(0).getDirection()));
+			Stage.fireball.setPosX(Stage.rLorannList.get(0).getPosX());
+			Stage.fireball.setPosY(Stage.rLorannList.get(0).getPosY());
+			Movement.getElementCoordinates(Stage.fireball, "attack", Stage.elements);
 		}
 	}
 
@@ -102,7 +101,7 @@ public class Model implements IModel {
 	}
 	
 	public IElement getFireball(){
-		return stage.fireball;
+		return Stage.fireball;
 	}
 
 }
