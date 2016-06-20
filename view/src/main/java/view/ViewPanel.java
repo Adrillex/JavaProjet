@@ -34,7 +34,7 @@ class ViewPanel extends JPanel {
 	public ViewPanel(IModel model) {
 		this.setLayout(new BorderLayout());
 		mapPan = new ViewPanelMap(model);
-		scorePan = new ViewPanelScore();
+		scorePan = new ViewPanelScore(model);
 		this.add(mapPan, BorderLayout.CENTER);
 		this.add(scorePan, BorderLayout.SOUTH);
 	}

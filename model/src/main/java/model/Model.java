@@ -13,11 +13,17 @@ import model.element.mobile.Hero;
 public class Model implements IModel {
 	private boolean isKeyPressed = false;
 	
-	Stage stage;
+	private Stage stage;
+	private int score;
 
 	/** Instantiates a new model */
 	public Model() {
 		ImageLoader.loadImage();
+		score = 0;
+	}
+	
+	public int getScore(){
+		return score;
 	}
 	
 	public ArrayList<IElement> loadStage(int numStage){

@@ -19,6 +19,8 @@ public interface IModel {
 	public void setKeyPressed(boolean isKeyPressed);
 	
 	public boolean getKeyPressed();
+	
+	public int getScore();
 		
 	public ArrayList<IElement> getMobile();
 }
