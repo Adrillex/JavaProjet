@@ -58,15 +58,9 @@ public class Model implements IModel {
 		for(Hero object : Stage.rLorannList){
 			Direction playerDir = object.getDirection();
 			IElement goalPosition = Movement.getElementCoordinates(object, "attack", Stage.elements);
-			if(goalPosition.getPermeability() == Permeability.KILLER){
-			}
 		}
 	}
-	
-	public void castFireball(Direction direction, int x, int y){
-		Fireball.getInstance(direction, x, y, ImageLoader.fireball[0]);
-	}
-	
+
 	public Direction fireballDirection(Direction playerDir){
 		switch(playerDir){
 		case BOTTOM_LEFT: return Direction.UPPER_RIGHT;

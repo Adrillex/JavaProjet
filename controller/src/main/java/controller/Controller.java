@@ -4,8 +4,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-import contract.ControllerOrder;
-import contract.Direction;
 import contract.IController;
 import contract.IElement;
 import contract.IModel;
@@ -19,7 +17,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	private long time;
 	private long lasttime = 0;
 	private int t = 200;
-	ArrayList <IElement> elements = null;
+	private ArrayList <IElement> elements = null;
 	private Order order;
 
 

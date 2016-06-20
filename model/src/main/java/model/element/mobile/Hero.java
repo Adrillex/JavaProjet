@@ -2,8 +2,6 @@ package model.element.mobile;
 
 import java.awt.image.BufferedImage;
 
-import javax.imageio.ImageIO;
-
 import contract.Direction;
 import contract.Permeability;
 import model.ImageLoader;
@@ -14,10 +12,6 @@ public class Hero extends Mobile{
 		
 	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite){
 		super(posX, posY, Permeability.HERO , sprite[0], direction, ID);
-	}
-	
-	public void action(){
-		
 	}
 	
 	public void setMoveSprite(){
@@ -39,21 +33,5 @@ public class Hero extends Mobile{
 	case BOTTOM_LEFT: this.setSprite(ImageLoader.player[7]);
 		break;
 		}
-	}
-
-	public void move() {
-		
-	}
-
-	public boolean isThisMovePossible() {
-
-		
-		return false;
-		
-	}
-
-	public void Action() {
-		// TODO Auto-generated method stub
-		
 	}
 }

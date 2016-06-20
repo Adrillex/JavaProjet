@@ -10,6 +10,7 @@ import model.database.DBConnection;
 import model.element.Bonus;
 import model.element.mobile.Arrbarr;
 import model.element.mobile.Cargyv;
+import model.element.mobile.Fireball;
 import model.element.mobile.Hero;
 import model.element.mobile.Kyrac;
 import model.element.mobile.Maarcg;
@@ -31,6 +32,8 @@ public class Stage {
 	public static ArrayList <IElement> elements;
 	public static ArrayList <Monster> monsterList;
 	
+	public static Fireball fireball;
+	
 	public Stage(int numStage, Bonus bPurse){
 		this.numStage = numStage;
 		this.bPurse = bPurse;
@@ -44,6 +47,9 @@ public class Stage {
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
 		monsterList = new ArrayList <Monster>();
+		fireball = new Fireball(Direction.UP, 0, 0, ImageLoader.fireball[0]);
+		elements.add(fireball);
+		
 		DBConnection instance = DBConnection.getInstance();
 		final String sql = "{call seeStage" + numStage + "}";
 		CallableStatement call;

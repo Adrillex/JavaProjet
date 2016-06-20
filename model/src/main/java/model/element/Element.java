@@ -25,8 +25,8 @@ public abstract class Element implements IElement{
 		return existing;
 	}
 	
-	public void setExisting(){
-		this.existing = false;
+	public void setExisting(boolean existing){
+		this.existing = existing;
 	}
 	
 	public int getID(){
