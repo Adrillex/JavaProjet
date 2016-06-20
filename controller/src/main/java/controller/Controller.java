@@ -37,7 +37,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	
 	/**
 	 * the method keyPressed
-	 * @param e 
+	 * @param KeyEvent e 
 	 * Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
 		l = 0;
@@ -48,6 +48,11 @@ public class Controller implements IController, KeyListener, Runnable{
 		}
 	}
 
+	/**
+	 * the method keyRealeased
+	 * @param KeyEvent e
+	 * Allows to know when the key is released
+	 */
 	public void keyReleased(KeyEvent e) {
 		l = 0;
 		order.setFalse();

@@ -37,20 +37,33 @@ public class Model implements IModel {
 	/** the method addToScore
 	 * 
 	 * @param bonus
+	 * Add bonus points to the total score
 	 */
 	public static void addToScore(int bonus){
 		score = score + bonus;
 	}
 	
+	/**the method loadStage
+	 * @param numStage
+	 * 	load the stage number numstage.
+	 */
 	public ArrayList<IElement> loadStage(int numStage){
 		stage = new Stage(numStage, bPurse);
 		return stage.LoadStage();
 	}
 	
+	
+	/**the method playerDirection
+	 * 
+	 * Launch the playerDirection method in PlayerMove
+	 */
 	public void playerDirection(Direction direction){
 		PlayerMove.playerDirection(direction);
 	}
 
+	/**the method playerSHot
+	 * Allows to cast the fireball spell
+	 */
 	public void playerShot() {
 		ArrayList<Hero> rLorannList = Stage.rLorannList;
 		for (int i = 0; i < rLorannList.size(); i++) {
@@ -61,6 +74,13 @@ public class Model implements IModel {
 		}
 	}
 
+	
+	/**
+	 * the method fireballDirection
+	 * @param playerDir
+	 * @return
+	 * Gives the new direction of the fireball
+	 */
 	public Direction fireballDirection(Direction playerDir){
 		switch(playerDir){
 		case BOTTOM_LEFT: return Direction.UPPER_RIGHT;
@@ -74,7 +94,6 @@ public class Model implements IModel {
 		}
 		return null;
 	}
-
 	public void monsterMove() {
 		MonsterMove.Move();
 	}

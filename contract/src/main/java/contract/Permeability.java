@@ -1,6 +1,7 @@
 package contract;
 
-/* The enum Permeability */
+/* The enum Permeability 
+ * Used to know a type of element*/
 
 public enum Permeability {
 	BLOCKING, //It blocks everyone

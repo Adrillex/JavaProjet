@@ -1,6 +1,7 @@
 package contract;
 
-/* Enum Direction */
+/* Enum Direction 
+ * The direction of a mobile*/
 
 public enum Direction {
 	UP,

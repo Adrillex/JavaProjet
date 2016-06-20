@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 
 /** The class ImageLoader.
  * 
- * @author Group 11
+ * @author Group 10
  *
  */
 
