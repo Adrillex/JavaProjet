@@ -27,4 +27,10 @@ public interface IModel {
 	public int getBonusNumber();
 
 	public void fireballMove();
+	
+	public IElement getFireball();
+	
+	public void switchFireBallSprite();
+	
+	public void switchLorannSprite();
 }

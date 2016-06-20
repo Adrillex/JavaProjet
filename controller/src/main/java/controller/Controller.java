@@ -16,9 +16,11 @@ public class Controller implements IController, KeyListener, Runnable{
 	private IView view;
 	private long time;
 	private long lasttime = 0;
-	private int t = 200;
+	private int t = 100;
 	private ArrayList <IElement> elements = null;
 	private Order order;
+	boolean k = false;
+	int l = 0;
 
 
 	/** Constructor. @param view, model **/
@@ -33,6 +35,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	
 	/** Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
+		l = 0;
 		time = System.currentTimeMillis();
 		if (time - lasttime >= t) {
 			lasttime = time;
@@ -41,6 +44,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	}
 
 	public void keyReleased(KeyEvent e) {
+		l = 0;
 		order.setFalse();
 	}
 	
@@ -48,6 +52,11 @@ public class Controller implements IController, KeyListener, Runnable{
 		while (true) {
 			model.monsterMove();
 			model.fireballMove();
+			model.switchFireBallSprite();
+			if (l >= 300/t ) {
+				model.switchLorannSprite();
+			}
+			else l ++;
 			try {
 				Thread.sleep(t);
 			} catch (InterruptedException e) {

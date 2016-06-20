@@ -48,6 +48,7 @@ public class Stage {
 		elements = new ArrayList <IElement>();
 		monsterList = new ArrayList <Monster>();
 		fireball = new Fireball(Direction.UP, 10, 19, ImageLoader.fireball[0]);
+		fireball.setExisting(false);
 		elements.add(fireball);
 		
 		DBConnection instance = DBConnection.getInstance();

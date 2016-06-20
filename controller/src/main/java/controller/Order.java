@@ -32,7 +32,7 @@ public class Order {
 			break;
 		case BOTTOM_LEFT: this.model.playerDirection(Direction.BOTTOM_LEFT);
 			break;
-		case SHOOT:
+		case SHOOT: if (!model.getFireball().getState())this.model.playerShot();
 			break;
 		default:
 			break;

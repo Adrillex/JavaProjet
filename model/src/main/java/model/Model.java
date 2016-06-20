@@ -9,6 +9,7 @@ import model.actions.FireballMove;
 import model.actions.MonsterMove;
 import model.actions.Movement;
 import model.actions.PlayerMove;
+import model.actions.SpriteSwitcher;
 import model.element.Bonus;
 import model.element.mobile.Hero;
 
@@ -55,8 +56,10 @@ public class Model implements IModel {
 
 	public void playerShot() {
 		for(Hero object : Stage.rLorannList){
-			Direction playerDir = object.getDirection();
-			IElement goalPosition = Movement.getElementCoordinates(object, "attack", Stage.elements);
+			stage.fireball.setDirection(fireballDirection(stage.rLorannList.get(0).getDirection()));
+			stage.fireball.setPosX(stage.rLorannList.get(0).getPosX());
+			stage.fireball.setPosY(stage.rLorannList.get(0).getPosY());
+			IElement goalPosition = Movement.getElementCoordinates(stage.fireball, "attack", Stage.elements);
 		}
 	}
 
@@ -88,6 +91,18 @@ public class Model implements IModel {
 	
 	public void fireballMove(){
 		FireballMove.move();
+	}
+	
+	public void switchFireBallSprite(){
+		SpriteSwitcher.fireBallLoader();
+	}
+	
+	public void switchLorannSprite(){
+		SpriteSwitcher.lorannloader();;
+	}
+	
+	public IElement getFireball(){
+		return stage.fireball;
 	}
 
 }

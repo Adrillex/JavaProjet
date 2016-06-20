@@ -18,29 +18,31 @@ public class PlayerMove {
 	}
 
 	public static void Move(){
-		for(Hero object : Stage.rLorannList){
-			IElement goalPosition = Movement.getElementCoordinates(object, "move", Stage.elements);
-			if(goalPosition != null){
-				switch(goalPosition.getPermeability()){
-				case PENETRABLE: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
-				Stage.elements.remove(goalPosition);
-				if(Stage.purseList.contains(goalPosition)){	
+		if (Stage.rLorannList.isEmpty() == false) {
+			for(Hero object : Stage.rLorannList){
+				IElement goalPosition = Movement.getElementCoordinates(object, "move", Stage.elements);
+				if(goalPosition != null){
+					switch(goalPosition.getPermeability()){
+					case PENETRABLE: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
+					Stage.elements.remove(goalPosition);
+					if(Stage.purseList.contains(goalPosition)){	
+						
+					}
+					goalPosition.setExisting(false);
 					
-				}
-				goalPosition.setExisting(false);
-				
-					break;
-				case BLOCKING:
-					break;
-				case KILLING:
-					Stage.rLorannList.get(0).setExisting(false);
-					Stage.elements.remove(Stage.elements.indexOf(Stage.rLorannList.get(0)));
-					Stage.rLorannList.remove(0);
-					break;
-				case KILLER:
-					break;
-				default: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
-					break;
+						break;
+					case BLOCKING:
+						break;
+					case KILLING:
+						Stage.rLorannList.get(0).setExisting(false);
+						Stage.elements.remove(Stage.elements.indexOf(Stage.rLorannList.get(0)));
+						Stage.rLorannList.remove(0);
+						break;
+					case KILLER: Stage.fireball.setExisting(false);
+						break;
+					default: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
+						break;
+					}
 				}
 			}
 		}

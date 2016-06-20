@@ -14,18 +14,30 @@ import contract.IModel;
 public class ViewPanelMap extends JPanel{
 	
 	private ArrayList<IElement> elements;
+	IModel model = null;
+	boolean t = false;
+	IElement temp = null;
 	
 	public ViewPanelMap(IModel model){
-		elements = model.loadStage(5);
+		this.model = model;
+		elements = model.loadStage(2);
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 	}
 	
 	public void updateMap(){
 		this.removeAll();
-		
+		if (model.getFireball().getState() == false && t == false) {
+			temp = model.getFireball();
+			elements.remove(model.getFireball());
+			t = true;
+		}
+		if (t == true && model.getFireball().getState() == true) {
+			elements.add(temp);
+			IElement temp = null;
+			t = false;
+		}
 		elements = orderElement();
-		IElement temp = null;
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {

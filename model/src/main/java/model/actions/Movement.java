@@ -46,11 +46,11 @@ public class Movement {
 		if(order == "move")
 			move(mobile, x, y);
 		else{
+			System.out.println("test");
 			Stage.fireball.setExisting(true);
 			Stage.fireball.setDirection(mobile.getDirection());
 			Stage.fireball.setPosX(x);
 			Stage.fireball.setPosY(y);
-			System.out.println(elements.get(0).getPosX());
 			
 		}
 		return null;
