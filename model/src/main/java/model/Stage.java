@@ -39,6 +39,11 @@ public class Stage {
 		this.bPurse = bPurse;
 	}
 
+	/** the method LoadStage
+	 * 
+	 * @return IElements
+	 * Create ArrayLists of elements for a later user.
+	 */
 	public ArrayList <IElement> LoadStage(){
 		cBallList = new ArrayList <CrystalBall>();
 		purseList = new ArrayList <Purse>();

@@ -5,6 +5,10 @@ import model.Stage;
 import model.element.mobile.Monster;
 
 public class MonsterMove {
+	
+	/**the method move
+	 * Manage the movements of monsters
+	 */
 	public static void Move(){
 		if (Stage.monsterList.isEmpty() == false) {
 			for(Monster object : Stage.monsterList){

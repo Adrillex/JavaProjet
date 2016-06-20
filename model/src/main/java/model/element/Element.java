@@ -13,6 +13,15 @@ public abstract class Element implements IElement{
 	protected final int ID;
 	protected boolean existing = true;
 
+	
+	/** The constructor Element
+	 * 
+	 * @param posX
+	 * @param posY
+	 * @param permeability
+	 * @param sprite
+	 * @param ID
+	 */
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID){
 		this.posX = posX;
 		this.posY = posY;
@@ -21,20 +30,8 @@ public abstract class Element implements IElement{
 		this.ID = ID;
 	}
 	
-	public boolean getState(){
-		return existing;
-	}
-	
-	public void setExisting(boolean existing){
-		this.existing = existing;
-	}
-	
-	public int getID(){
-		return ID;
-	}
-	public void setSprite(BufferedImage sprite){
-		this.sprite = sprite;
-	}
+
+	//getters
 	
 	public BufferedImage getSprite(){
 		return this.sprite;
@@ -52,6 +49,23 @@ public abstract class Element implements IElement{
 		return permeability;
 	}
 	
+	public int getID(){
+		return ID;
+	}
+	
+	public boolean getState(){
+		return existing;
+	}
+	
+	//setters
+	public void setExisting(boolean existing){
+		this.existing = existing;
+	}
+	
+	public void setSprite(BufferedImage sprite){
+		this.sprite = sprite;
+	}
+	
 	public void setPosX(int posX) {
 		this.posX = posX;
 	}
@@ -59,5 +73,4 @@ public abstract class Element implements IElement{
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
-
 }

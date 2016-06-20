@@ -10,10 +10,19 @@ public class Hero extends Mobile{
 	
 	private final static int ID = 0;
 		
+	/** The constructor Hero
+	 * 
+	 * @param direction
+	 * @param posX
+	 * @param posY
+	 * @param sprite
+	 */
 	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite){
 		super(posX, posY, Permeability.HERO , sprite[0], direction, ID);
 	}
-	
+	/** the method setMoveSprite
+	 * Change the sprite when the hero is moving
+	 */
 	public void setMoveSprite(){
 		switch(this.direction){
 		case UP: this.setSprite(ImageLoader.player[4]);

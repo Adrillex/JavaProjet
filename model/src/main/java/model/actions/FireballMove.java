@@ -5,6 +5,10 @@ import model.Stage;
 
 public class FireballMove {
 	
+	
+	/**the method move
+	 * Manage the movements of the fireball
+	 */
 	public static void move(){
 		IElement goalPosition = Movement.getElementCoordinates(Stage.fireball, "move", Stage.elements);
 		if(goalPosition != null){

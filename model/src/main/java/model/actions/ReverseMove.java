@@ -4,6 +4,11 @@ import contract.Direction;
 
 public class ReverseMove {
 	
+	/** Reverse the direction of a mobile
+	 * 
+	 * @param direction
+	 * @return
+	 */
 	public static Direction reverseMove(Direction direction){
 		switch (direction) {
 		case UP:

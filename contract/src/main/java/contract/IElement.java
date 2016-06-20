@@ -2,6 +2,8 @@ package contract;
 
 import java.awt.image.BufferedImage;
 
+/* Interface IElement */
+
 public interface IElement {
 	
 	public int getPosX();

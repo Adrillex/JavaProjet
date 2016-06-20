@@ -1,5 +1,7 @@
 package contract;
 
+/* The enum Permeability */
+
 public enum Permeability {
 	BLOCKING, //It blocks everyone
 	PENETRABLE, //penetrable by the player, blocking the monsters

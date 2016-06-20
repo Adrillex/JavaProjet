@@ -7,7 +7,11 @@ import model.element.mobile.Hero;
 
 public class PlayerMove {
 	
-	
+	/** 
+	 * the method playerDirection
+	 * Update the direction of the player and try to execute the associated movement
+	 * @param direction
+	 */
 	public static void playerDirection(Direction direction){
 		for(Hero object : Stage.rLorannList){
 			object.setDirection(direction);
@@ -15,7 +19,10 @@ public class PlayerMove {
 		}
 		Move();
 	}
-
+	/**
+	 * The method move.
+	 * Move if allowed by the permeability of the element on the position. Or die if it's a monster.
+ 	*/
 	public static void Move(){
 		if (Stage.rLorannList.isEmpty() == false) {
 			for(Hero object : Stage.rLorannList){

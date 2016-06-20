@@ -8,12 +8,17 @@ public class Arrbarr extends Monster{
 	
 	private final static int ID = 1;
 	
+	/**the constructor Arrbarr
+	 * 
+	 * @param direction
+	 * @param posX
+	 * @param posY
+	 * @param picture
+	 */
+	
 	public Arrbarr(Direction direction, int posX, int posY, BufferedImage picture){
 		super(direction, posX, posY, picture, ID);
 		
 	}
 	
-	public void Action(){
-		
-	}
 }

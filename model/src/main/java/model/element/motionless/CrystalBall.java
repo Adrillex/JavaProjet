@@ -9,10 +9,17 @@ public class CrystalBall extends Motionless{
 	
 	private final static int ID = 6;
 	
+	/** The constructor CrystallBall
+	 * 
+	 * @param posX
+	 * @param posY
+	 * @param sprite
+	 */
 	public CrystalBall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 	}
 
-	public void setDirection(Direction direction) {		
+	public void setDirection(Direction direction) {
+		
 	}
 }

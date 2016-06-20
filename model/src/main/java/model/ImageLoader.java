@@ -5,6 +5,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/** The class ImageLoader.
+ * 
+ * @author Group 11
+ *
+ */
+
 public class ImageLoader {
 	
 	public static BufferedImage[] player;
@@ -19,6 +25,10 @@ public class ImageLoader {
 	public static BufferedImage monster_2;
 	public static BufferedImage monster_3;
 	public static BufferedImage monster_4;
+	
+	/** the method loadImage.
+	 * Load all sprite of the game in buffered Images.
+	 */
 	
 	public static void loadImage(){
 		

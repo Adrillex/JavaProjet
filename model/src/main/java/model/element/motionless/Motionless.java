@@ -7,6 +7,14 @@ import model.element.Element;
 
 public abstract class Motionless extends Element{
 
+	/**The constructor MotionLess
+	 * 
+	 * @param posX
+	 * @param posY
+	 * @param permeability
+	 * @param sprite
+	 * @param ID
+	 */
 	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID) {
 		super(posX, posY, permeability, sprite, ID);
 	}

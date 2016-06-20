@@ -13,9 +13,17 @@ import model.actions.SpriteSwitcher;
 import model.element.Bonus;
 import model.element.mobile.Hero;
 
+/** The class Model.
+ * 
+ * @author Group 10
+ */
 public class Model implements IModel {
+	
 	private boolean isKeyPressed = false;
 	
+	/** the attribute stage.
+	 * Actual loaded stage.
+	 */
 	private Stage stage;
 	private static int score;
 	private Bonus bPurse;
@@ -26,21 +34,12 @@ public class Model implements IModel {
 		score = 0;
 		bPurse = new Bonus(650);
 	}
-	
+	/** the method addToScore
+	 * 
+	 * @param bonus
+	 */
 	public static void addToScore(int bonus){
 		score = score + bonus;
-	}
-	
-	public int getScore(){
-		return score;
-	}
-	
-	public int getMonsterNumber(){
-		return Stage.monsterList.size();
-	}
-	
-	public int getBonusNumber(){
-		return Stage.purseList.size();
 	}
 	
 	public ArrayList<IElement> loadStage(int numStage){
@@ -76,14 +75,6 @@ public class Model implements IModel {
 		return null;
 	}
 
-	public void setKeyPressed(boolean isKeyPressed) {
-		this.isKeyPressed = isKeyPressed;
-	}
-	
-	public boolean getKeyPressed() {
-		return isKeyPressed;
-	}
-
 	public void monsterMove() {
 		MonsterMove.Move();
 	}
@@ -100,8 +91,30 @@ public class Model implements IModel {
 		SpriteSwitcher.lorannloader();;
 	}
 	
+	//getters
+	public int getScore(){
+		return score;
+	}
+	
+	public int getMonsterNumber(){
+		return Stage.monsterList.size();
+	}
+	
+	public int getBonusNumber(){
+		return Stage.purseList.size();
+	}
+	
 	public IElement getFireball(){
 		return Stage.fireball;
+	}
+	
+	public boolean getKeyPressed() {
+		return isKeyPressed;
+	}
+	
+	//setters
+	public void setKeyPressed(boolean isKeyPressed) {
+		this.isKeyPressed = isKeyPressed;
 	}
 
 }

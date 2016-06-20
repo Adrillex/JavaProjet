@@ -9,6 +9,12 @@ public class Wall extends Motionless{
 	
 	private final static int ID = 9;
 	
+	/**The constructor Wall
+	 * 
+	 * @param posX
+	 * @param posY
+	 * @param sprite
+	 */
 	public Wall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.BLOCKING, sprite, ID);
 	}

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 /**
  * The Interface IModel.
- *
  */
 public interface IModel {
 

@@ -11,9 +11,20 @@ public class Order {
 	private boolean up = false, down = false, left = false, right = false;
 	private IModel model;
 	
+	/** The Constructor Order.
+	 * 
+	 * @param model
+	 */
 	public Order(IModel model){
 		this.model = model;
 	}
+	
+	/** The method orderPerform.
+	 * 
+	 * @param order
+	 * 
+	 * Send an order to the character.
+	 */
 	public void orderPerform(final ControllerOrder order) {
 		switch(order){
 		case UP: this.model.playerDirection(Direction.UP);
@@ -39,7 +50,8 @@ public class Order {
 		}
 	}
 
-	/** Take the keycode and send an order to orderPerform @param keyCode**/
+	/** Take the keycode and send an order to orderPerform 
+	 * 	@param keyCode**/
 	protected ControllerOrder keyCodeToOrder(final int keyCode){
 		switch (keyCode){
 		
@@ -90,6 +102,9 @@ public class Order {
 		}
 	}
 	
+	/** the method setFalse
+	 * Set to false all attributes.
+	 */
 	public void setFalse(){
 		up = false;
 		down = false;

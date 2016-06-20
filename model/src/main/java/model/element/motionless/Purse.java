@@ -12,6 +12,13 @@ public class Purse extends Motionless{
 
 	private final static int ID = 8;
 	
+	/**The constructor Purse
+	 * 
+	 * @param posX
+	 * @param posY
+	 * @param sprite
+	 * @param bonus
+	 */
 	public Purse(int posX, int posY, BufferedImage sprite, Bonus bonus){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 		this.bonus = bonus;

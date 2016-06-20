@@ -9,20 +9,21 @@ public class Monster extends Mobile{
 	
 	static Permeability permeability = Permeability.KILLING;
 	
+	/** the constructor Monster 
+	 * 
+	 * @param direction
+	 * @param posX
+	 * @param posY
+	 * @param sprite
+	 * @param ID
+	 */
 	public Monster(Direction direction, int posX, int posY, BufferedImage sprite, int ID){
 		super(posX, posY, permeability , sprite, direction, ID);
 	}
-		
-	public void action(){
-		
-	}
-	
-	public boolean isThisMovePossible() {
-		
-		return false;
-	}
 
-	
+	/**
+	 * Reverse the direction
+	 */
 	public void reverse(){
 		switch (direction) {
 		case UP:

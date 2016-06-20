@@ -11,27 +11,23 @@ public abstract class Mobile extends Element implements IMobile{
 	
 	protected Direction direction;
 	
+	/** The constructor Mobile
+	 * 
+	 * @param posX
+	 * @param posY
+	 * @param permeability
+	 * @param sprite
+	 * @param direction
+	 * @param ID
+	 */
 	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID) {
 		super(posX, posY, permeability, sprite, ID);
 		this.direction = direction;
 	}
-
-	public Direction getDirection() {
-		return direction;
-	}
-
-	public void setDirection(Direction direction) {
-		this.direction = direction;
-	}
-
-	public void setPosX(int posX) {
-		this.posX = posX;
-	}
-
-	public void setPosY(int posY) {
-		this.posY = posY;
-	}
 	
+	/**The method move 
+	 * 
+	 */
 	public void move() {
 		switch (direction) {
 		case UP:
@@ -65,6 +61,25 @@ public abstract class Mobile extends Element implements IMobile{
 		default:
 			break;
 		}
+	}
+	
+	/**getters **/
+	
+	public Direction getDirection() {
+		return direction;
+	}
+	
+	//setters
+	public void setDirection(Direction direction) {
+		this.direction = direction;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
 	}
 
 

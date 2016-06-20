@@ -7,11 +7,19 @@ public class SpriteSwitcher {
 	static int i = 0;
 	static int j = 0;
 	
+	
+	/** fireballLoader
+	 * Change the fireball's sprite
+	 */
 	public static void fireBallLoader(){
 		if (i < 4) i ++;
 		else i = 0;
 		Stage.fireball.setSprite(ImageLoader.fireball[i]);
 	}
+	
+	/** loranloader method
+	 * change lorann's sprite
+	 */
 	
 	public static void lorannloader(){
 		if (j < 7) j ++;

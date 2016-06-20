@@ -8,11 +8,29 @@ import model.element.mobile.Mobile;
 
 public class Movement {
 
+	/**the method move
+	 * 
+	 * @param mobile
+	 * @param x
+	 * @param y
+	 * 
+	 * set the new position to a mobile
+	 */
 	
 	public static void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);
 	}
+	
+	/** the method getElementCoordinates
+	 * 
+	 * @param mobile
+	 * @param order
+	 * @param elements
+	 * @return
+	 * 
+	 * Allow us to know what type of element is on the goalPosition of the mobile
+	 */
 	
 	public static IElement getElementCoordinates(Mobile mobile, String order, ArrayList<IElement> elements) {
 		int x = mobile.getPosX() ,y = mobile.getPosY();

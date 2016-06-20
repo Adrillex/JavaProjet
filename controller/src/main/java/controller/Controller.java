@@ -2,10 +2,8 @@ package controller;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 
 import contract.IController;
-import contract.IElement;
 import contract.IModel;
 import contract.IView;
 
@@ -13,11 +11,16 @@ public class Controller implements IController, KeyListener, Runnable{
 
 	/** The model. */
 	private IModel model;
-	private IView view;
+	
+	/** time between two pressure on a key **/
 	private long time;
+	
+	/** Last time a key has been pressed **/
 	private long lasttime = 0;
+	
+	/** minimum time between each pressure on a key **/
 	private int t = 100;
-	private ArrayList <IElement> elements = null;
+
 	private Order order;
 	boolean k = false;
 	int l = 0;
@@ -25,7 +28,6 @@ public class Controller implements IController, KeyListener, Runnable{
 
 	/** Constructor. @param view, model **/
 	public Controller(final IView view, final IModel model) {
-		this.view = view;
 		this.model = model;
 		order = new Order(model);
 	}
@@ -33,7 +35,10 @@ public class Controller implements IController, KeyListener, Runnable{
 	public void keyTyped(KeyEvent e) {
 	}
 	
-	/** Wait for the user to press a key and send it to KeyCodeToOrder **/
+	/**
+	 * the method keyPressed
+	 * @param e 
+	 * Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
 		l = 0;
 		time = System.currentTimeMillis();
@@ -48,6 +53,8 @@ public class Controller implements IController, KeyListener, Runnable{
 		order.setFalse();
 	}
 	
+	/** the method run
+	 * Game loop **/
 	public void run() {
 		while (true) {
 			model.monsterMove();
@@ -60,7 +67,6 @@ public class Controller implements IController, KeyListener, Runnable{
 			try {
 				Thread.sleep(t);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

@@ -1,5 +1,7 @@
 package contract;
 
+/* Enum Direction */
+
 public enum Direction {
 	UP,
 	DOWN,
