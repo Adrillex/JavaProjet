@@ -162,7 +162,6 @@ public class Model implements IModel {
 					Hero hero = new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player);
 					rLorannList.add(hero);
 					elements.add(hero);
-					elementsMobile.add(hero);
 					break;
 				default:
 					break;
@@ -177,8 +176,8 @@ public class Model implements IModel {
 		
 	}
 	
-	private ArrayList<Mobile> getMobile(){
-		return null;
+	public ArrayList<IElement> getMobile(){
+		return elementsMobile;
 	}
 	
 	public void monsterMove(){

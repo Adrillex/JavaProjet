@@ -21,4 +21,6 @@ public interface IModel {
 	public boolean getKeyPressed();
 	
 	public void playerMove();
+	
+	public ArrayList<IElement> getMobile();
 }

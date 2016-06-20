@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 
 import contract.Permeability;
 import model.element.Bonus;
-import model.element.Sprite;
 
 public class Purse extends Motionless{
 	
@@ -14,6 +13,11 @@ public class Purse extends Motionless{
 	
 	public Purse(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
+		
+	}
+
+	public void Action() {
+		// TODO Auto-generated method stub
 		
 	}
 

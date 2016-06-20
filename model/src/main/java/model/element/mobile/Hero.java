@@ -51,4 +51,9 @@ public class Hero extends Mobile{
 		return false;
 		
 	}
+
+	public void Action() {
+		// TODO Auto-generated method stub
+		
+	}
 }

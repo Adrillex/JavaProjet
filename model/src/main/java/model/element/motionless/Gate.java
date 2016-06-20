@@ -17,5 +17,10 @@ public class Gate extends Motionless{
 	public boolean isOpen(){
 		return open;
 	}
+
+	public void Action() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

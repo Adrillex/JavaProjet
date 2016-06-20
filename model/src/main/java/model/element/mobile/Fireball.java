@@ -28,5 +28,9 @@ public class Fireball extends Mobile{
 	public boolean isThisMovePossible() {
 		return false;
 	}
+	public void Action() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

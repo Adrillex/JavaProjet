@@ -27,4 +27,9 @@ public class Monster extends Mobile{
 	public void move() {		
 	}
 
+	public void Action() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

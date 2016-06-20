@@ -24,5 +24,8 @@ public abstract class Main {
 		
 		view.setController(controller);
 		view.start();
+		
+		Thread ct = new Thread(controller);
+		ct.start();
 	}
 }

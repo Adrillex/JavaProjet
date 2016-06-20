@@ -11,7 +11,7 @@ import contract.IElement;
 import contract.IModel;
 import contract.IView;
 
-public class Controller implements IController, KeyListener{
+public class Controller implements IController, KeyListener, Runnable{
 
 	/** The model. */
 	private IModel model;
@@ -19,6 +19,8 @@ public class Controller implements IController, KeyListener{
 	private long time;
 	private long lasttime = 0;
 	private int t = 200;
+	ArrayList <IElement> elements = null;
+
 
 	/** Constructor. @param view, model **/
 	public Controller(final IView view, final IModel model) {
@@ -91,5 +93,21 @@ public class Controller implements IController, KeyListener{
 	}
 
 	public void keyReleased(KeyEvent e) {
+	}
+	
+	public void run() {
+		while (true) {
+			elements = model.getMobile();
+			for (IElement object : elements) {
+				object.Action();
+			}
+			try {
+				Thread.sleep(t);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 	}
 }

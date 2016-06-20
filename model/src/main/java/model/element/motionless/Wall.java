@@ -11,6 +11,11 @@ public class Wall extends Motionless{
 	public Wall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.BLOCKING, sprite, ID);
 	}
+
+	public void Action() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 	
