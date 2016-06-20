@@ -1,10 +1,12 @@
 package model;
 
 import java.util.ArrayList;
+
 import contract.Direction;
 import contract.IElement;
 import contract.IModel;
 import contract.Permeability;
+import model.actions.MonsterMove;
 import model.actions.Movement;
 import model.actions.PlayerMove;
 import model.element.mobile.Fireball;
@@ -29,10 +31,6 @@ public class Model implements IModel {
 	public ArrayList<IElement> loadStage(int numStage){
 		stage = new Stage(numStage);
 		return stage.LoadStage();
-	}
-	
-	public ArrayList<IElement> getMobile(){
-		return Stage.elementsMobile;
 	}
 	
 	public void playerDirection(Direction direction){
@@ -74,7 +72,8 @@ public class Model implements IModel {
 		return isKeyPressed;
 	}
 
-	public void monsterMove() {		
+	public void monsterMove() {
+		MonsterMove.Move();
 	}
 
 }

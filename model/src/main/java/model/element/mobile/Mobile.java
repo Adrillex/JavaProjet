@@ -32,6 +32,24 @@ public abstract class Mobile extends Element implements IMobile{
 		this.posY = posY;
 	}
 	
+	public void move() {
+		switch (direction) {
+		case UP:
+			posY ++;
+			break;
+		case DOWN:
+			posY --;
+			break;
+		case LEFT:
+			posX --;
+			break;
+		case RIGHT:
+			posX ++;
+			break;
+		default:
+			break;
+		}
+	}
 
 
 }

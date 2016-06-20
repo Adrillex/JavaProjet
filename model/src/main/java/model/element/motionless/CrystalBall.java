@@ -11,10 +11,4 @@ public class CrystalBall extends Motionless{
 	public CrystalBall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 	}
-
-	public void Action() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

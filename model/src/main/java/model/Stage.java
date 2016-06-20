@@ -13,6 +13,8 @@ import model.element.mobile.Cargyv;
 import model.element.mobile.Hero;
 import model.element.mobile.Kyrac;
 import model.element.mobile.Maarcg;
+import model.element.mobile.Mobile;
+import model.element.mobile.Monster;
 import model.element.motionless.CrystalBall;
 import model.element.motionless.Gate;
 import model.element.motionless.Purse;
@@ -28,7 +30,7 @@ public class Stage {
 	public static ArrayList <Gate> gateOList;
 	public static ArrayList <Hero> rLorannList;
 	public static ArrayList <IElement> elements;
-	public static ArrayList <IElement> elementsMobile;
+	public static ArrayList <Monster> monsterList;
 	
 	public Stage(int numStage)
 	{
@@ -42,8 +44,7 @@ public class Stage {
 		gateOList = new ArrayList <Gate>();
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
-		elementsMobile = new ArrayList <IElement>();
-	
+		monsterList = new ArrayList <Monster>();
 		DBConnection instance = DBConnection.getInstance();
 		final String sql = "{call seeStage" + numStage + "}";
 		CallableStatement call;
@@ -99,27 +100,27 @@ public class Stage {
 					break;
 				case 8:
 					// round wall
-					Arrbarr arrbarr = new Arrbarr(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1);
+					Arrbarr arrbarr = new Arrbarr(Direction.RIGHT ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_1);
 					elements.add(arrbarr);
-					elementsMobile.add(arrbarr);
+					monsterList.add(arrbarr);
 					break;
 				case 9:
 					// round wall
 					Cargyv cargyv = new Cargyv(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_2);
 					elements.add(cargyv);
-					elementsMobile.add(cargyv);
+					monsterList.add(cargyv);
 					break;
 				case 10:
 					// round wall
 					Kyrac kyrac = new Kyrac(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_3);
 					elements.add(kyrac);
-					elementsMobile.add(kyrac);
+					monsterList.add(kyrac);
 					break;
 				case 11:
 					// round wall
 					Maarcg maarcg = new Maarcg(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.monster_4);
 					elements.add(maarcg);
-					elementsMobile.add(maarcg);
+					monsterList.add(maarcg);
 					break;
 				case 12:
 					Hero hero = new Hero(Direction.UP ,rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.player);

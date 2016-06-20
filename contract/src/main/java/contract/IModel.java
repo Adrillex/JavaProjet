@@ -21,6 +21,4 @@ public interface IModel {
 	public boolean getKeyPressed();
 	
 	public int getScore();
-		
-	public ArrayList<IElement> getMobile();
 }

@@ -36,7 +36,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	/** Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
 		time = System.currentTimeMillis();
-		if (time - lasttime > t) {
+		if (time - lasttime >= t) {
 			lasttime = time;
 			order.orderPerform(this.order.keyCodeToOrder(e.getKeyCode()));
 		}
@@ -48,10 +48,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	
 	public void run() {
 		while (true) {
-			elements = model.getMobile();
-			for (IElement object : elements) {
-				object.Action();
-			}
+			model.monsterMove();
 			try {
 				Thread.sleep(t);
 			} catch (InterruptedException e) {
@@ -59,6 +56,5 @@ public class Controller implements IController, KeyListener, Runnable{
 				e.printStackTrace();
 			}
 		}
-		
 	}
 }

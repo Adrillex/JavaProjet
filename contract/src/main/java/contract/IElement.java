@@ -21,7 +21,5 @@ public interface IElement {
 	public boolean getState();
 	
 	public void setExisting();
-	
-	public void Action();
 }
 

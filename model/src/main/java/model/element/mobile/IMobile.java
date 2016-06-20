@@ -10,4 +10,5 @@ public interface IMobile {
 	public void setPosX(int posX);
 	public void setPosY(int posY);
 	public boolean isThisMovePossible();
+	public void Action();
 }
