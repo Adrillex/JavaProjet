@@ -7,12 +7,13 @@ import model.element.Bonus;
 
 public class Purse extends Motionless{
 	
-	protected Bonus bonus;
+	public Bonus bonus;
 
 	private final static int ID = 8;
 	
-	public Purse(int posX, int posY, BufferedImage sprite){
+	public Purse(int posX, int posY, BufferedImage sprite, Bonus bonus){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
+		this.bonus = bonus;
 		
 	}
 }

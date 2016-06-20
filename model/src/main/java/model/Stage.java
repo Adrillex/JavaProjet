@@ -1,5 +1,4 @@
 package model;
-
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,12 +7,12 @@ import java.util.ArrayList;
 import contract.Direction;
 import contract.IElement;
 import model.database.DBConnection;
+import model.element.Bonus;
 import model.element.mobile.Arrbarr;
 import model.element.mobile.Cargyv;
 import model.element.mobile.Hero;
 import model.element.mobile.Kyrac;
 import model.element.mobile.Maarcg;
-import model.element.mobile.Mobile;
 import model.element.mobile.Monster;
 import model.element.motionless.CrystalBall;
 import model.element.motionless.Gate;
@@ -23,7 +22,7 @@ import model.element.motionless.Wall;
 public class Stage {
 	
 	private int numStage;
-	
+	private Bonus bPurse;
 	public static ArrayList <CrystalBall> cBallList;
 	public static ArrayList <Purse> purseList;
 	public static ArrayList <Gate> gateCList;
@@ -32,9 +31,9 @@ public class Stage {
 	public static ArrayList <IElement> elements;
 	public static ArrayList <Monster> monsterList;
 	
-	public Stage(int numStage)
-	{
+	public Stage(int numStage, Bonus bPurse){
 		this.numStage = numStage;
+		this.bPurse = bPurse;
 	}
 
 	public ArrayList <IElement> LoadStage(){
@@ -82,7 +81,7 @@ public class Stage {
 					break;
 				case 5:
 					// round wall
-					Purse purse = new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse);
+					Purse purse = new Purse(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.purse, bPurse);
 					purseList.add(purse);
 					elements.add(purse);
 					break;

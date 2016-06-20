@@ -9,6 +9,7 @@ import contract.Permeability;
 import model.actions.MonsterMove;
 import model.actions.Movement;
 import model.actions.PlayerMove;
+import model.element.Bonus;
 import model.element.mobile.Fireball;
 import model.element.mobile.Hero;
 
@@ -16,20 +17,36 @@ public class Model implements IModel {
 	private boolean isKeyPressed = false;
 	
 	private Stage stage;
-	private int score;
+	private static int score;
+	private Bonus bPurse;
+	private static Bonus bMonster;
 
 	/** Instantiates a new model */
 	public Model() {
 		ImageLoader.loadImage();
 		score = 0;
+		bPurse = new Bonus(650);
+		bMonster = new Bonus(100);
+	}
+	
+	public static void addToScore(int bonus){
+		score = score + bonus;
 	}
 	
 	public int getScore(){
 		return score;
 	}
 	
+	public int getMonsterNumber(){
+		return Stage.monsterList.size();
+	}
+	
+	public int getBonusNumber(){
+		return Stage.purseList.size();
+	}
+	
 	public ArrayList<IElement> loadStage(int numStage){
-		stage = new Stage(numStage);
+		stage = new Stage(numStage, bPurse);
 		return stage.LoadStage();
 	}
 	

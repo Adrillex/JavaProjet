@@ -2,7 +2,7 @@ package model.element;
 
 public class Bonus implements IBonus{
 
-	public int bonus;
+	private int bonus;
 	
 	public Bonus(int bonus){
 		this.bonus = bonus;

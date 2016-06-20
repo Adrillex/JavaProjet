@@ -2,6 +2,7 @@ package model.actions;
 
 import contract.Direction;
 import contract.IElement;
+import model.Model;
 import model.Stage;
 import model.element.mobile.Hero;
 
@@ -22,8 +23,12 @@ public class PlayerMove {
 			if(goalPosition != null){
 				switch(goalPosition.getPermeability()){
 				case PENETRABLE: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
-				goalPosition.setExisting();
 				Stage.elements.remove(goalPosition);
+				if(Stage.purseList.contains(goalPosition)){	
+					
+				}
+				goalPosition.setExisting();
+				
 					break;
 				case BLOCKING:
 					break;
