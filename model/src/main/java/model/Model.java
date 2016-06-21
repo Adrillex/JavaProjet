@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-
 import contract.Direction;
 import contract.IElement;
 import contract.IModel;
@@ -12,18 +11,13 @@ import model.actions.PlayerMove;
 import model.actions.SpriteSwitcher;
 import model.element.Bonus;
 import model.element.mobile.Hero;
-
 /** The class Model.
- * 
- * @author Group 10
- */
+ * @author Group 10  */
 public class Model implements IModel {
 	
 	private boolean isKeyPressed = false;
-	
 	/**Actual loaded stage.**/
 	private Stage stage;
-	
 	/**Actual score of the player **/
 	private static int score;
 	
@@ -58,19 +52,19 @@ public class Model implements IModel {
 		return null;
 	}
 	
-	
 	/**the method playerDirection
 	 * 
 	 * Launch the playerDirection method in PlayerMove
 	 * @throws Exception 
+	 * 	playerDir
 	 */
 	public void playerDirection(Direction direction) throws Exception{
 		PlayerMove.playerDirection(direction);
 	}
-
 	/**the method playerSHot
 	 * Allows to cast the fireball spell
 	 * @throws Exception 
+	 * 	playerShot
 	 */
 	public void playerShot() throws Exception {
 		ArrayList<Hero> rLorannList = Stage.rLorannList;
@@ -81,10 +75,7 @@ public class Model implements IModel {
 			Movement.getElementCoordinates(Stage.fireball, "attack", Stage.elements);
 		}
 	}
-
-	
-	/**
-	 * the method fireballDirection
+	/** the method fireballDirection
 	 * @param playerDir
 	 * 	Direction of the player
 	 * @return
@@ -105,13 +96,15 @@ public class Model implements IModel {
 	}
 	
 	/** Call the monsterMove method 
-	 * @throws Exception **/
+	 * @throws Exception 
+	 * 	monsterMove **/
 	public void monsterMove() throws Exception {
 		MonsterMove.Move();
 	}
 	
 	/** Call the fireballMove method 
-	 * @throws Exception **/
+	 * @throws Exception 
+	 * 	monstermove **/
 	public void fireballMove() throws Exception{
 		FireballMove.move();
 	}

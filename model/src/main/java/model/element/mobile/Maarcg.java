@@ -17,6 +17,8 @@ public class Maarcg extends Monster{
 	 * 	Position Y of Maarcg
 	 * @param sprite
 	 * 	sprite of Maarcg
+	 * 	@throws Exception
+	 * 	Error in Position
 	 */
 	public Maarcg(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(direction, posX, posY, sprite, ID);

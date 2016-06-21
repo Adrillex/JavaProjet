@@ -18,6 +18,8 @@ public class Cargyv extends Monster{
 	 * 	Position Y of Cargyv
 	 * @param sprite
 	 * 	sprite of Cargyv
+	 * @throws Exception
+	 * 	Error in Position
 	 */
 	public Cargyv(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(direction, posX, posY, sprite, ID);

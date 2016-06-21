@@ -1,7 +1,6 @@
 package model.element.motionless;
 
 import java.awt.image.BufferedImage;
-import contract.Direction;
 import contract.Permeability;
 import model.element.Bonus;
 
@@ -12,7 +11,6 @@ public class Purse extends Motionless{
 	private final static int ID = 8;
 	
 	/**The constructor Purse
-	 * 
 	 * @param posX
 	 * 	The position X of the purse
 	 * @param posY
@@ -21,6 +19,9 @@ public class Purse extends Motionless{
 	 * 	The sprite of the purse
 	 * @param bonus
 	 * 	The bonus of the purse
+	 * 
+	 * @throws Exception
+	 * 	Error in position
 	 */
 	public Purse(int posX, int posY, BufferedImage sprite, Bonus bonus)throws Exception{
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);

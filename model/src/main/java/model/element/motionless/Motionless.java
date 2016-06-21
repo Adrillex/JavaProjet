@@ -18,6 +18,9 @@ public abstract class Motionless extends Element{
 	 * 	The sprite of the motionless element
 	 * @param ID
 	 * 	The id of the motionless element
+	 * 
+	 *  @throws Exception
+	 * 		Error in position
 	 */
 	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID)throws Exception{
 		super(posX, posY, permeability, sprite, ID);
