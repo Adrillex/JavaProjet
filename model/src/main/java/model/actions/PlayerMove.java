@@ -2,8 +2,12 @@ package model.actions;
 
 import contract.Direction;
 import contract.IElement;
+import contract.Permeability;
+import model.ImageLoader;
+import model.Model;
 import model.Stage;
 import model.element.mobile.Hero;
+import model.element.motionless.Gate;
 
 public class PlayerMove {
 	
@@ -33,7 +37,14 @@ public class PlayerMove {
 					case PENETRABLE: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
 					Stage.elements.remove(goalPosition);
 					if(Stage.purseList.contains(goalPosition)){	
-						
+						Model.addToScore(650);
+					}
+					else if(Stage.cBallList.contains(goalPosition)){
+						for (Gate gate : Stage.gateList) {
+							gate.setOpen(true);
+							gate.setSprite(ImageLoader.gate[1]);
+							gate.setPermeability(Permeability.GATE);
+						}
 					}
 					goalPosition.setExisting(false);
 					

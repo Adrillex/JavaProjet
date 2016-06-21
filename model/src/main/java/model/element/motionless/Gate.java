@@ -27,7 +27,11 @@ public class Gate extends Motionless{
 	 * @return
 	 * Verify if the door is open
 	 */
-	public boolean isOpen(){
+	public boolean getOpen(){
 		return open;
+	}
+	
+	public void setOpen(boolean open){
+		this.open = open;
 	}
 }

@@ -25,8 +25,6 @@ public abstract class Element implements IElement{
 	 * 	Sprite of the element
 	 * @param ID
 	 * 	ID of the element
-	 * @throws Exception
-	 * 	prevent posX and posY to have some forbidden values
 	 */
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID) throws Exception{
 		if(posX < 0 || posX >= 20)
@@ -73,5 +71,9 @@ public abstract class Element implements IElement{
 	
 	public void setSprite(BufferedImage sprite){
 		this.sprite = sprite;
+	}
+	
+	public void setPermeability(Permeability permeability){
+		this.permeability = permeability;
 	}
 }

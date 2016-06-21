@@ -1,4 +1,5 @@
 package model;
+
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,8 +27,7 @@ public class Stage {
 	private Bonus bPurse;
 	public static ArrayList <CrystalBall> cBallList;
 	public static ArrayList <Purse> purseList;
-	public static ArrayList <Gate> gateCList;
-	public static ArrayList <Gate> gateOList;
+	public static ArrayList <Gate> gateList;
 	public static ArrayList <Hero> rLorannList;
 	public static ArrayList <IElement> elements;
 	public static ArrayList <Monster> monsterList;
@@ -47,8 +47,7 @@ public class Stage {
 	public ArrayList <IElement> LoadStage()throws Exception{
 		cBallList = new ArrayList <CrystalBall>();
 		purseList = new ArrayList <Purse>();
-		gateCList = new ArrayList <Gate>();
-		gateOList = new ArrayList <Gate>();
+		gateList = new ArrayList <Gate>();
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
 		monsterList = new ArrayList <Monster>();
@@ -100,14 +99,10 @@ public class Stage {
 				case 6:
 					// round wall
 					Gate gate = new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate);
-					gateCList.add(gate);
+					gateList.add(gate);
 					elements.add(gate);
 					break;
 				case 7:
-					// round wall
-					Gate gate2 = new Gate(rs.getInt("coord_X"), rs.getInt("coord_Y"), ImageLoader.gate);
-					gateOList.add(gate2);
-					elements.add(gate2);
 					break;
 				case 8:
 					// round wall

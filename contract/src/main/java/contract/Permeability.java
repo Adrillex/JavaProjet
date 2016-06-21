@@ -8,5 +8,6 @@ public enum Permeability {
 	PENETRABLE, //penetrable by the player, blocking the monsters
 	KILLING, //things that kill the player
 	KILLER, //thing that kill the monsters
-	HERO; //thing that is the hero
+	HERO, //thing that is the hero
+	GATE; //thing that is the gate
 }

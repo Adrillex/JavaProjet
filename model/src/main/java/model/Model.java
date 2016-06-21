@@ -34,7 +34,6 @@ public class Model implements IModel {
 	public Model() {
 		ImageLoader.loadImage();
 		score = 0;
-		bPurse = new Bonus(650);
 	}
 	/** Add bonus point to the actual score
 	 * 
@@ -63,21 +62,17 @@ public class Model implements IModel {
 	/**the method playerDirection
 	 * 
 	 * Launch the playerDirection method in PlayerMove
-	 * 
-	 * @throws Exception
-	 * 	playerDirection
+	 * @throws Exception 
 	 */
-	public void playerDirection(Direction direction)throws Exception{
+	public void playerDirection(Direction direction) throws Exception{
 		PlayerMove.playerDirection(direction);
 	}
 
 	/**the method playerSHot
-	 * Allows to cast the Fireball spell
-	 * 
-	 * @throws Exception
-	 * 	Fireball
+	 * Allows to cast the fireball spell
+	 * @throws Exception 
 	 */
-	public void playerShot()throws Exception {
+	public void playerShot() throws Exception {
 		ArrayList<Hero> rLorannList = Stage.rLorannList;
 		for (int i = 0; i < rLorannList.size(); i++) {
 			Stage.fireball.setDirection(fireballDirection(Stage.rLorannList.get(0).getDirection()));
@@ -109,13 +104,15 @@ public class Model implements IModel {
 		return playerDir;
 	}
 	
-	/** Call the monsterMove method **/
-	public void monsterMove()throws Exception {
+	/** Call the monsterMove method 
+	 * @throws Exception **/
+	public void monsterMove() throws Exception {
 		MonsterMove.Move();
 	}
 	
-	/** Call the fireballMove method **/
-	public void fireballMove()throws Exception{
+	/** Call the fireballMove method 
+	 * @throws Exception **/
+	public void fireballMove() throws Exception{
 		FireballMove.move();
 	}
 	
