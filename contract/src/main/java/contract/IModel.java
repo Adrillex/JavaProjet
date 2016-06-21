@@ -9,11 +9,11 @@ public interface IModel {
 
 	public ArrayList<IElement> loadStage(int stage);
 	
-	public void playerDirection(Direction direction);
+	public void playerDirection(Direction direction) throws Exception;
 	
-	public void monsterMove();
+	public void monsterMove() throws Exception;
 	
-	public void playerShot();
+	public void playerShot() throws Exception;
 	
 	public void setKeyPressed(boolean isKeyPressed);
 	
@@ -25,7 +25,7 @@ public interface IModel {
 	
 	public int getBonusNumber();
 
-	public void fireballMove();
+	public void fireballMove() throws Exception;
 	
 	public IElement getFireball();
 	

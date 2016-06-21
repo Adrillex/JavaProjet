@@ -16,8 +16,10 @@ public class Movement {
 	 * 	the actual position x of the mobile
 	 * @param y
 	 * 	the actual position y of the mobile
+	 * @throws Exception 
+	 * 	Prevent forbidden modification of posX and posY
 	 */
-	public static void move(Mobile mobile, int x, int y){
+	public static void move(Mobile mobile, int x, int y) throws Exception{
 		mobile.setPosX(x);
 		mobile.setPosY(y);
 	}
@@ -35,7 +37,7 @@ public class Movement {
 	 * Allow us to know what type of element is on the goalPosition of the mobile
 	 */
 	
-	public static IElement getElementCoordinates(Mobile mobile, String order, ArrayList<IElement> elements) {
+	public static IElement getElementCoordinates(Mobile mobile, String order, ArrayList<IElement> elements)throws Exception{
 		int x = mobile.getPosX() ,y = mobile.getPosY();
 		switch(mobile.getDirection()){
 		case UP: y = mobile.getPosY() - 1; 
@@ -59,7 +61,6 @@ public class Movement {
 					  x = mobile.getPosX() - 1;
 		break; 
 		}
-		//System.out.println("Coordonnées précédentes : x = "+mobile.getPosX()+" y = "+mobile.getPosY());
 		for(IElement goalPosition : elements){
 			if (goalPosition.getPermeability() == Permeability.KILLER && goalPosition.getState()) {
 				System.out.println("bolos");

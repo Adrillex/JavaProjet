@@ -79,11 +79,22 @@ public abstract class Mobile extends Element implements IMobile{
 		this.direction = direction;
 	}
 
-	public void setPosX(int posX) {
+	/**setPosX
+	 * @throws Exception
+	 * 	prevent posX to have forbidden values
+	 */
+	public void setPosX(int posX) throws Exception {
+		if(posX < 0 || posX >= 20 )
+			throw new Exception("PosX not correct!");
 		this.posX = posX;
 	}
-
-	public void setPosY(int posY) {
+	/**setPosY
+	 * @throws Exception
+	 * 	prevent posY to have forbidden values
+	 */
+	public void setPosY(int posY) throws Exception {
+		if(posY < 0 || posY >= 12)
+			throw new Exception("PosY not correct!");
 		this.posY = posY;
 	}
 

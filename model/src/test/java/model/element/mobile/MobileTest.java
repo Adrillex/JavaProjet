@@ -10,10 +10,7 @@ import contract.Direction;
 import model.ImageLoader;
 
 public class MobileTest {
-
-	
 	private Mobile mobile;
-	
 	/**
 	 * Initialization of the sprite
 	 * @throws Exception
@@ -23,7 +20,6 @@ public class MobileTest {
 	public static void setUpBeforeClass() throws Exception {
 		ImageLoader.loadImage();
 	}
-
 	/** Instantiation of a mobile using the Hero constructor
 	 * @throws Exception
 	 * 	Before**/
@@ -31,7 +27,6 @@ public class MobileTest {
 	public void setUp() throws Exception {
 	mobile = new Hero(Direction.RIGHT, 5, 6, ImageLoader.player);	
 	}
-
 	/**
 	 * Test of getDirection. 
 	 */
@@ -39,21 +34,18 @@ public class MobileTest {
 	public void testGetDirection() {
 		assertEquals(Direction.RIGHT, this.mobile.getDirection());
 	}
-
 	/** Test of the setter of Direction **/
 	@Test
 	public void testSetDirection() {
 		this.mobile.setDirection(Direction.LEFT);
 		assertEquals(Direction.LEFT, this.mobile.getDirection());
 	}
-	
 	/** Test of the movement to the right **/
 	@Test
 	public void testMoveRight() {
 		this.mobile.move();
 		assertEquals(6, this.mobile.getPosX());
 	}
-	
 	/** Test of the movement to the top **/
 	@Test
 	public void testMoveUp() {
@@ -61,21 +53,18 @@ public class MobileTest {
 		this.mobile.move();
 		assertEquals(5, this.mobile.getPosY());	
 		}
-	
 	/** Test of the movement to the bottom **/
 	@Test
 	public void testMoveDown() {
 		this.mobile.setDirection(Direction.DOWN);
 		this.mobile.move();
 		assertEquals(7, this.mobile.getPosY());	}
-	
 	/** Test of the movement to the left **/
 	@Test
 	public void testMoveLeft() {
 		this.mobile.setDirection(Direction.LEFT);
 		this.mobile.move();
 		assertEquals(4, this.mobile.getPosX());	}
-	
 	/** Test of the movement to the upper-right **/
 	@Test
 	public void testMoveUpperRight() {
@@ -84,7 +73,6 @@ public class MobileTest {
 		assertEquals(6, this.mobile.getPosX());	
 		assertEquals(5, this.mobile.getPosY());
 		}
-	
 	/** Test of the movement to the upper-left **/
 	@Test
 	public void testMoveUpperLeft() {
@@ -93,7 +81,6 @@ public class MobileTest {
 		assertEquals(4, this.mobile.getPosX());
 		assertEquals(5, this.mobile.getPosY());
 	}
-	
 	/** Test of the movement to the bottom-right **/
 	@Test
 	public void testMoveBottomRight() {
@@ -102,7 +89,6 @@ public class MobileTest {
 		assertEquals(6, this.mobile.getPosX());	
 		assertEquals(7, this.mobile.getPosY());
 		}
-	
 	/** Test of the movement to the bottom-left **/
 	@Test
 	public void testMoveBottomLeft() {
@@ -111,5 +97,20 @@ public class MobileTest {
 		assertEquals(4, this.mobile.getPosX());
 		assertEquals(7, this.mobile.getPosY());
 	}
-
+	/**Test of the posX setter 
+	 * @throws Exception 
+	 * 	prevent posX to have forbidden values**/
+	@Test
+	public void testSetPosX() throws Exception {
+		this.mobile.setPosX(3);
+		assertEquals(3, this.mobile.getPosX());
+	}
+	/**Test of the posY setter 
+	 * @throws Exception 
+	 * 	prevent posY to have forbidden values**/
+	@Test
+	public void testSetPosY() throws Exception {
+		this.mobile.setPosY(10);
+		assertEquals(10, this.mobile.getPosY());
+	}
 }

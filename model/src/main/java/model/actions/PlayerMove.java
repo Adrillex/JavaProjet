@@ -13,7 +13,7 @@ public class PlayerMove {
 	 * @param direction
 	 * 	the new direction of the player
 	 */
-	public static void playerDirection(Direction direction){
+	public static void playerDirection(Direction direction)throws Exception{
 		for(Hero object : Stage.rLorannList){
 			object.setDirection(direction);
 			object.setMoveSprite();
@@ -24,7 +24,7 @@ public class PlayerMove {
 	 * The method move.
 	 * Move if allowed by the permeability of the element on the position. Or die if it's a monster.
  	*/
-	public static void Move(){
+	public static void Move()throws Exception{
 		if (Stage.rLorannList.isEmpty() == false) {
 			for(Hero object : Stage.rLorannList){
 				IElement goalPosition = Movement.getElementCoordinates(object, "move", Stage.elements);

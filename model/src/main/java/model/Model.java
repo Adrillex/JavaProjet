@@ -63,15 +63,21 @@ public class Model implements IModel {
 	/**the method playerDirection
 	 * 
 	 * Launch the playerDirection method in PlayerMove
+	 * 
+	 * @throws Exception
+	 * 	playerDirection
 	 */
-	public void playerDirection(Direction direction){
+	public void playerDirection(Direction direction)throws Exception{
 		PlayerMove.playerDirection(direction);
 	}
 
 	/**the method playerSHot
-	 * Allows to cast the fireball spell
+	 * Allows to cast the Fireball spell
+	 * 
+	 * @throws Exception
+	 * 	Fireball
 	 */
-	public void playerShot() {
+	public void playerShot()throws Exception {
 		ArrayList<Hero> rLorannList = Stage.rLorannList;
 		for (int i = 0; i < rLorannList.size(); i++) {
 			Stage.fireball.setDirection(fireballDirection(Stage.rLorannList.get(0).getDirection()));
@@ -104,12 +110,12 @@ public class Model implements IModel {
 	}
 	
 	/** Call the monsterMove method **/
-	public void monsterMove() {
+	public void monsterMove()throws Exception {
 		MonsterMove.Move();
 	}
 	
 	/** Call the fireballMove method **/
-	public void fireballMove(){
+	public void fireballMove()throws Exception{
 		FireballMove.move();
 	}
 	

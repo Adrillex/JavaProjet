@@ -8,8 +8,10 @@ public class FireballMove {
 	
 	/**
 	 * Manage the movements of the fireball
+	 * @throws Exception 
+	 * 	goalPosition
 	 */
-	public static void move(){
+	public static void move() throws Exception{
 		IElement goalPosition = Movement.getElementCoordinates(Stage.fireball, "move", Stage.elements);
 		if(goalPosition != null){
 			switch(goalPosition.getPermeability()){

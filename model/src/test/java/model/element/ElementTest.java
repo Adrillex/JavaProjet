@@ -100,18 +100,4 @@ public class ElementTest {
 	    }
 	}
 
-	/**Test of the posX setter **/
-	@Test
-	public void testSetPosX() {
-		this.element.setPosX(3);
-		assertEquals(3, this.element.getPosX());
-	}
-
-	/**Test of the posY setter **/
-	@Test
-	public void testSetPosY() {
-		this.element.setPosY(10);
-		assertEquals(10, this.element.getPosY());
-	}
-
 }

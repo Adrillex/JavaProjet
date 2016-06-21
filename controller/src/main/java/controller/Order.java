@@ -25,9 +25,12 @@ public class Order {
 	 * @param order
 	 * 	The order to execute
 	 * 
+	 * @throws Exception
+	 * 	playerDirection
+	 * 
 	 * Send an order to the character.
 	 */
-	public void orderPerform(final ControllerOrder order) {
+	public void orderPerform(final ControllerOrder order) throws Exception{
 		switch(order){
 		case UP: this.model.playerDirection(Direction.UP);
 			break;

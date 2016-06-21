@@ -6,8 +6,10 @@ import model.element.mobile.Monster;
 
 public class MonsterMove {
 	
-	/** Manage the movements of monster */
-	public static void Move(){
+	/** Manage the movements of monster 
+	 * @throws Exception 
+	 * 	GoalPosition*/
+	public static void Move() throws Exception{
 		if (Stage.monsterList.isEmpty() == false) {
 			for(Monster object : Stage.monsterList){
 				IElement goalPosition = Movement.getElementCoordinates(object, "move", Stage.elements);

@@ -50,7 +50,11 @@ public class Controller implements IController, KeyListener, Runnable{
 		time = System.currentTimeMillis();
 		if (time - lasttime >= t) {
 			lasttime = time;
-			order.orderPerform(this.order.keyCodeToOrder(e.getKeyCode()));
+			try {
+				order.orderPerform(this.order.keyCodeToOrder(e.getKeyCode()));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 
@@ -69,10 +73,15 @@ public class Controller implements IController, KeyListener, Runnable{
 	 * Game loop **/
 	public void run() {
 		while (true) {
-			model.monsterMove();
-			if(model.getFireball().getState()){
-				model.fireballMove();
-				model.switchFireBallSprite();
+			try {
+				model.monsterMove();
+				if(model.getFireball().getState()){
+					model.fireballMove();
+					model.switchFireBallSprite();
+				}
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 			if (l >= 300/t ) {
 				model.switchLorannSprite();
