@@ -41,11 +41,13 @@ public class PlayerMove {
 					case BLOCKING:
 						break;
 					case KILLING:
+						System.out.println("coucou");
 						Stage.rLorannList.get(0).setExisting(false);
-						Stage.elements.remove(Stage.elements.indexOf(Stage.rLorannList.get(0)));
-						Stage.rLorannList.remove(0);
 						break;
-					case KILLER: Stage.fireball.setExisting(false);
+					case KILLER: 
+						Stage.fireball.setExisting(false);
+						Stage.fireball.setPosX(19);
+						Stage.fireball.setPosY(11);
 						break;
 					default: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
 						break;

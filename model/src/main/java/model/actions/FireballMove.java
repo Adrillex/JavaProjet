@@ -25,8 +25,6 @@ public class FireballMove {
 					
 				case KILLING:
 					goalPosition.setExisting(false);
-					Stage.monsterList.remove(goalPosition);
-					Stage.elements.remove(goalPosition);
 					Stage.fireball.setExisting(false);
 					break;
 					

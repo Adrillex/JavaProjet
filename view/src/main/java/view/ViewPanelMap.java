@@ -42,13 +42,7 @@ public class ViewPanelMap extends JPanel{
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
 				if(elements.get(k).getState() == false){
-					if (elements.get(k).getID() == 5) {
-						k++;
-					}
-					else {
-						elements.remove(elements.get(k));
-						updateMap();
-					}
+					k++;
 				}
 				if (elements.get(k).getPosX() == i && elements.get(k).getPosY() == j){
 					ImageIcon icon = new ImageIcon(elements.get(k).getSprite());

@@ -62,12 +62,10 @@ public class Movement {
 		break; 
 		}
 		for(IElement goalPosition : elements){
-			if (goalPosition.getPermeability() == Permeability.KILLER && goalPosition.getState()) {
-				System.out.println("bolos");
-			}
 			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y && goalPosition.getState()){
 				return goalPosition;
-			}}
+			}
+		}
 		if(order == "move")
 			move(mobile, x, y);
 		else{
