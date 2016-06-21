@@ -21,11 +21,13 @@ public class Model implements IModel {
 	
 	private boolean isKeyPressed = false;
 	
-	/** the attribute stage.
-	 * Actual loaded stage.
-	 */
+	/**Actual loaded stage.**/
 	private Stage stage;
+	
+	/**Actual score of the player **/
 	private static int score;
+	
+	/**Bonus point given by the purse **/
 	private Bonus bPurse;
 
 	/** Instantiates a new model */
@@ -34,9 +36,9 @@ public class Model implements IModel {
 		score = 0;
 		bPurse = new Bonus(650);
 	}
-	/** the method addToScore
+	/** Add bonus point to the actual score
 	 * 
-	 * @param bonus
+	 * @param bonus 
 	 * Add bonus points to the total score
 	 */
 	public static void addToScore(int bonus){
@@ -78,6 +80,7 @@ public class Model implements IModel {
 	/**
 	 * the method fireballDirection
 	 * @param playerDir
+	 * 	Direction of the player
 	 * @return
 	 * Gives the new direction of the fireball
 	 */
@@ -92,20 +95,25 @@ public class Model implements IModel {
 		case UPPER_LEFT: return Direction.BOTTOM_RIGHT;
 		case UPPER_RIGHT: return Direction.BOTTOM_RIGHT;
 		}
-		return null;
+		return playerDir;
 	}
+	
+	/** Call the monsterMove method **/
 	public void monsterMove() {
 		MonsterMove.Move();
 	}
 	
+	/** Call the fireballMove method **/
 	public void fireballMove(){
 		FireballMove.move();
 	}
 	
+	/** Call the SpriteSwitcher method **/
 	public void switchFireBallSprite(){
 		SpriteSwitcher.fireBallLoader();
 	}
 	
+	/**Allow Lorann to change his Sprite **/
 	public void switchLorannSprite(){
 		SpriteSwitcher.lorannloader();;
 	}

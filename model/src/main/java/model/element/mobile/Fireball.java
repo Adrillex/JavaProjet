@@ -11,10 +11,13 @@ public class Fireball extends Mobile{
 	/** the constructor Fireball
 	 * 
 	 * @param direction
+	 * 	Direction of the Fireball
 	 * @param posX
+	 * 	Position X of the Fireball
 	 * @param posY
-	 * @param sprite
-	 * @throws IOException 
+	 * 	Position Y of the fireball
+	 * @param sprite 
+	 * 	Actual sprite of the fireball
 	 */
 	public Fireball(Direction direction, int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.KILLER, sprite,  direction, ID);

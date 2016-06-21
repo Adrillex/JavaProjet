@@ -13,15 +13,19 @@ import contract.IModel;
 /**
  * The Class ViewPanel.
  *
- * @author Jean-Aymeric Diet
+ * @author group 10
  */
 class ViewPanel extends JPanel {
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -998294702363713521L;
 	
-	
+	/** The ArrayList of elements **/
 	public ArrayList<IElement> element;
+	
+	/**The map Panel **/
 	private ViewPanelMap mapPan;
+	
+	/**The score panel **/
 	private ViewPanelScore scorePan;
 	
 
@@ -39,6 +43,10 @@ class ViewPanel extends JPanel {
 		this.add(scorePan, BorderLayout.SOUTH);
 	}
 	
+	/**
+	 * Update all panels
+	 * @return
+	 */
 	public ViewPanel update(){
 		mapPan.updateMap();
 		scorePan.updateScore();
@@ -55,11 +63,4 @@ class ViewPanel extends JPanel {
 	public void update(final Observable arg0, final Object arg1) {
 		this.repaint();
 	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
-	 */
-	
 }

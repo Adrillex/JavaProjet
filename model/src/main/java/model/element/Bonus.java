@@ -7,6 +7,7 @@ public class Bonus implements IBonus{
 	/** the constructor Bonus
 	 * 
 	 * @param bonus
+	 * 	the bonus value of the object
 	 */
 	public Bonus(int bonus){
 		this.bonus = bonus;

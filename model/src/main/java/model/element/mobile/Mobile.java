@@ -13,12 +13,17 @@ public abstract class Mobile extends Element implements IMobile{
 	/** The constructor Mobile
 	 * 
 	 * @param posX
+	 * 	Position X of the mobile
 	 * @param posY
+	 * 	Position Y of the mobile
 	 * @param permeability
+	 * 	The permeability type of the mobile
 	 * @param sprite
+	 * 	The sprite of the mobile
 	 * @param direction
+	 * 	The direction of the mobile
 	 * @param ID
-	 * @throws IOException 
+	 * 	The ID of the mobile
 	 */
 	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID){
 		super(posX, posY, permeability, sprite, ID);
@@ -26,7 +31,7 @@ public abstract class Mobile extends Element implements IMobile{
 	}
 	
 	/**The method move 
-	 * 
+	 *
 	 */
 	public void move() {
 		switch (direction) {

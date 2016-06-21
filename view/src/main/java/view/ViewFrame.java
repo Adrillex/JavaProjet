@@ -8,7 +8,7 @@ import contract.IModel;
 /**
  * The Class ViewFrame.
  *
- * @author Jean-Aymeric Diet
+ * @author group 10
  */
 class ViewFrame extends JFrame{
 
@@ -25,8 +25,6 @@ class ViewFrame extends JFrame{
 	 *
 	 * @param model
 	 *          the model
-	 * @throws HeadlessException
-	 *           the headless exception
 	 */
 	public ViewFrame(IModel model) {
 		this.model = model;

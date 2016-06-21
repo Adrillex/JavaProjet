@@ -7,7 +7,9 @@ public class ReverseMove {
 	/** Reverse the direction of a mobile
 	 * 
 	 * @param direction
-	 * @return
+	 * 	the direction of the mobile
+	 * @return 
+	 * 	the new direction
 	 */
 	public static Direction reverseMove(Direction direction){
 		switch (direction) {

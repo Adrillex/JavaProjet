@@ -10,14 +10,17 @@ public class Arrbarr extends Monster{
 	/**the constructor Arrbarr
 	 * 
 	 * @param direction
+	 * 	Direction of the monster
 	 * @param posX
+	 * 	Position of Arrbarr
 	 * @param posY
-	 * @param picture
-	 * @throws IOException 
+	 * 	Position Y of Arrbarr
+	 * @param sprite
+	 * 	sprite of Arrbarr
 	 */
 	
-	public Arrbarr(Direction direction, int posX, int posY, BufferedImage picture){
-		super(direction, posX, posY, picture, ID);
+	public Arrbarr(Direction direction, int posX, int posY, BufferedImage sprite){
+		super(direction, posX, posY, sprite, ID);
 		
 	}
 	

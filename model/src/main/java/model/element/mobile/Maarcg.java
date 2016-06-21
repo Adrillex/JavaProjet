@@ -7,13 +7,16 @@ public class Maarcg extends Monster{
 
 	private final static int ID = 4;
 	
-	/** The constructor Maarcg
+	/**the constructor Maarcg
 	 * 
 	 * @param direction
+	 * 	Direction of the monster
 	 * @param posX
+	 * 	Position of Maarcg
 	 * @param posY
+	 * 	Position Y of Maarcg
 	 * @param sprite
-	 * @throws IOException 
+	 * 	sprite of Maarcg
 	 */
 	public Maarcg(Direction direction, int posX, int posY, BufferedImage sprite){
 		super(direction, posX, posY, sprite, ID);

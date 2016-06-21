@@ -11,6 +11,7 @@ public class PlayerMove {
 	 * the method playerDirection
 	 * Update the direction of the player and try to execute the associated movement
 	 * @param direction
+	 * 	the new direction of the player
 	 */
 	public static void playerDirection(Direction direction){
 		for(Hero object : Stage.rLorannList){

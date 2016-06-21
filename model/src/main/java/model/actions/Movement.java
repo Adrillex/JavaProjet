@@ -8,15 +8,14 @@ import model.element.mobile.Mobile;
 
 public class Movement {
 
-	/**the method move
-	 * 
+	/**set the new position to a mobile
 	 * @param mobile
+	 * 	the mobile who has to move
 	 * @param x
+	 * 	the actual position x of the mobile
 	 * @param y
-	 * 
-	 * set the new position to a mobile
+	 * 	the actual position y of the mobile
 	 */
-	
 	public static void move(Mobile mobile, int x, int y){
 		mobile.setPosX(x);
 		mobile.setPosY(y);

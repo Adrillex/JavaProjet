@@ -16,10 +16,15 @@ public abstract class Element implements IElement{
 	/** The constructor Element
 	 * 
 	 * @param posX
+	 * 	Position X of the element
 	 * @param posY
+	 * 	Position Y of the element
 	 * @param permeability
+	 * 	Permeability type of the element
 	 * @param sprite
+	 * 	Sprite of the element
 	 * @param ID
+	 * 	ID of the element
 	 */
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID){
 		this.posX = posX;

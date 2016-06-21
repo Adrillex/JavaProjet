@@ -12,10 +12,13 @@ public class Hero extends Mobile{
 	/** The constructor Hero
 	 * 
 	 * @param direction
+	 * 	The direction of the character
 	 * @param posX
+	 * 	The position X of the character
 	 * @param posY
+	 * 	The position Y of the character
 	 * @param sprite
-	 * @throws IOException 
+	 * 	The sprite of the character
 	 */
 	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite){
 		super(posX, posY, Permeability.HERO , sprite[0], direction, ID);

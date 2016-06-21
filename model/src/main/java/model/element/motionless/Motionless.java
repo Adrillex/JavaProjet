@@ -9,10 +9,15 @@ public abstract class Motionless extends Element{
 	/**The constructor MotionLess
 	 * 
 	 * @param posX
+	 * 	The position X of the motionless element
 	 * @param posY
+	 * 	The position Y of the motionless element
 	 * @param permeability
+	 * 	The permeability type of the motionless element
 	 * @param sprite
+	 * 	The sprite of the motionless element
 	 * @param ID
+	 * 	The id of the motionless element
 	 * @throws IOException 
 	 */
 	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID){

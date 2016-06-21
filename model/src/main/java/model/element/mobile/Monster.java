@@ -11,11 +11,15 @@ public class Monster extends Mobile{
 	/** the constructor Monster 
 	 * 
 	 * @param direction
+	 * 	Direction of the monster
 	 * @param posX
+	 * 	Position X of the monster
 	 * @param posY
+	 * 	Position Y of the monster
 	 * @param sprite
+	 * 	Sprite of the monster
 	 * @param ID
-	 * @throws IOException 
+	 * 	ID of the monster 
 	 */
 	public Monster(Direction direction, int posX, int posY, BufferedImage sprite, int ID){
 		super(posX, posY, permeability , sprite, direction, ID);

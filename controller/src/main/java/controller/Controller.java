@@ -21,12 +21,15 @@ public class Controller implements IController, KeyListener, Runnable{
 	/** minimum time between each pressure on a key **/
 	private int t = 100;
 
+	/**The order object **/
 	private Order order;
-	boolean k = false;
+	
+	/** Variable used to control the time between each change of lorann's sprite**/
 	int l = 0;
 
 
-	/** Constructor. @param view, model **/
+	/** Constructor. @param view the View, model the Model 
+	 * **/
 	public Controller(final IView view, final IModel model) {
 		this.model = model;
 		order = new Order(model);
@@ -38,6 +41,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	/**
 	 * the method keyPressed
 	 * @param KeyEvent e 
+	 * 	The code of the pressed key
 	 * Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
 		l = 0;
@@ -51,6 +55,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	/**
 	 * the method keyRealeased
 	 * @param KeyEvent e
+	 * 	The code of the pressed key
 	 * Allows to know when the key is released
 	 */
 	public void keyReleased(KeyEvent e) {

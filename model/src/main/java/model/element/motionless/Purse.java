@@ -14,17 +14,17 @@ public class Purse extends Motionless{
 	/**The constructor Purse
 	 * 
 	 * @param posX
+	 * 	The position X of the purse
 	 * @param posY
+	 * 	The position Y of the purse
 	 * @param sprite
+	 * 	The sprite of the purse
 	 * @param bonus
-	 * @throws IOException 
+	 * 	The bonus of the purse
 	 */
 	public Purse(int posX, int posY, BufferedImage sprite, Bonus bonus){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 		this.bonus = bonus;
 		
-	}
-
-	public void setDirection(Direction direction) {	
 	}
 }

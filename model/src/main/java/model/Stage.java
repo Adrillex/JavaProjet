@@ -149,4 +149,3 @@ public class Stage {
 		return elements;
 	}
 }
-	

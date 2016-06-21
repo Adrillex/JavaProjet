@@ -18,6 +18,12 @@ public class ViewPanelMap extends JPanel{
 	boolean t = false;
 	IElement temp = null;
 	
+	/** 
+	 * the constructor ViewPanelMap
+	 * @param model
+	 * 	the model
+	 * 	show the actual map
+	 */
 	public ViewPanelMap(IModel model){
 		this.model = model;
 		elements = model.loadStage(2);
@@ -25,6 +31,10 @@ public class ViewPanelMap extends JPanel{
 		this.setBackground(Color.black);
 	}
 	
+	/**
+	 * the method updateMap
+	 * Update all information about the map
+	 */
 	public void updateMap(){
 		this.removeAll();
 		if (model.getFireball().getState() == false && t == false) {
@@ -67,24 +77,22 @@ public class ViewPanelMap extends JPanel{
 		}
 	}
 
+	/**
+	 * the method orderElement
+	 * @return
+	 * 	Arrange the arrayList elements
+	 */
 	public ArrayList<IElement> orderElement(){
 		ArrayList<IElement> orderElement = new ArrayList<IElement>();
-		IElement temp = null;
 		int xMin = 0, yMin = 0, i = elements.size();
 		while(orderElement.size() != i){
 			for (IElement element : elements) {
-			/*	if(element.getState() == false)
-				{
-					temp = element;
-				}
-				else{*/
 					int x = element.getPosX(), y = element.getPosY();
 					if(x == xMin && y == yMin){
 						orderElement.add(element);
 						xMin = x;
 						yMin = y;
 					}
-				//}
 			}
 			xMin++;
 			if(xMin == 20){
@@ -92,8 +100,6 @@ public class ViewPanelMap extends JPanel{
 				yMin++;
 			}
 		}
-	/*	orderElement.remove(temp);
-		elements.remove(temp);*/
 		return orderElement;
 	}
 }

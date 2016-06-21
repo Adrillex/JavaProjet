@@ -1,7 +1,6 @@
 package model.element.motionless;
 
 import java.awt.image.BufferedImage;
-import contract.Direction;
 import contract.Permeability;
 
 public class CrystalBall extends Motionless{
@@ -11,15 +10,13 @@ public class CrystalBall extends Motionless{
 	/** The constructor CrystallBall
 	 * 
 	 * @param posX
+	 * 	Position X of the crystalBall
 	 * @param posY
+	 * 	Position Y of the crystalBall
 	 * @param sprite
-	 * @throws IOException 
+	 * 	Sprite of the crystallBall
 	 */
 	public CrystalBall(int posX, int posY, BufferedImage sprite){
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
-	}
-
-	public void setDirection(Direction direction) {
-		
 	}
 }

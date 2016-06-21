@@ -15,16 +15,19 @@ public class ElementTest {
 
 	private Element element;
 	
+	/** Sprite initialization **/
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		ImageLoader.loadImage();
 	}
 
+	/** Instantiation of an element object using the hero constructor **/
 	@Before
 	public void setUp() throws Exception {
 		this.element = new Hero(Direction.RIGHT, 2, 3, ImageLoader.player);
 		}
 
+	/**Testing getSprite with a sprite comparison**/
 	@Test
 	public void testGetSprite() {
 		if (this.element.getSprite().getWidth() == ImageLoader.player[0].getWidth() && this.element.getSprite().getHeight() == ImageLoader.player[0].getHeight()) {
@@ -39,22 +42,25 @@ public class ElementTest {
 	    }
 
 	}
-
+	/** Test of the getPosX method **/
 	@Test
 	public void testGetPosX() {
 		assertEquals(2, this.element.getPosX());
 	}
 
+	/**Test of the getPosY method **/
 	@Test
 	public void testGetPosY() {
 		assertEquals(3, this.element.getPosY());
 	}
 
+	/**Test of the getPermeability method **/
 	@Test
 	public void testGetPermeability() {
 		assertEquals(Permeability.HERO, this.element.getPermeability());
 	}
 
+	/**Test of the getID method **/
 	@Test
 	public void testGetID() {
 		assertEquals(0, this.element.getID());
@@ -65,12 +71,14 @@ public class ElementTest {
 		assertEquals(true, this.element.getState());
 	}
 
+	/**Test of the setExisting method **/
 	@Test
 	public void testSetExisting() {
-		this.element.setExisting(true);
-		assertEquals(true, this.element.getState());
+		this.element.setExisting(false);
+		assertEquals(false, this.element.getState());
 	}
 
+	/**Test of the setSprite method **/
 	@Test
 	public void testSetSprite() {
 		this.element.setSprite(ImageLoader.player[1]);
@@ -86,12 +94,14 @@ public class ElementTest {
 	    }
 	}
 
+	/**Test of the posX setter **/
 	@Test
 	public void testSetPosX() {
 		this.element.setPosX(3);
 		assertEquals(3, this.element.getPosX());
 	}
 
+	/**Test of the posY setter **/
 	@Test
 	public void testSetPosY() {
 		this.element.setPosY(10);

@@ -1,7 +1,6 @@
 package model.element.motionless;
 
 import java.awt.image.BufferedImage;
-import contract.Direction;
 import contract.Permeability;
 
 public class Gate extends Motionless{
@@ -12,9 +11,11 @@ public class Gate extends Motionless{
 	/**The constructor Gate
 	 * 
 	 * @param posX
+	 * 	Position X of the gate
 	 * @param posY
+	 * 	Position Y of the gate
 	 * @param sprite
-	 * @throws IOException 
+	 * 	The sprite of the gate
 	 */
 	public Gate(int posX, int posY, BufferedImage[] sprite){
 		super(posX, posY, Permeability.BLOCKING, sprite[0], ID);
@@ -29,7 +30,4 @@ public class Gate extends Motionless{
 	public boolean isOpen(){
 		return open;
 	}
-
-	public void setDirection(Direction direction) {
-	}	
 }

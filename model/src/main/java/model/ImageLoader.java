@@ -27,9 +27,8 @@ public class ImageLoader {
 	public static BufferedImage monster_4;
 	
 	/** the method loadImage.
-	 * Load all sprite of the game in buffered Images.
+	 * Load all sprite of the game in bufferedImages.
 	 */
-	
 	public static void loadImage(){
 		
 		player = new BufferedImage[8];

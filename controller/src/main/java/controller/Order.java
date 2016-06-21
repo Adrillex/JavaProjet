@@ -22,6 +22,7 @@ public class Order {
 	/** The method orderPerform.
 	 * 
 	 * @param order
+	 * 	The order to execute
 	 * 
 	 * Send an order to the character.
 	 */
@@ -50,8 +51,9 @@ public class Order {
 		}
 	}
 
-	/** Take the keycode and send an order to orderPerform 
-	 * 	@param keyCode**/
+	/** Send an order to orderPerform 
+	 * 	@param keyCode
+	 * 	The key pressed**/
 	protected ControllerOrder keyCodeToOrder(final int keyCode){
 		switch (keyCode){
 		

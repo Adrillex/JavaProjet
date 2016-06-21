@@ -6,9 +6,7 @@ import model.element.mobile.Monster;
 
 public class MonsterMove {
 	
-	/**the method move
-	 * Manage the movements of monsters
-	 */
+	/** Manage the movements of monster */
 	public static void Move(){
 		if (Stage.monsterList.isEmpty() == false) {
 			for(Monster object : Stage.monsterList){

@@ -6,7 +6,7 @@ import model.Stage;
 public class FireballMove {
 	
 	
-	/**the method move
+	/**
 	 * Manage the movements of the fireball
 	 */
 	public static void move(){

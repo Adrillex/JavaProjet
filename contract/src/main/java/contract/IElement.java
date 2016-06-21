@@ -23,8 +23,6 @@ public interface IElement {
 	public boolean getState();
 	
 	public void setExisting(boolean existing);
-
-	public void setDirection(Direction direction);
 	
 	public void setSprite(BufferedImage image);
 }
