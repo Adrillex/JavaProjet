@@ -26,10 +26,14 @@ public class FireballMove {
 				case KILLING:
 					goalPosition.setExisting(false);
 					Stage.fireball.setExisting(false);
+					Stage.fireball.setPosX(19);
+					Stage.fireball.setPosY(11);
 					break;
 					
 				case HERO: 
 					Stage.fireball.setExisting(false);
+					Stage.fireball.setPosX(19);
+					Stage.fireball.setPosY(11);
 			default:
 				break;
 				}
