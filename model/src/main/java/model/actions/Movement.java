@@ -24,10 +24,13 @@ public class Movement {
 	/** the method getElementCoordinates
 	 * 
 	 * @param mobile
+	 * 	the mobile
 	 * @param order
+	 * 	the order to execute
 	 * @param elements
+	 * 	the arrayList elements
 	 * @return
-	 * 
+	 * 	The element on the position the mobile try to go on
 	 * Allow us to know what type of element is on the goalPosition of the mobile
 	 */
 	

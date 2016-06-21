@@ -15,13 +15,19 @@ public class ElementTest {
 
 	private Element element;
 	
-	/** Sprite initialization **/
+	/** 
+	 * Sprite initialization 
+	 * @throws Exception
+	 * BeforeClass**/
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		ImageLoader.loadImage();
 	}
 
-	/** Instantiation of an element object using the hero constructor **/
+	/** Instantiation of an element object using the hero constructor 
+	 * @throws Exception
+	 * setup**/
 	@Before
 	public void setUp() throws Exception {
 		this.element = new Hero(Direction.RIGHT, 2, 3, ImageLoader.player);

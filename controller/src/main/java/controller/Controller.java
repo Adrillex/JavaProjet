@@ -28,7 +28,9 @@ public class Controller implements IController, KeyListener, Runnable{
 	int l = 0;
 
 
-	/** Constructor. @param view the View, model the Model 
+	/** Constructor. 
+	 * @param view the View
+	 * @param model the Model 
 	 * **/
 	public Controller(final IView view, final IModel model) {
 		this.model = model;
@@ -40,7 +42,7 @@ public class Controller implements IController, KeyListener, Runnable{
 	
 	/**
 	 * the method keyPressed
-	 * @param KeyEvent e 
+	 * @param e 
 	 * 	The code of the pressed key
 	 * Wait for the user to press a key and send it to KeyCodeToOrder **/
 	public void keyPressed(KeyEvent e) {
@@ -54,7 +56,7 @@ public class Controller implements IController, KeyListener, Runnable{
 
 	/**
 	 * the method keyRealeased
-	 * @param KeyEvent e
+	 * @param e
 	 * 	The code of the pressed key
 	 * Allows to know when the key is released
 	 */

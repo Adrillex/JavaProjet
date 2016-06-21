@@ -13,7 +13,8 @@ public class Order {
 	
 	/** The Constructor Order.
 	 * 
-	 * @param model
+	 * @param model*
+	 * 	the model
 	 */
 	public Order(IModel model){
 		this.model = model;
@@ -53,7 +54,9 @@ public class Order {
 
 	/** Send an order to orderPerform 
 	 * 	@param keyCode
-	 * 	The key pressed**/
+	 * 	The key pressed 
+	 * @return 
+	 * 		the order**/
 	protected ControllerOrder keyCodeToOrder(final int keyCode){
 		switch (keyCode){
 		

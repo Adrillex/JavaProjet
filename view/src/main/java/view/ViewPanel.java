@@ -32,8 +32,8 @@ class ViewPanel extends JPanel {
 	/**
 	 * Instantiates a new view panel.
 	 *
-	 * @param viewFrame
-	 *          the view frame
+	 * @param model
+	 *          the model
 	 */
 	public ViewPanel(IModel model) {
 		this.setLayout(new BorderLayout());
@@ -46,6 +46,7 @@ class ViewPanel extends JPanel {
 	/**
 	 * Update all panels
 	 * @return
+	 * 	return the panel
 	 */
 	public ViewPanel update(){
 		mapPan.updateMap();

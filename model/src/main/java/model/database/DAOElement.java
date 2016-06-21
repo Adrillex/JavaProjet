@@ -42,8 +42,8 @@ abstract class DAOElement<E extends Element> {
 	/**
 	 * Creates the.
 	 *
-	 * @param entity
-	 *          the entity
+	 * @param element
+	 *          the element
 	 * @return true, if successful
 	 */
 	public abstract boolean create(E element);
@@ -51,8 +51,8 @@ abstract class DAOElement<E extends Element> {
 	/**
 	 * Delete.
 	 *
-	 * @param entity
-	 *          the entity
+	 * @param element
+	 *          the element
 	 * @return true, if successful
 	 */
 	public abstract boolean delete(E element);
@@ -60,8 +60,8 @@ abstract class DAOElement<E extends Element> {
 	/**
 	 * Update.
 	 *
-	 * @param entity
-	 *          the entity
+	 * @param element
+	 *          the element
 	 * @return true, if successful
 	 */
 	public abstract boolean update(E element);

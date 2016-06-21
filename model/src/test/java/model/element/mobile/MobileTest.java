@@ -17,13 +17,16 @@ public class MobileTest {
 	/**
 	 * Initialization of the sprite
 	 * @throws Exception
+	 * 	beforeclass
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		ImageLoader.loadImage();
 	}
 
-	/** Instanciation of a mobile using the Hero constructor**/
+	/** Instantiation of a mobile using the Hero constructor
+	 * @throws Exception
+	 * 	Before**/
 	@Before
 	public void setUp() throws Exception {
 	mobile = new Hero(Direction.RIGHT, 5, 6, ImageLoader.player);	
