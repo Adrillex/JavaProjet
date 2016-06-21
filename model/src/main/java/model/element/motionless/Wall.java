@@ -16,7 +16,7 @@ public class Wall extends Motionless{
 	 * @param sprite
 	 * 	The sprite of the wall
 	 */
-	public Wall(int posX, int posY, BufferedImage sprite){
+	public Wall(int posX, int posY, BufferedImage sprite)throws Exception{
 		super(posX, posY, Permeability.BLOCKING, sprite, ID);
 	}
 }

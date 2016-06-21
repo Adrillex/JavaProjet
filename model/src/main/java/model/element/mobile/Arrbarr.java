@@ -19,7 +19,7 @@ public class Arrbarr extends Monster{
 	 * 	sprite of Arrbarr
 	 */
 	
-	public Arrbarr(Direction direction, int posX, int posY, BufferedImage sprite){
+	public Arrbarr(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(direction, posX, posY, sprite, ID);
 		
 	}

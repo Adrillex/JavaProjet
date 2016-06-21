@@ -19,7 +19,7 @@ public abstract class Motionless extends Element{
 	 * @param ID
 	 * 	The id of the motionless element
 	 */
-	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID){
+	public Motionless(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID)throws Exception{
 		super(posX, posY, permeability, sprite, ID);
 	}
 

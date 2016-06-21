@@ -16,7 +16,7 @@ public class CrystalBall extends Motionless{
 	 * @param sprite
 	 * 	Sprite of the crystallBall
 	 */
-	public CrystalBall(int posX, int posY, BufferedImage sprite){
+	public CrystalBall(int posX, int posY, BufferedImage sprite)throws Exception{
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 	}
 }

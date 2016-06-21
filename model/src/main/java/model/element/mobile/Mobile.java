@@ -25,7 +25,7 @@ public abstract class Mobile extends Element implements IMobile{
 	 * @param ID
 	 * 	The ID of the mobile
 	 */
-	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID){
+	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID)throws Exception{
 		super(posX, posY, permeability, sprite, ID);
 		this.direction = direction;
 	}

@@ -20,7 +20,7 @@ public class Hero extends Mobile{
 	 * @param sprite
 	 * 	The sprite of the character
 	 */
-	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite){
+	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite)throws Exception{
 		super(posX, posY, Permeability.HERO , sprite[0], direction, ID);
 	}
 	/** the method setMoveSprite

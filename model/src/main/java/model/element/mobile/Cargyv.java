@@ -19,7 +19,7 @@ public class Cargyv extends Monster{
 	 * @param sprite
 	 * 	sprite of Cargyv
 	 */
-	public Cargyv(Direction direction, int posX, int posY, BufferedImage sprite){
+	public Cargyv(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(direction, posX, posY, sprite, ID);
 		
 	}

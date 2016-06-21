@@ -17,7 +17,7 @@ public class Gate extends Motionless{
 	 * @param sprite
 	 * 	The sprite of the gate
 	 */
-	public Gate(int posX, int posY, BufferedImage[] sprite){
+	public Gate(int posX, int posY, BufferedImage[] sprite)throws Exception{
 		super(posX, posY, Permeability.BLOCKING, sprite[0], ID);
 		this.open = false;
 	}

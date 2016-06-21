@@ -27,9 +27,12 @@ public abstract class Element implements IElement{
 	 * 	ID of the element
 	 */
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID) throws Exception{
-		if(posX >= 0 || posX <= 20)
-			this.posX = posX;
+		if(posX < 0 || posX > 20)
+			throw new Exception("PosX not correct");
+		if(posY < 0 || posX > 12)
+			throw new Exception("PosY not correct");
 		this.posY = posY;
+		this.posX = posX;
 		this.permeability = permeability;
 		this.sprite = sprite;
 		this.ID = ID;

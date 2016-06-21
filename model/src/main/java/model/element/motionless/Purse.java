@@ -22,7 +22,7 @@ public class Purse extends Motionless{
 	 * @param bonus
 	 * 	The bonus of the purse
 	 */
-	public Purse(int posX, int posY, BufferedImage sprite, Bonus bonus){
+	public Purse(int posX, int posY, BufferedImage sprite, Bonus bonus)throws Exception{
 		super(posX, posY, Permeability.PENETRABLE, sprite, ID);
 		this.bonus = bonus;
 		

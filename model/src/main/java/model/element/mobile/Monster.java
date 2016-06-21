@@ -21,7 +21,7 @@ public class Monster extends Mobile{
 	 * @param ID
 	 * 	ID of the monster 
 	 */
-	public Monster(Direction direction, int posX, int posY, BufferedImage sprite, int ID){
+	public Monster(Direction direction, int posX, int posY, BufferedImage sprite, int ID)throws Exception{
 		super(posX, posY, permeability , sprite, direction, ID);
 	}
 

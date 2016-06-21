@@ -45,7 +45,7 @@ public class Stage {
 	 * @return IElements
 	 * Create ArrayLists of elements for a later user.
 	 */
-	public ArrayList <IElement> LoadStage(){
+	public ArrayList <IElement> LoadStage()throws Exception{
 		cBallList = new ArrayList <CrystalBall>();
 		purseList = new ArrayList <Purse>();
 		gateCList = new ArrayList <Gate>();

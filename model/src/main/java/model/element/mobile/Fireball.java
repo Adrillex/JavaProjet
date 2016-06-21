@@ -19,7 +19,7 @@ public class Fireball extends Mobile{
 	 * @param sprite 
 	 * 	Actual sprite of the fireball
 	 */
-	public Fireball(Direction direction, int posX, int posY, BufferedImage sprite){
+	public Fireball(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(posX, posY, Permeability.KILLER, sprite,  direction, ID);
 	}
 }

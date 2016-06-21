@@ -18,7 +18,7 @@ public class Maarcg extends Monster{
 	 * @param sprite
 	 * 	sprite of Maarcg
 	 */
-	public Maarcg(Direction direction, int posX, int posY, BufferedImage sprite){
+	public Maarcg(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(direction, posX, posY, sprite, ID);
 		
 	}

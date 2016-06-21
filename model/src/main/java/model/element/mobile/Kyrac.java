@@ -19,7 +19,7 @@ public class Kyrac extends Monster{
 	 * @param sprite
 	 * 	sprite of Kyrac
 	 */
-	public Kyrac(Direction direction, int posX, int posY, BufferedImage sprite){
+	public Kyrac(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(direction, posX, posY, sprite, ID);
 	}
 	
