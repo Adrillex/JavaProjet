@@ -13,6 +13,7 @@ import model.element.mobile.Hero;
 
 public class ElementTest {
 
+	/** The element **/
 	private Element element;
 	
 	/** 

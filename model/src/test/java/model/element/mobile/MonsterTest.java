@@ -11,6 +11,7 @@ import model.ImageLoader;
 
 public class MonsterTest {
 	
+	/**The monster**/
 	private Monster arrbarr;
 
 	/** 
