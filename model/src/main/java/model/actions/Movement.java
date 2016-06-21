@@ -3,6 +3,7 @@ package model.actions;
 import java.util.ArrayList;
 
 import contract.IElement;
+import contract.Permeability;
 import model.Stage;
 import model.element.mobile.Mobile;
 
@@ -59,10 +60,13 @@ public class Movement {
 		break; 
 		}
 		//System.out.println("Coordonnées précédentes : x = "+mobile.getPosX()+" y = "+mobile.getPosY());
-		for(IElement goalPosition : elements)
-			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y){
-				return goalPosition;
+		for(IElement goalPosition : elements){
+			if (goalPosition.getPermeability() == Permeability.KILLER && goalPosition.getState()) {
+				System.out.println("bolos");
 			}
+			if(goalPosition.getPosX() == x && goalPosition.getPosY() == y && goalPosition.getState()){
+				return goalPosition;
+			}}
 		if(order == "move")
 			move(mobile, x, y);
 		else{

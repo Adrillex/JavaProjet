@@ -70,8 +70,10 @@ public class Controller implements IController, KeyListener, Runnable{
 	public void run() {
 		while (true) {
 			model.monsterMove();
-			model.fireballMove();
-			model.switchFireBallSprite();
+			if(model.getFireball().getState()){
+				model.fireballMove();
+				model.switchFireBallSprite();
+			}
 			if (l >= 300/t ) {
 				model.switchLorannSprite();
 			}

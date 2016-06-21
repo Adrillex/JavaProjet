@@ -26,6 +26,7 @@ public class MonsterMove {
 						Stage.elements.remove(object);
 						Stage.monsterList.remove(object);
 						object.setExisting(false);
+						Stage.fireball.setExisting(false);
 						break;
 					case HERO:
 						Stage.rLorannList.get(0).setExisting(false);

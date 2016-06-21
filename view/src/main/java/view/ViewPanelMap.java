@@ -37,16 +37,6 @@ public class ViewPanelMap extends JPanel{
 	 */
 	public void updateMap(){
 		this.removeAll();
-		if (model.getFireball().getState() == false && t == false) {
-			temp = model.getFireball();
-			elements.remove(model.getFireball());
-			t = true;
-		}
-		if (t == true && model.getFireball().getState() == true) {
-			elements.add(temp);
-			IElement temp = null;
-			t = false;
-		}
 		elements = orderElement();
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
