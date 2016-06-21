@@ -20,8 +20,13 @@ public class Movement {
 	 * 	Prevent forbidden modification of posX and posY
 	 */
 	public static void move(Mobile mobile, int x, int y) throws Exception{
-		mobile.setPosX(x);
-		mobile.setPosY(y);
+		if(mobile.getID() == 4 || mobile.getID() == 3){
+			mobile.move();
+		}
+		else {
+			mobile.setPosX(x);
+			mobile.setPosY(y);
+		}
 	}
 	
 	/** the method getElementCoordinates

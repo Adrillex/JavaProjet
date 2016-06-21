@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 import contract.IElement;
 import contract.IModel;
+import contract.Permeability;
 
 public class ViewPanelMap extends JPanel{
 	
@@ -26,7 +27,7 @@ public class ViewPanelMap extends JPanel{
 	 */
 	public ViewPanelMap(IModel model){
 		this.model = model;
-		elements = model.loadStage(2);
+		elements = model.loadStage(4);
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 	}
@@ -41,6 +42,14 @@ public class ViewPanelMap extends JPanel{
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
+				if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k+1).getPosX() && elements.get(k).getPosY() == elements.get(k+1).getPosY()) {
+					k++;
+				}
+				else if (k>10) {
+					if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k-1).getPosX() && elements.get(k).getPosY() == elements.get(k-1).getPosY()) {
+						k++;
+					}
+				}
 				if(elements.get(k).getState() == false){
 					k++;
 				}
