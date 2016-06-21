@@ -10,7 +10,7 @@ public abstract class Element implements IElement{
 	protected Permeability permeability;
 	protected int posX, posY;
 	protected final int ID;
-	protected boolean existing = true;
+	protected boolean existing;
 
 	
 	/** The constructor Element
@@ -27,9 +27,9 @@ public abstract class Element implements IElement{
 	 * 	ID of the element
 	 */
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID) throws Exception{
-		if(posX < 0 || posX > 20)
+		if(posX < 0 || posX >= 20)
 			throw new Exception("PosX not correct");
-		if(posY < 0 || posX > 12)
+		if(posY < 0 || posY >= 12)
 			throw new Exception("PosY not correct");
 		this.posY = posY;
 		this.posX = posX;
@@ -38,8 +38,6 @@ public abstract class Element implements IElement{
 		this.ID = ID;
 		existing = true;
 	}
-	
-
 	//getters
 	
 	public BufferedImage getSprite(){
@@ -73,13 +71,5 @@ public abstract class Element implements IElement{
 	
 	public void setSprite(BufferedImage sprite){
 		this.sprite = sprite;
-	}
-	
-	public void setPosX(int posX) {
-		this.posX = posX;
-	}
-
-	public void setPosY(int posY) {
-		this.posY = posY;
 	}
 }

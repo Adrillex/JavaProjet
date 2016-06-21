@@ -53,7 +53,7 @@ public class Stage {
 		rLorannList = new ArrayList <Hero>();
 		elements = new ArrayList <IElement>();
 		monsterList = new ArrayList <Monster>();
-		fireball = new Fireball(Direction.UP, 10, 19, ImageLoader.fireball[0]);
+		fireball = new Fireball(Direction.UP, 19, 11, ImageLoader.fireball[0]);
 		fireball.setExisting(false);
 		elements.add(fireball);
 		

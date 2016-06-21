@@ -51,7 +51,12 @@ public class Model implements IModel {
 	 */
 	public ArrayList<IElement> loadStage(int numStage){
 		stage = new Stage(numStage, bPurse);
-		return stage.LoadStage();
+		try {
+			return stage.LoadStage();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	

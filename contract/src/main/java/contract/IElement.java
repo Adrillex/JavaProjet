@@ -14,10 +14,6 @@ public interface IElement {
 	
 	public BufferedImage getSprite();
 	
-	public void setPosX(int x);
-	
-	public void setPosY(int y);
-	
 	public int getID();
 	
 	public boolean getState();
