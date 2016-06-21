@@ -41,7 +41,7 @@ public class PlayerMove {
 					}
 					else if(Stage.cBallList.contains(goalPosition)){
 						for (Gate gate : Stage.gateList) {
-							gate.setOpen(true);
+							gate.setOpen();
 							gate.setSprite(ImageLoader.gate[1]);
 							gate.setPermeability(Permeability.GATE);
 						}

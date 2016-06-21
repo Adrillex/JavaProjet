@@ -10,6 +10,8 @@ import contract.Direction;
 import model.ImageLoader;
 
 public class MobileTest {
+	
+	/** The mobile **/
 	private Mobile mobile;
 	/**
 	 * Initialization of the sprite

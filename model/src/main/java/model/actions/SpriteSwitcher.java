@@ -20,7 +20,6 @@ public class SpriteSwitcher {
 	/** loranloader method
 	 * change lorann's sprite
 	 */
-	
 	public static void lorannloader(){
 		if (j < 7) j ++;
 		else j = 0;

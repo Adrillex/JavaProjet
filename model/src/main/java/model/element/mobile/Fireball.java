@@ -18,6 +18,8 @@ public class Fireball extends Mobile{
 	 * 	Position Y of the fireball
 	 * @param sprite 
 	 * 	Actual sprite of the fireball
+	 * @throws Exception
+	 * 	Error in Position
 	 */
 	public Fireball(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{
 		super(posX, posY, Permeability.KILLER, sprite,  direction, ID);

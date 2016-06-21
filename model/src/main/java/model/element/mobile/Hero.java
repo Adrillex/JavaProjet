@@ -19,6 +19,8 @@ public class Hero extends Mobile{
 	 * 	The position Y of the character
 	 * @param sprite
 	 * 	The sprite of the character
+	 * @throws Exception
+	 * 	Error in Position
 	 */
 	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite)throws Exception{
 		super(posX, posY, Permeability.HERO , sprite[0], direction, ID);

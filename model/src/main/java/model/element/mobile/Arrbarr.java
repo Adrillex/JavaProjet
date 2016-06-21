@@ -19,6 +19,8 @@ public class Arrbarr extends Monster{
 	 * 	Position Y of Arrbarr
 	 * @param sprite
 	 * 	sprite of Arrbarr
+	 * @throws Exception
+	 * 	Error in Position
 	 */
 	
 	public Arrbarr(Direction direction, int posX, int posY, BufferedImage sprite)throws Exception{

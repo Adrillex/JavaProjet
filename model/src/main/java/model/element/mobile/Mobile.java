@@ -24,6 +24,8 @@ public abstract class Mobile extends Element implements IMobile{
 	 * 	The direction of the mobile
 	 * @param ID
 	 * 	The ID of the mobile
+	 * @throws Exception
+	 * 	Error in Position
 	 */
 	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID)throws Exception{
 		super(posX, posY, permeability, sprite, ID);

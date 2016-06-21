@@ -16,6 +16,8 @@ public class Gate extends Motionless{
 	 * 	Position Y of the gate
 	 * @param sprite
 	 * 	The sprite of the gate
+	 * @throws Exception
+	 * 	Error in position
 	 */
 	public Gate(int posX, int posY, BufferedImage[] sprite)throws Exception{
 		super(posX, posY, Permeability.BLOCKING, sprite[0], ID);
@@ -30,8 +32,12 @@ public class Gate extends Motionless{
 	public boolean getOpen(){
 		return open;
 	}
-	
-	public void setOpen(boolean open){
-		this.open = open;
+	/** the method setOpen
+	 * @param open
+	 * 	the state of the door
+	 * 
+	 * Tell if Lorann can go through the gate or not **/
+	public void setOpen(){
+		this.open = true;
 	}
 }

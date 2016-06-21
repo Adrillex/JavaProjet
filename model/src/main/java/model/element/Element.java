@@ -6,13 +6,17 @@ import contract.Permeability;
 
 public abstract class Element implements IElement{
 	
+	/** The sprite **/
 	protected BufferedImage sprite;
+	/** The permeability **/
 	protected Permeability permeability;
+	/**The position **/
 	protected int posX, posY;
+	/** The ID **/
 	protected final int ID;
+	/**The state**/
 	protected boolean existing;
 
-	
 	/** The constructor Element
 	 * 
 	 * @param posX
@@ -25,6 +29,8 @@ public abstract class Element implements IElement{
 	 * 	Sprite of the element
 	 * @param ID
 	 * 	ID of the element
+	 * @throws Exception
+	 * 	Position Error
 	 */
 	public Element(int posX, int posY, Permeability permeability, BufferedImage sprite, int ID) throws Exception{
 		if(posX < 0 || posX >= 20)
