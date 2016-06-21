@@ -1,7 +1,6 @@
 package model.element.mobile;
 
 import java.awt.image.BufferedImage;
-
 import contract.Direction;
 import contract.Permeability;
 
@@ -16,6 +15,7 @@ public class Monster extends Mobile{
 	 * @param posY
 	 * @param sprite
 	 * @param ID
+	 * @throws IOException 
 	 */
 	public Monster(Direction direction, int posX, int posY, BufferedImage sprite, int ID){
 		super(posX, posY, permeability , sprite, direction, ID);

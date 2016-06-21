@@ -29,8 +29,6 @@ public class FireballMove {
 					
 				case HERO: 
 					Stage.fireball.setExisting(false);
-					Stage.fireball.setPosX(100);
-					Stage.fireball.setPosY(100);
 			default:
 				break;
 				}

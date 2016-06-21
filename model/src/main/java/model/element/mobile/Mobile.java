@@ -1,7 +1,6 @@
-	package model.element.mobile;
+package model.element.mobile;
 
 import java.awt.image.BufferedImage;
-
 import contract.Direction;
 import contract.Permeability;
 import model.element.Element;
@@ -19,8 +18,9 @@ public abstract class Mobile extends Element implements IMobile{
 	 * @param sprite
 	 * @param direction
 	 * @param ID
+	 * @throws IOException 
 	 */
-	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID) {
+	public Mobile(int posX, int posY, Permeability permeability, BufferedImage sprite, Direction direction, int ID){
 		super(posX, posY, permeability, sprite, ID);
 		this.direction = direction;
 	}
@@ -47,15 +47,15 @@ public abstract class Mobile extends Element implements IMobile{
 			posX --;
 			break;
 		case UPPER_RIGHT:
-			posY ++;
+			posY --;
 			posX ++;
 			break;
 		case BOTTOM_RIGHT:
-			posY --;
+			posY ++;
 			posX ++;
 			break;
 		case BOTTOM_LEFT:
-			posY --;
+			posY ++;
 			posX --;
 			break;
 		default:

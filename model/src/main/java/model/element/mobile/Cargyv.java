@@ -1,7 +1,6 @@
 package model.element.mobile;
 
 import java.awt.image.BufferedImage;
-
 import contract.Direction;
 import model.Stage;
 
@@ -15,6 +14,7 @@ public class Cargyv extends Monster{
 	 * @param posX
 	 * @param posY
 	 * @param picture
+	 * @throws IOException 
 	 */
 	public Cargyv(Direction direction, int posX, int posY, BufferedImage picture){
 		super(direction, posX, posY, picture, ID);

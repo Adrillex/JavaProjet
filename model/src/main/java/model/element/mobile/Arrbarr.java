@@ -1,7 +1,6 @@
 package model.element.mobile;
 
 import java.awt.image.BufferedImage;
-
 import contract.Direction;
 
 public class Arrbarr extends Monster{
@@ -14,6 +13,7 @@ public class Arrbarr extends Monster{
 	 * @param posX
 	 * @param posY
 	 * @param picture
+	 * @throws IOException 
 	 */
 	
 	public Arrbarr(Direction direction, int posX, int posY, BufferedImage picture){

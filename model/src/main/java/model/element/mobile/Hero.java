@@ -1,7 +1,6 @@
 package model.element.mobile;
 
 import java.awt.image.BufferedImage;
-
 import contract.Direction;
 import contract.Permeability;
 import model.ImageLoader;
@@ -16,6 +15,7 @@ public class Hero extends Mobile{
 	 * @param posX
 	 * @param posY
 	 * @param sprite
+	 * @throws IOException 
 	 */
 	public Hero(Direction direction, int posX, int posY, BufferedImage[] sprite){
 		super(posX, posY, Permeability.HERO , sprite[0], direction, ID);

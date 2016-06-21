@@ -1,7 +1,6 @@
 package model.element;
 
 import java.awt.image.BufferedImage;
-
 import contract.IElement;
 import contract.Permeability;
 
@@ -28,6 +27,7 @@ public abstract class Element implements IElement{
 		this.permeability = permeability;
 		this.sprite = sprite;
 		this.ID = ID;
+		existing = true;
 	}
 	
 
