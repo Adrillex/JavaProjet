@@ -3,6 +3,7 @@ package model.element.mobile;
 import java.awt.image.BufferedImage;
 import contract.Direction;
 import contract.Permeability;
+import model.actions.ReverseMove;
 
 public class Monster extends Mobile{
 	
@@ -29,22 +30,6 @@ public class Monster extends Mobile{
 	 * Reverse the direction
 	 */
 	public void reverse(){
-		switch (direction) {
-		case UP:
-			this.direction = Direction.DOWN;
-			break;
-		case DOWN:
-			this.direction = Direction.UP;
-			break;
-		case LEFT:
-			this.direction = Direction.RIGHT;
-			break;
-		case RIGHT:
-			this.direction = Direction.LEFT;
-			break;
-
-		default:
-			break;
-		}
+		ReverseMove.reverseMove(this.direction);
 	}
 }
