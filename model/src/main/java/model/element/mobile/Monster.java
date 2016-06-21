@@ -30,6 +30,6 @@ public class Monster extends Mobile{
 	 * Reverse the direction
 	 */
 	public void reverse(){
-		ReverseMove.reverseMove(this.direction);
+		this.direction = ReverseMove.reverseMove(this.direction);
 	}
 }
