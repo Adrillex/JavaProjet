@@ -16,8 +16,7 @@ public class ElementTest {
 	/** The element **/
 	private Element element;
 	
-	/** 
-	 * Sprite initialization 
+	/** Sprite initialization 
 	 * @throws Exception
 	 * BeforeClass**/
 	
