@@ -2,7 +2,6 @@ package model.actions;
 
 import contract.Direction;
 import contract.IElement;
-import contract.Permeability;
 import model.ImageLoader;
 import model.Model;
 import model.Stage;
@@ -43,7 +42,6 @@ public class PlayerMove {
 						for (Gate gate : Stage.gateList) {
 							gate.setOpen();
 							gate.setSprite(ImageLoader.gate[1]);
-							gate.setPermeability(Permeability.GATE);
 						}
 					}
 					
