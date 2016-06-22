@@ -20,7 +20,7 @@ public class Gate extends Motionless{
 	 * 	Error in position
 	 */
 	public Gate(int posX, int posY, BufferedImage[] sprite)throws Exception{
-		super(posX, posY, Permeability.KILLING, sprite[0], ID);
+		super(posX, posY, Permeability.GATE, sprite[0], ID);
 		this.open = false;
 	}
 	

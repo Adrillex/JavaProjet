@@ -42,6 +42,7 @@ public class BeforeView {
 		pan.add(progress);
 		frame.setContentPane(pan);
 		progress.load();
+		frame.setVisible(false);
 	}
 	/**Option selection **/
 	public void setOption(){

@@ -61,8 +61,20 @@ public class PlayerMove {
 						Stage.fireball.setPosY(11);
 						break;
 					case GATE:
-						Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
-						Model.nextStage();
+						for (Gate gate : Stage.gateList) {
+							if(gate.getOpen()){
+								Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
+								Model.nextStage();
+							}
+							else{
+								for (Hero lorann : Stage.rLorannList) {
+									lorann.setExisting(false);
+								}
+								
+							}
+								
+						}
+						
 						break;
 					default: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
 						break;
