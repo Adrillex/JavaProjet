@@ -3,8 +3,6 @@ package view;
 import java.awt.BorderLayout;
 
 import java.util.ArrayList;
-import java.util.Observable;
-
 import javax.swing.JPanel;
 
 import contract.IElement;
@@ -35,6 +33,7 @@ class ViewPanel extends JPanel {
 	 * @param model
 	 *          the model
 	 * @param stage 
+	 * 	the actual stage
 	 */
 	public ViewPanel(IModel model, int stage) {
 		this.setLayout(new BorderLayout());

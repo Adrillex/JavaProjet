@@ -7,8 +7,7 @@ import view.View;
 
 /**
  * The Class Main.
- *
- * @author Jean-Aymeric Diet
+ * @author Group 10
  */
 public abstract class Main {
 

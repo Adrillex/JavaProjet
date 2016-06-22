@@ -11,22 +11,40 @@ import contract.IView;
 
 public class ViewPanelMenu extends JPanel{
 	
+	/**
+	 * Default Serial VersionUID
+	 */
+	private static final long serialVersionUID = 1L;
+	/** The texture choice**/
 	ButtonGroup texture;
+	/**The first texture button**/
 	JRadioButton texture1;
+	/**The second texture button **/
 	JRadioButton texture2;
+	/**The panel **/
 	JPanel texturePan;
 	
+	/**The stages buttons**/
 	ButtonGroup stage;
+	/**Stage 1 button**/
 	JRadioButton stage1;
+	/**Stage 2 button**/
 	JRadioButton stage2;
+	/**Stage 3 button**/
 	JRadioButton stage3;
+	/**Stage 4 button**/
 	JRadioButton stage4;
+	/**Stage 5 button**/
 	JRadioButton stage5;
+	/**The panel **/
 	JPanel stagePan;
 	
+	/**The view**/
 	IView view;
+	/**The controller**/
 	IController controller;
 	
+	/**The constructor**/
 	public ViewPanelMenu(){
 		texture = new ButtonGroup();
 		texture1 = new JRadioButton("Original texture");
@@ -44,6 +62,7 @@ public class ViewPanelMenu extends JPanel{
 		createMenu();
 	}
 	
+	/** The game selection menu**/
 	public void createMenu(){
 		
 		texture1.setSelected(true);

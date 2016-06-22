@@ -21,12 +21,12 @@ public class Model implements IModel {
 	private Stage stage;
 	/**Actual score of the player **/
 	private static int score;
-	
 	/**Bonus point given by the purse **/
 	private Bonus bPurse;
 
 	/** Instantiates a new model 
-	 * @param texture */
+	 * @param texture 
+	 * 	The texture pack to use*/
 	public Model(String texture) {
 		ImageLoader.loadImage(texture);
 		score = 0;
@@ -34,8 +34,7 @@ public class Model implements IModel {
 	/** Add bonus point to the actual score
 	 * 
 	 * @param bonus 
-	 * Add bonus points to the total score
-	 */
+	 * Add bonus points to the total score **/
 	public static void addToScore(int bonus){
 		score = score + bonus;
 	}
@@ -96,57 +95,46 @@ public class Model implements IModel {
 		}
 		return playerDir;
 	}
-	
 	/** Call the monsterMove method 
 	 * @throws Exception 
 	 * 	monsterMove **/
 	public void monsterMove() throws Exception {
 		MonsterMove.Move();
 	}
-	
 	/** Call the fireballMove method 
 	 * @throws Exception 
-	 * 	monstermove **/
+	 * 	monsterMove **/
 	public void fireballMove() throws Exception{
 		FireballMove.move();
 	}
-	
 	/** Call the SpriteSwitcher method **/
 	public void switchFireBallSprite(){
 		SpriteSwitcher.fireBallLoader();
 	}
-	
 	/**Allow Lorann to change his Sprite **/
 	public void switchLorannSprite(){
 		SpriteSwitcher.lorannloader();;
 	}
-	
 	//getters
 	public int getScore(){
 		return score;
 	}
-	
 	public int getMonsterNumber(){
 		return Stage.monsterList.size();
 	}
-	
 	public int getBonusNumber(){
 		return Stage.purseList.size();
 	}
-	
 	public IElement getFireball(){
 		return Stage.fireball;
 	}
-	
 	public boolean getKeyPressed() {
 		return isKeyPressed;
 	}
-	
 	//setters
 	public void setKeyPressed(boolean isKeyPressed) {
 		this.isKeyPressed = isKeyPressed;
 	}
 	public static void nextStage() {		
 	}
-
 }

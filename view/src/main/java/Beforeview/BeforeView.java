@@ -8,13 +8,18 @@ import view.ViewFrame;
 
 public class BeforeView {
 	
+	/** The frame**/
 	private ViewFrame frame;
+	/**The loading bar**/
 	private ViewPanelProgressbar progress;
+	/**The menu**/
 	private ViewPanelMenu menu;
+	/**The texture pack**/
 	private String texture;
+	/**The stage**/
 	private int stage;
 	
-	
+	/** The constructor BeforeView**/
 	public BeforeView(){
 		frame = new ViewFrame();
 		JPanel pan = new JPanel();		
@@ -38,7 +43,7 @@ public class BeforeView {
 		frame.setContentPane(pan);
 		progress.load();
 	}
-	
+	/**Option selection **/
 	public void setOption(){
 		if(menu.texture1.isSelected())
 			texture = "lorann";
@@ -57,6 +62,7 @@ public class BeforeView {
 				stage = 5;
 		}
 		
+	//getters
 		public String getTexture(){
 			return texture;
 		}

@@ -10,8 +10,14 @@ import javax.swing.border.Border;
 
 public class ViewPanelProgressbar extends JPanel{
 	
+	/**
+	 * Default Serial VersionUID
+	 */
+	private static final long serialVersionUID = 1L;
+	/**The loading bar**/
 	private JProgressBar progress;
 	
+	/**The constructor **/
 	public ViewPanelProgressbar(){
 		progress = new JProgressBar();
 		progress.setPreferredSize(new Dimension(650,200));
@@ -29,6 +35,7 @@ public class ViewPanelProgressbar extends JPanel{
         this.add(progress);
         }
 	
+	/**The loadin method. Loads elements from the database**/
 	public void load(){
 		for (int i = 1; i < 101; i++) {
 	        progress.setValue(i);

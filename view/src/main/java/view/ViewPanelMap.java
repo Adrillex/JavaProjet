@@ -27,6 +27,7 @@ public class ViewPanelMap extends JPanel{
 	 * 	the model
 	 * 	show the actual map
 	 * @param stage 
+	 * 	the actual stage
 	 */
 	public ViewPanelMap(IModel model, int stage){
 		this.model = model;

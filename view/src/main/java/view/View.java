@@ -29,9 +29,13 @@ public class View implements IView, Runnable {
 	/**The thread **/
 	private Thread thread;
 	
-	/* The constructor View
+	/** The constructor View
 	 * @param model
 	 * 			the model
+	 * @param frame
+	 * 	The Viewframe
+	 * @param stage
+	 * 	the stage 
 	 */
 	public View(IModel model, ViewFrame frame, int stage){
 		this.model = model;
