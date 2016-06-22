@@ -39,7 +39,6 @@ public class ViewPanelProgressbar extends JPanel{
 	public void load(){
 		for (int i = 1; i < 101; i++) {
 	        progress.setValue(i);
-	        System.out.println(i);
 	        try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {

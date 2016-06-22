@@ -47,7 +47,6 @@ public class ViewPanelMap extends JPanel{
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
-				System.out.println(k);
 				if (k == elements.size() - 2) {
 					if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k+1).getPosX() && elements.get(k).getPosY() == elements.get(k+1).getPosY()) {
 						k++;
