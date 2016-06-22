@@ -32,7 +32,6 @@ public class MonsterMove {
 							Stage.fireball.setPosY(11);
 							break;
 						case HERO:
-							System.out.println("bisous");
 							Stage.rLorannList.get(0).setExisting(false);
 							break;
 						default: 

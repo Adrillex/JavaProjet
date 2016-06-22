@@ -14,6 +14,8 @@ import contract.Permeability;
 
 public class ViewPanelMap extends JPanel{
 	
+	/** attribute serialVersionUID **/
+	private static final long serialVersionUID = 1L;
 	private ArrayList<IElement> elements;
 	IModel model = null;
 	boolean t = false;

@@ -20,7 +20,7 @@ public class GateTest {
 	 */	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		ImageLoader.loadImage();
+		ImageLoader.loadImage("lorann");
 		}
 	/**
 	 * 

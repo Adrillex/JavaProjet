@@ -20,7 +20,7 @@ public class MobileTest {
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		ImageLoader.loadImage();
+		ImageLoader.loadImage("lorann");
 	}
 	/** Instantiation of a mobile using the Hero constructor
 	 * @throws Exception

@@ -53,7 +53,6 @@ public class PlayerMove {
 					case BLOCKING:
 						break;
 					case KILLING:
-						System.out.println("coucou");
 						Stage.rLorannList.get(0).setExisting(false);
 						break;
 					case KILLER: 

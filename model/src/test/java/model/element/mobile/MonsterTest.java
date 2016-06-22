@@ -20,7 +20,7 @@ public class MonsterTest {
 	 */	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		ImageLoader.loadImage();
+		ImageLoader.loadImage("Lorann");
 	}
 
 	/**

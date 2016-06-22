@@ -22,7 +22,7 @@ public class ElementTest {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		ImageLoader.loadImage();
+		ImageLoader.loadImage("lorann");
 	}
 
 	/** Instantiation of an element object using the hero constructor 

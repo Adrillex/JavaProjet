@@ -38,8 +38,8 @@ public class ViewPanelScore extends JPanel{
 	this.setBackground(Color.black);
 	this.model = model;
 	showScore = new JLabel("Score : " + score);
-	monsterAlive = new JLabel("Monster alive : 4");
-	bonusRemaining = new JLabel("Bonus remaining : 2");
+	monsterAlive = new JLabel("Monster alive : " + this.model.getMonsterNumber());
+	bonusRemaining = new JLabel("Bonus remaining : " + this.model.getBonusNumber());
 	
 	showScore.setForeground(Color.orange);
 	monsterAlive.setForeground(Color.orange);

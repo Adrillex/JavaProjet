@@ -3,7 +3,6 @@ package model.actions;
 import java.util.ArrayList;
 
 import contract.IElement;
-import contract.Permeability;
 import model.Stage;
 import model.element.mobile.Mobile;
 
@@ -74,7 +73,6 @@ public class Movement {
 		if(order == "move")
 			move(mobile, x, y);
 		else{
-			System.out.println("test");
 			Stage.fireball.setExisting(true);
 			Stage.fireball.setDirection(mobile.getDirection());
 			Stage.fireball.setPosX(x);

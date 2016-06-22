@@ -146,9 +146,7 @@ public class Model implements IModel {
 	public void setKeyPressed(boolean isKeyPressed) {
 		this.isKeyPressed = isKeyPressed;
 	}
-	public static void nextStage() {
-		System.out.println("lkjb");
-		
+	public static void nextStage() {		
 	}
 
 }

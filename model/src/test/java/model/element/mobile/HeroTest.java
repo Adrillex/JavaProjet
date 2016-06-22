@@ -17,7 +17,7 @@ public class HeroTest {
 	 * BeforeClass**/
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		ImageLoader.loadImage();
+		ImageLoader.loadImage("lorann");
 	}
 	/** Instantiation of an element object using the hero constructor 
 	 * @throws Exception

@@ -5,31 +5,21 @@ import java.awt.event.KeyListener;
 
 import contract.IController;
 import contract.IModel;
-import contract.IView;
 
 public class Controller implements IController, KeyListener, Runnable{
 
 	/** The model. */
 	private IModel model;
-	
 	/** time between two pressure on a key **/
 	private long time;
-	
 	/** Last time a key has been pressed **/
 	private long lasttime = 0;
-	
 	/** minimum time between each pressure on a key **/
 	public int t = 100;
-
 	/**The order object **/
 	private Order order;
-	
 	/** Variable used to control the time between each change of lorann's sprite**/
 	int l = 0;
-	
-	private boolean jouer = true;
-
-
 	/** Constructor. 
 	 * @param view the View
 	 * @param model the Model 
