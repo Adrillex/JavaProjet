@@ -91,7 +91,7 @@ public class Model implements IModel {
 		case RIGHT:return Direction.LEFT;
 		case UP: return Direction.DOWN;
 		case UPPER_LEFT: return Direction.BOTTOM_RIGHT;
-		case UPPER_RIGHT: return Direction.BOTTOM_RIGHT;
+		case UPPER_RIGHT: return Direction.BOTTOM_LEFT;
 		}
 		return playerDir;
 	}
