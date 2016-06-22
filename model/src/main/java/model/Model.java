@@ -1,6 +1,12 @@
 package model;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import contract.Direction;
 import contract.IElement;
@@ -135,6 +141,23 @@ public class Model implements IModel {
 	public void setKeyPressed(boolean isKeyPressed) {
 		this.isKeyPressed = isKeyPressed;
 	}
-	public static void nextStage() {		
+	public static void nextStage() {
+		JFrame frame = new JFrame();
+		frame.setSize(1000, 1000);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setFocusable(true);
+		
+		JPanel pan = new JPanel();
+		pan.setBackground(Color.black);
+		
+		JLabel label = new JLabel("YOU WIN !");
+		Font font = new Font("Aerial", Font.BOLD ,100);
+		label.setForeground(Color.white);
+		label.setFont(font);
+		
+		pan.add(label);
+		frame.setContentPane(pan);
+		frame.setVisible(true);
 	}
 }
