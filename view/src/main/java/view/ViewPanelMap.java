@@ -20,6 +20,7 @@ public class ViewPanelMap extends JPanel{
 	IModel model = null;
 	boolean t = false;
 	IElement temp = null;
+	boolean n = true;
 	
 	/** 
 	 * the constructor ViewPanelMap
@@ -46,24 +47,27 @@ public class ViewPanelMap extends JPanel{
 		int k = 0;
 		for (int j = 0; j < 12; j++ ) {
 			for (int i = 0; i < 20; i++) {
-				if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k+1).getPosX() && elements.get(k).getPosY() == elements.get(k+1).getPosY()) {
-					k++;
-				}
-				else if (k>10) {
-					if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k-1).getPosX() && elements.get(k).getPosY() == elements.get(k-1).getPosY()) {
+				System.out.println(k);
+				if (k == elements.size() - 2) {
+					if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k+1).getPosX() && elements.get(k).getPosY() == elements.get(k+1).getPosY()) {
 						k++;
 					}
+					else if (k>10) {
+						if (elements.get(k).getPermeability() != Permeability.HERO && elements.get(k).getPermeability() != Permeability.KILLING && elements.get(k).getPosX() == elements.get(k-1).getPosX() && elements.get(k).getPosY() == elements.get(k-1).getPosY()) {
+							k++;
+						}
+					}
 				}
-				if(elements.get(k).getState() == false){
+				if(n == true && elements.get(k).getState() == false){
 					k++;
 				}
-				if (elements.get(k).getPosX() == i && elements.get(k).getPosY() == j){
+				if (n == true && elements.get(k).getPosX() == i && elements.get(k).getPosY() == j){
 					ImageIcon icon = new ImageIcon(elements.get(k).getSprite());
 					JLabel img = new JLabel(icon);
 					this.add(img);
 					k++;
 					if(k == elements.size()-1)
-						break;	
+						n = false;	
 				}
 				else {
 					JPanel pan = new JPanel();
@@ -72,6 +76,7 @@ public class ViewPanelMap extends JPanel{
 				}
 			}
 		}
+	n = true;
 	}
 
 	/**
