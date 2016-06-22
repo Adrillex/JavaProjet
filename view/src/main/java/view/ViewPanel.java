@@ -34,10 +34,11 @@ class ViewPanel extends JPanel {
 	 *
 	 * @param model
 	 *          the model
+	 * @param stage 
 	 */
-	public ViewPanel(IModel model) {
+	public ViewPanel(IModel model, int stage) {
 		this.setLayout(new BorderLayout());
-		mapPan = new ViewPanelMap(model);
+		mapPan = new ViewPanelMap(model, stage);
 		scorePan = new ViewPanelScore(model);
 		this.add(mapPan, BorderLayout.CENTER);
 		this.add(scorePan, BorderLayout.SOUTH);
@@ -52,16 +53,5 @@ class ViewPanel extends JPanel {
 		mapPan.updateMap();
 		scorePan.updateScore();
 		return this;
-	}
-	
-	
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
-	 */
-	public void update(final Observable arg0, final Object arg1) {
-		this.repaint();
 	}
 }

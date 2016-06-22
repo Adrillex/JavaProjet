@@ -10,7 +10,7 @@ import contract.IModel;
  *
  * @author group 10
  */
-class ViewFrame extends JFrame{
+public class ViewFrame extends JFrame{
 
 	/** The model. */
 	private IModel	model;
@@ -22,27 +22,14 @@ class ViewFrame extends JFrame{
 
 	/**
 	 * Instantiates a new view frame.
-	 *
-	 * @param model
-	 *          the model
 	 */
-	public ViewFrame(IModel model) {
-		this.model = model;
+	public ViewFrame() {
 		this.setSize(836, 450);
 		this.setTitle("Lorann");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
 		this.setLocationRelativeTo(null);
-	}
-
-	
-	/**
-	 * Gets the controller.
-	 *
-	 * @return the controller
-	 */
-	public ViewPanel getPanel(){
-		return new ViewPanel(model);
+		this.setVisible(true);
 	}
 
 	/**

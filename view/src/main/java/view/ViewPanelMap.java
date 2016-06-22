@@ -24,10 +24,11 @@ public class ViewPanelMap extends JPanel{
 	 * @param model
 	 * 	the model
 	 * 	show the actual map
+	 * @param stage 
 	 */
-	public ViewPanelMap(IModel model){
+	public ViewPanelMap(IModel model, int stage){
 		this.model = model;
-		elements = model.loadStage(4);
+		elements = model.loadStage(stage);
 		this.setLayout(new GridLayout(12, 20));
 		this.setBackground(Color.black);
 	}

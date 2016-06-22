@@ -19,20 +19,22 @@ public class Controller implements IController, KeyListener, Runnable{
 	private long lasttime = 0;
 	
 	/** minimum time between each pressure on a key **/
-	private int t = 100;
+	public int t = 100;
 
 	/**The order object **/
 	private Order order;
 	
 	/** Variable used to control the time between each change of lorann's sprite**/
 	int l = 0;
+	
+	private boolean jouer = true;
 
 
 	/** Constructor. 
 	 * @param view the View
 	 * @param model the Model 
 	 * **/
-	public Controller(final IView view, final IModel model) {
+	public Controller(final IModel model) {
 		this.model = model;
 		order = new Order(model);
 	}
@@ -80,7 +82,6 @@ public class Controller implements IController, KeyListener, Runnable{
 					model.switchFireBallSprite();
 				}
 			} catch (Exception e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			if (l >= 300/t ) {

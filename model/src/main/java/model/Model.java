@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+
 import contract.Direction;
 import contract.IElement;
 import contract.IModel;
@@ -24,9 +25,10 @@ public class Model implements IModel {
 	/**Bonus point given by the purse **/
 	private Bonus bPurse;
 
-	/** Instantiates a new model */
-	public Model() {
-		ImageLoader.loadImage();
+	/** Instantiates a new model 
+	 * @param texture */
+	public Model(String texture) {
+		ImageLoader.loadImage(texture);
 		score = 0;
 	}
 	/** Add bonus point to the actual score
@@ -143,6 +145,10 @@ public class Model implements IModel {
 	//setters
 	public void setKeyPressed(boolean isKeyPressed) {
 		this.isKeyPressed = isKeyPressed;
+	}
+	public static void nextStage() {
+		System.out.println("lkjb");
+		
 	}
 
 }

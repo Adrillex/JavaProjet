@@ -46,6 +46,7 @@ public class PlayerMove {
 							gate.setPermeability(Permeability.GATE);
 						}
 					}
+					
 					goalPosition.setExisting(false);
 					
 						break;
@@ -59,6 +60,10 @@ public class PlayerMove {
 						Stage.fireball.setExisting(false);
 						Stage.fireball.setPosX(19);
 						Stage.fireball.setPosY(11);
+						break;
+					case GATE:
+						Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
+						Model.nextStage();
 						break;
 					default: Movement.move(object, goalPosition.getPosX(), goalPosition.getPosY());
 						break;

@@ -20,6 +20,9 @@ public class View implements IView, Runnable {
 	/**The model **/
 	IModel model;
 	
+	/** The controller **/
+	IController controller;
+	
 	/** Allow to verify if the program is running or not **/
 	private boolean running = false;
 	
@@ -30,12 +33,10 @@ public class View implements IView, Runnable {
 	 * @param model
 	 * 			the model
 	 */
-	public View(IModel model){
+	public View(IModel model, ViewFrame frame, int stage){
 		this.model = model;
-		frame = new ViewFrame(model);
-		pan = new ViewPanel(this.model);
-		frame.setContentPane(pan);
-		frame.setVisible(true);
+		this.frame = new ViewFrame();
+		pan = new ViewPanel(this.model, stage);
 	}
 	
 	
@@ -100,7 +101,8 @@ public class View implements IView, Runnable {
 	 *          the new controller
 	 */
 	public void setController(final IController controller) {
-		this.frame.setController(controller);
+		this.controller = controller;
+		this.frame.addKeyListener(this.controller);
 	}
 
 
