@@ -126,12 +126,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>20</td>
+<td>31</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.007</td></tr></table><br />
+<td>0.023</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
 <div class="section">
 <h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
@@ -147,20 +147,28 @@ function toggleDisplay(elementId) {
 <th>Time</th></tr>
 <tr class="b">
 <td><a href="#model.element">model.element</a></td>
-<td>10</td>
+<td>9</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.006</td></tr>
+<td>0.014</td></tr>
 <tr class="a">
 <td><a href="#model.element.mobile">model.element.mobile</a></td>
-<td>10</td>
+<td>20</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.001</td></tr></table><br />
+<td>0.009</td></tr>
+<tr class="b">
+<td><a href="#model.element.motionless">model.element.motionless</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
 <div class="section">
 <h3>model.element<a name="model.element"></a></h3><a name="model.element"></a>
@@ -175,14 +183,23 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#model.elementElementTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
-<td><a href="#model.elementElementTest">ElementTest</a></td>
-<td>10</td>
+<td><a href="#model.elementBonusTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#model.elementBonusTest">BonusTest</a></td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.006</td></tr></table></div>
+<td>0.007</td></tr>
+<tr class="a">
+<td><a href="#model.elementElementTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#model.elementElementTest">ElementTest</a></td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.007</td></tr></table></div>
 <div class="section">
 <h3>model.element.mobile<a name="model.element.mobile"></a></h3><a name="model.element.mobile"></a>
 <table border="1" class="bodyTable">
@@ -196,24 +213,61 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#model.element.mobileMobileTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
-<td><a href="#model.element.mobileMobileTest">MobileTest</a></td>
-<td>10</td>
+<td><a href="#model.element.mobileHeroTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#model.element.mobileHeroTest">HeroTest</a></td>
+<td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.001</td></tr></table></div><br /></div>
+<td>0.008</td></tr>
+<tr class="a">
+<td><a href="#model.element.mobileMobileTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#model.element.mobileMobileTest">MobileTest</a></td>
+<td>12</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.001</td></tr></table></div>
+<div class="section">
+<h3>model.element.motionless<a name="model.element.motionless"></a></h3><a name="model.element.motionless"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td><a href="#model.element.motionlessGateTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#model.element.motionlessGateTest">GateTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
+<div class="section">
+<h3>BonusTest<a name="BonusTest"></a></h3><a name="model.elementBonusTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.BonusTest.testGetBonus"></a>testGetBonus</td>
+<td>0.007</td></tr></table></div>
 <div class="section">
 <h3>ElementTest<a name="ElementTest"></a></h3><a name="model.elementElementTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.ElementTest.testGetState"></a>testGetState</td>
-<td>0.003</td></tr>
+<td>0.002</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.ElementTest.testGetID"></a>testGetID</td>
@@ -237,26 +291,53 @@ function toggleDisplay(elementId) {
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.ElementTest.testSetSprite"></a>testSetSprite</td>
-<td>0.002</td></tr>
+<td>0.003</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.ElementTest.testGetSprite"></a>testGetSprite</td>
+<td>0.002</td></tr></table></div>
+<div class="section">
+<h3>HeroTest<a name="HeroTest"></a></h3><a name="model.element.mobileHeroTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteBottomLeft"></a>testSetMoveSpriteBottomLeft</td>
+<td>0.002</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteUpperRight"></a>testSetMoveSpriteUpperRight</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteBottomRight"></a>testSetMoveSpriteBottomRight</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteDown"></a>testSetMoveSpriteDown</td>
 <td>0.001</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_model.element.ElementTest.testSetPosX"></a>testSetPosX</td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteLeft"></a>testSetMoveSpriteLeft</td>
 <td>0</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_model.element.ElementTest.testSetPosY"></a>testSetPosY</td>
-<td>0</td></tr></table></div>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteUp"></a>testSetMoveSpriteUp</td>
+<td>0.002</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteUpperLeft"></a>testSetMoveSpriteUpperLeft</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.HeroTest.testSetMoveSpriteRight"></a>testSetMoveSpriteRight</td>
+<td>0.001</td></tr></table></div>
 <div class="section">
 <h3>MobileTest<a name="MobileTest"></a></h3><a name="model.element.mobileMobileTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.mobile.MobileTest.testMoveBottomLeft"></a>testMoveBottomLeft</td>
-<td>0</td></tr>
+<td>0.001</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.mobile.MobileTest.testMoveUpperRight"></a>testMoveUpperRight</td>
@@ -283,8 +364,16 @@ function toggleDisplay(elementId) {
 <td>0</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.MobileTest.testSetPosX"></a>testSetPosX</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.mobile.MobileTest.testSetPosY"></a>testSetPosY</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.mobile.MobileTest.testMoveBottomRight"></a>testMoveBottomRight</td>
-<td>0.001</td></tr>
+<td>0</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.mobile.MobileTest.testSetDirection"></a>testSetDirection</td>
@@ -292,6 +381,17 @@ function toggleDisplay(elementId) {
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a name="TC_model.element.mobile.MobileTest.testMoveRight"></a>testMoveRight</td>
+<td>0</td></tr></table></div>
+<div class="section">
+<h3>GateTest<a name="GateTest"></a></h3><a name="model.element.motionlessGateTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.motionless.GateTest.testGetOpen"></a>testGetOpen</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a name="TC_model.element.motionless.GateTest.testSetOpen"></a>testSetOpen</td>
 <td>0</td></tr></table></div><br /></div>
       </div>
     </div>

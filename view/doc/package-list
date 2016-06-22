@@ -1,11 +1,11 @@
-contract
 Beforeview
-view
+contract
+controller
+main
+model
 model.actions
 model.database
 model.element
 model.element.mobile
 model.element.motionless
-model
-controller
-main
+view

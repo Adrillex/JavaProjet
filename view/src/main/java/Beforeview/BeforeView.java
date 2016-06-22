@@ -43,6 +43,8 @@ public class BeforeView {
 		frame.setContentPane(pan);
 		progress.load();
 		frame.setVisible(false);
+		Audio audio = new Audio();
+		audio.start();
 	}
 	/**Option selection **/
 	public void setOption(){

@@ -12,6 +12,8 @@ public class ReverseMove {
 	 * 	the new direction
 	 */
 	public static Direction reverseMove(Direction direction){
+		System.out.println("f");
+
 		switch (direction) {
 		case UP:
 			return Direction.DOWN;

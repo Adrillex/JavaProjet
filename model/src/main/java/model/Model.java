@@ -141,6 +141,8 @@ public class Model implements IModel {
 	public void setKeyPressed(boolean isKeyPressed) {
 		this.isKeyPressed = isKeyPressed;
 	}
+	
+	/**Allow to oad the nextStage **/
 	public static void nextStage() {
 		JFrame frame = new JFrame();
 		frame.setSize(1000, 1000);

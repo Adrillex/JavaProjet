@@ -10,7 +10,9 @@ public class BonusTest {
 	/** The bonus test **/
 	Bonus bonus;
 
-	/** The setUp **/
+	/** The setUp 
+	 * @throws Exception
+	 * 	The position**/
 	@Before
 	public void setUp() throws Exception {
 		bonus = new Bonus(10);

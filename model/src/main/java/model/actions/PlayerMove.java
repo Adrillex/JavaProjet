@@ -15,7 +15,7 @@ public class PlayerMove {
 	 * Update the direction of the player and try to execute the associated movement
 	 * @param direction
 	 * 	the new direction of the player
-	 * @throws
+	 * @throws Exception
 	 * 	For the move method
 	 */
 	public static void playerDirection(Direction direction)throws Exception{
