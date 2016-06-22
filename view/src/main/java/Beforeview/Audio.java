@@ -5,6 +5,7 @@ import javax.sound.sampled.*;
  
 public class Audio extends Thread{
      
+<<<<<<< HEAD
      /** Input Stream**/
     AudioInputStream audioInputStream = null;
     /**The line read by the source**/
@@ -15,6 +16,21 @@ public class Audio extends Thread{
      */
     public void run(){
         File fichier = new File("C:/Users/Alexandre/Desktop/Projet Java/Lavender.wav");
+=======
+     
+    AudioInputStream audioInputStream = null;
+    SourceDataLine line;
+     
+    public void run(){
+        File fichier = new File("C:/Users/nicolas/workspace/JavaProject/model/src/main/resources/sprite/Yeah.wav");
+        try {
+        AudioFileFormat format = AudioSystem.getAudioFileFormat(fichier);
+        } catch (UnsupportedAudioFileException e1) {
+            e1.printStackTrace();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+>>>>>>> fb6c40449365c228da37d26074d9829c6b49ee95
          
         try {
             audioInputStream = AudioSystem.getAudioInputStream(fichier);
