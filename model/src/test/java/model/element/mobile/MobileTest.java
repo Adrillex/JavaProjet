@@ -115,4 +115,40 @@ public class MobileTest {
 		this.mobile.setPosY(10);
 		assertEquals(10, this.mobile.getPosY());
 	}
+	
+	public void testSetPosXMax(){
+		try {
+			this.mobile.setPosX(20);
+			fail("Too high!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void testSetPosYMax(){
+		try {
+			this.mobile.setPosY(12);
+			fail("Too high!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void testSetPosXMin(){
+		try {
+			this.mobile.setPosX(-1);
+			fail("Too high!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void testSetPosYMin(){
+		try {
+			this.mobile.setPosX(-1);
+			fail("Too high!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

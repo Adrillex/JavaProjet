@@ -29,6 +29,7 @@ public class ImageLoader {
 	/** the method loadImage.
 	 * Load all "+texture+" of the game in bufferedImages.
 	 * @param texture 
+	 * 	the choosen texture pack
 	 */
 	public static void loadImage(String texture){
 		

@@ -43,6 +43,8 @@ public class Stage {
 	 * 
 	 * @return IElements
 	 * Create ArrayLists of elements for a later user.
+	 * @throws Exception
+	 * 	Constructors of elements
 	 */
 	public ArrayList <IElement> LoadStage()throws Exception{
 		cBallList = new ArrayList <CrystalBall>();

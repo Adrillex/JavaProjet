@@ -21,7 +21,6 @@ public class Controller implements IController, KeyListener, Runnable{
 	/** Variable used to control the time between each change of lorann's sprite**/
 	int l = 0;
 	/** Constructor. 
-	 * @param view the View
 	 * @param model the Model 
 	 * **/
 	public Controller(final IModel model) {

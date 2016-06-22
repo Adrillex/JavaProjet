@@ -46,7 +46,7 @@ public class ElementTest {
 	    } else {
 	    	fail("Images are different");
 	    }
-
+		
 	}
 	/** Test of the getPosX method **/
 	@Test

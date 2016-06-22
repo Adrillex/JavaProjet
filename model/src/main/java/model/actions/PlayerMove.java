@@ -16,6 +16,8 @@ public class PlayerMove {
 	 * Update the direction of the player and try to execute the associated movement
 	 * @param direction
 	 * 	the new direction of the player
+	 * @throws
+	 * 	For the move method
 	 */
 	public static void playerDirection(Direction direction)throws Exception{
 		for(Hero object : Stage.rLorannList){
@@ -27,6 +29,8 @@ public class PlayerMove {
 	/**
 	 * The method move.
 	 * Move if allowed by the permeability of the element on the position. Or die if it's a monster.
+	 * @throws Exception
+	 * 	set position
  	*/
 	public static void Move()throws Exception{
 		if (Stage.rLorannList.isEmpty() == false) {

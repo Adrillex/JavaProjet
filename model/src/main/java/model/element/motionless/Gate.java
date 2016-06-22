@@ -33,9 +33,7 @@ public class Gate extends Motionless{
 		return open;
 	}
 	/** the method setOpen
-	 * @param open
-	 * 	the state of the door
-	 * 
+
 	 * Tell if Lorann can go through the gate or not **/
 	public void setOpen(){
 		this.open = true;

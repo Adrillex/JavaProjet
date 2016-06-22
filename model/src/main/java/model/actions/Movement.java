@@ -38,6 +38,8 @@ public class Movement {
 	 * 	the arrayList elements
 	 * @return
 	 * 	The element on the position the mobile try to go on
+	 * @throws 
+	 * 	Exception for the move method
 	 * Allow us to know what type of element is on the goalPosition of the mobile
 	 */
 	
